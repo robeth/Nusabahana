@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fbbg" >
+
+
+    <LinearLayout
+        android:id="@+id/button_group_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" 
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="100dp"
+            android:layout_margin="10dp"
+            android:layout_height="40dp"
+            android:text="Login" />
+        
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="Logout" />
+
+        
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/facebook_message_box"
+        android:layout_width="400dp"
+        android:layout_height="120dp"
+        android:inputType="textMultiLine" 
+        android:layout_below="@id/button_group_fb"
+        android:layout_centerHorizontal="true">
+        <requestFocus />
+    </EditText>
+    
+    <Button
+            android:id="@+id/btn_post"
+            android:layout_width="400dp"
+            android:layout_margin="10dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/facebook_message_box"
+            android:layout_centerHorizontal="true"
+            android:text="Post" />
+
+</RelativeLayout>

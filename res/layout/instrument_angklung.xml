@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung0"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="4dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung1"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/angklung0"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/angklung1"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung3"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/angklung2"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/angklung0"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+    
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung5"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/angklung4"
+        android:layout_below="@id/angklung1"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung6"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/angklung2"
+       	android:layout_toRightOf="@id/angklung5"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+                
+     <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung7"
+       android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_toRightOf="@id/angklung6"
+        android:layout_below="@id/angklung3"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+
+        
+    <TextView
+        android:id="@+id/angklung_text0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung0"
+        android:layout_alignRight="@id/angklung0"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/angklung_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung1"
+        android:layout_alignRight="@id/angklung1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/angklung_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung2"
+        android:layout_alignRight="@id/angklung2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="2" />
+
+    <TextView
+        android:id="@+id/angklung_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung3"
+        android:layout_alignRight="@id/angklung3"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="3" />
+
+    <TextView
+        android:id="@+id/angklung_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung4"
+        android:layout_alignRight="@id/angklung4"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="4" />
+
+
+        <TextView
+        android:id="@+id/angklung_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung5"
+        android:layout_alignRight="@id/angklung5"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="5" />
+        
+            <TextView
+        android:id="@+id/angklung_text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung6"
+        android:layout_alignRight="@id/angklung6"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="6" />
+            
+                <TextView
+        android:id="@+id/angklung_text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung7"
+        android:layout_alignRight="@id/angklung7"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="7" />
+
+</RelativeLayout>

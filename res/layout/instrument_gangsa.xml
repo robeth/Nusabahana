@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gangsa0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="9dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="180dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/gangsa" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gangsa1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/gangsa0"
+        android:adjustViewBounds="true"
+        android:maxHeight="178dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/gangsa" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gangsa2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/gangsa1"
+        android:adjustViewBounds="true"
+        android:maxHeight="176dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/gangsa" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gangsa3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/gangsa2"
+        android:adjustViewBounds="true"
+        android:maxHeight="174dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/gangsa" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gangsa4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@id/gangsa3"
+        android:adjustViewBounds="true"
+        android:maxHeight="172dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/gangsa" />
+
+    
+
+    
+
+    <TextView
+        android:id="@+id/gangsa_text0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gangsa0"
+        android:layout_alignRight="@id/gangsa0"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/gangsa_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gangsa1"
+        android:layout_alignRight="@id/gangsa1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/gangsa_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gangsa2"
+        android:layout_alignRight="@id/gangsa2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="2" />
+
+    <TextView
+        android:id="@+id/gangsa_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gangsa3"
+        android:layout_alignRight="@id/gangsa3"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="3" />
+
+    <TextView
+        android:id="@+id/gangsa_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gangsa4"
+        android:layout_alignRight="@id/gangsa4"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="4" />
+
+   
+</RelativeLayout>

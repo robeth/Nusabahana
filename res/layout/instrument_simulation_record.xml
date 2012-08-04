@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/simulation"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:background="@+drawable/blue_box_top" >
+
+        <LinearLayout
+            android:id="@+id/buttons1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/button_start_bm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:background="#00000000"
+                android:clickable="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/playblack" />
+
+            <ImageButton
+                android:id="@+id/button_stop_bm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:background="#00000000"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/stopblack" />
+
+            <ImageView
+                android:id="@+id/button_browse_bm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/music_folder" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="8dp"
+            android:layout_below="@+id/buttons1"
+            android:layout_centerHorizontal="true"
+            android:max="240" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sidebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="2dp"
+        android:background="@+drawable/blue_box_left">
+
+        <LinearLayout
+            android:id="@+id/button_group2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/button_start_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#00000000"
+                android:clickable="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/record" />
+
+            <ImageButton
+                android:id="@+id/button_stop_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#00000000"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/stopblack" />
+
+            <TextView
+                android:id="@+id/text_record_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:text="01:25"
+                android:textColor="#FFFFFF"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/instrument_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/sidebar" 
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+
+        <com.nusabahana.view.DistributorView
+            android:id="@+id/distributor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="#00FFFFFF"/>
+    </FrameLayout>
+
+</RelativeLayout>

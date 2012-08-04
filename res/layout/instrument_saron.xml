@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/saron0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="9dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="180dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/saron" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/saron1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/saron0"
+        android:adjustViewBounds="true"
+        android:maxHeight="178dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/saron" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/saron2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/saron1"
+        android:adjustViewBounds="true"
+        android:maxHeight="176dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/saron" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/saron3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/saron2"
+        android:adjustViewBounds="true"
+        android:maxHeight="174dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/saron" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/saron4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@id/saron3"
+        android:adjustViewBounds="true"
+        android:maxHeight="172dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/saron" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/saron5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@id/saron4"
+        android:adjustViewBounds="true"
+        android:maxHeight="170dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/saron" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/saron6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/saron5"
+        android:adjustViewBounds="true"
+        android:maxHeight="168dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/saron" />
+
+    <TextView
+        android:id="@+id/saron_text0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/saron0"
+        android:layout_alignRight="@id/saron0"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/saron_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/saron1"
+        android:layout_alignRight="@id/saron1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/saron_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/saron2"
+        android:layout_alignRight="@id/saron2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="2" />
+
+    <TextView
+        android:id="@+id/saron_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/saron3"
+        android:layout_alignRight="@id/saron3"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="3" />
+
+    <TextView
+        android:id="@+id/saron_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/saron4"
+        android:layout_alignRight="@id/saron4"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="4" />
+
+    <TextView
+        android:id="@+id/saron_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/saron5"
+        android:layout_alignRight="@id/saron5"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="5" />
+    
+    <TextView
+        android:id="@+id/saron_text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/saron6"
+        android:layout_alignRight="@id/saron6"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="6" />
+</RelativeLayout>

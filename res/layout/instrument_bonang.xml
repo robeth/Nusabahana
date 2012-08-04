@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bonang0"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bonang1"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bonang2"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bonang3"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bonang4"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bonang5"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bonang0"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bonang1"
+        android:layout_toRightOf="@id/bonang7"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bonang0"
+        android:layout_toRightOf="@id/bonang8"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bonang0"
+        android:layout_toRightOf="@id/bonang9"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bonang0"
+        android:layout_toRightOf="@id/bonang10"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bonang0"
+        android:layout_toRightOf="@id/bonang11"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/bonang13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bonang0"
+        android:layout_toRightOf="@id/bonang12"
+        android:adjustViewBounds="true"
+        android:layout_margin="5dp"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/bonang" />
+
+    <TextView
+        android:id="@+id/bonang_text0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang0"
+        android:layout_alignRight="@id/bonang0"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/bonang_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang1"
+        android:layout_alignRight="@id/bonang1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/bonang_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang2"
+        android:layout_alignRight="@id/bonang2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="2" />
+
+    <TextView
+        android:id="@+id/bonang_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang3"
+        android:layout_alignRight="@id/bonang3"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="3" />
+
+    <TextView
+        android:id="@+id/bonang_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang4"
+        android:layout_alignRight="@id/bonang4"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="4" />
+
+    <TextView
+        android:id="@+id/bonang_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang5"
+        android:layout_alignRight="@id/bonang5"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="5" />
+
+    <TextView
+        android:id="@+id/bonang_text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang6"
+        android:layout_alignRight="@id/bonang6"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="6" />
+
+    <TextView
+        android:id="@+id/bonang_text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang7"
+        android:layout_alignRight="@id/bonang7"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="7" />
+
+    <TextView
+        android:id="@+id/bonang_text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang8"
+        android:layout_alignRight="@id/bonang8"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="8" />
+
+    <TextView
+        android:id="@+id/bonang_text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang9"
+        android:layout_alignRight="@id/bonang9"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="9" />
+
+    <TextView
+        android:id="@+id/bonang_text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang10"
+        android:layout_alignRight="@id/bonang10"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="10" />
+
+    <TextView
+        android:id="@+id/bonang_text11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang11"
+        android:layout_alignRight="@id/bonang11"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="11" />
+
+    <TextView
+        android:id="@+id/bonang_text12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang12"
+        android:layout_alignRight="@id/bonang12"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="12" />
+
+    <TextView
+        android:id="@+id/bonang_text13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bonang13"
+        android:layout_alignRight="@id/bonang13"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="13" />
+
+</RelativeLayout>
