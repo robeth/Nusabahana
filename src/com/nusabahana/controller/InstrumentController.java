@@ -157,7 +157,7 @@ public class InstrumentController {
 			Instrument[] instrumentElements = new Instrument[insElements.length];
 
 			for (int j = 0; j < instrumentElements.length; j++) {
-				Log.e("Load", insElements[j]);
+				Log.d("Load", insElements[j]);
 				int insID = res.getIdentifier(insElements[j], "array",
 						activity.getPackageName());
 				String[] ins = res.getStringArray(insID);
@@ -194,7 +194,7 @@ public class InstrumentController {
 		this.activeSoundId = new int[notes.length];
 
 		for (int i = 0; i < notes.length; i++) {
-			Log.e("Cari path", getFileName(notes[i].getPath()));
+			Log.d("Cari path", getFileName(notes[i].getPath()));
 			activeSoundId[notes[i].getIndex()] = soundPool.load(
 					activity,
 					activity.getResources().getIdentifier(

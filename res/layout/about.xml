@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:shadowColor="#AAFFFFFF"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="3"
+            android:text="Nusabahana (0.8.1)"
+            android:textColor="#000"
+            android:textSize="24dp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/tata" />
+
+        <TextView
+            android:id="@+id/nameTata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imageView1"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/imageView1"
+            android:background="@drawable/name_frame"
+            android:paddingLeft="10dp"
+            android:text="Widyana Prita Karnia"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/tika" />
+
+        <TextView
+            android:id="@+id/nameTika"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imageView2"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/imageView2"
+            android:background="@drawable/name_frame"
+            android:paddingLeft="10dp"
+            android:text="Tika Permatasari Dama"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_below="@+id/imageView2"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/robeth" />
+
+        <TextView
+            android:id="@+id/nameRobeth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imageView3"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/imageView3"
+            android:background="@drawable/name_frame"
+            android:paddingLeft="10dp"
+            android:text="Robeth Rahmatullah"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_below="@+id/imageView3"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/panji" />
+
+        <TextView
+            android:id="@+id/namePanji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imageView4"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/imageView4"
+            android:background="@drawable/name_frame"
+            android:paddingLeft="10dp"
+            android:text="Panji Yudha Satriawan"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2" >
+
+        <ImageView
+            android:id="@+id/imageFasilkom"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/fasilkom" />
+
+        <LinearLayout
+            android:id="@+id/fasilkomTextGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageFasilkom"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/fasilkom_frame"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/fasilkomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Software Design - B"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/fasilkomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Fasilkom UI 2011/2012"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dosenText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/fasilkomTextGroup"
+            android:layout_margin="5dp"
+            android:text="Lecturer"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <ImageView
+            android:id="@+id/imageDosen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/dosenText"
+            android:layout_below="@+id/dosenText"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/siheq" />
+
+        <TextView
+            android:id="@+id/nameSiheq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imageDosen"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/imageDosen"
+            android:background="@drawable/name_frame"
+            android:paddingLeft="10dp"
+            android:text="Hadaiq Rolis S. ,S.Kom, M.Kom."
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+</LinearLayout>

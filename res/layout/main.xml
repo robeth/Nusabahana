@@ -11,6 +11,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:src="@drawable/nusabahana" />
+    
+    
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -19,11 +21,12 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         android:orientation="horizontal" >
-
+		
         <RelativeLayout
             android:id="@+id/playicon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
 
             <ImageView
                 android:id="@+id/playring"
@@ -42,7 +45,8 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content" 
+            android:layout_weight="1" >
 
             <ImageView
                 android:id="@+id/galleryring"
@@ -58,6 +62,15 @@
                 android:layout_centerInParent="true"
                 android:src="@drawable/treaserumusic" />
         </RelativeLayout>
+        
+        <ImageView
+                android:id="@+id/aboutImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/about"
+                android:layout_gravity="center_vertical|right"
+                android:layout_weight="0"  />
     </LinearLayout>
 
     <ImageView

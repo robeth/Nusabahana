@@ -40,10 +40,11 @@ public class MainMenu extends Activity {
 		setContentView(R.layout.main);
 		ImageView playImage = (ImageView) findViewById(R.id.play);
 		ImageView galleryImage = (ImageView) findViewById(R.id.gallery);
-
+		ImageView aboutImage = (ImageView) findViewById(R.id.aboutImage);
+		
 		playImage.setOnClickListener(playListener);
 		galleryImage.setOnClickListener(galleryListener);
-
+		aboutImage.setOnClickListener(aboutListener);
 	}
 
 	/**
@@ -66,6 +67,15 @@ public class MainMenu extends Activity {
 			Intent newIntent = new Intent(
 					MainMenu.this.getApplicationContext(),
 					RecordGalleryMenu.class);
+			MainMenu.this.startActivity(newIntent);
+		}
+	};
+	
+	private OnClickListener aboutListener = new OnClickListener() {
+		public void onClick(View v) {
+			Intent newIntent = new Intent(
+					MainMenu.this.getApplicationContext(),
+					AboutView.class);
 			MainMenu.this.startActivity(newIntent);
 		}
 	};
@@ -141,6 +151,7 @@ public class MainMenu extends Activity {
 			iv3 = (ImageView) findViewById(R.id.galleryring);
 			iv3.clearAnimation();
 			iv3.startAnimation(a);
+			
 
 		}
 	}

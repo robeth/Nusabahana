@@ -108,7 +108,7 @@ public class RecordController {
 
 			@Override
 			public boolean accept(File dir, String filename) {
-				Log.e("FILE RECORD", filename);
+				Log.d("FILE RECORD", filename);
 				// TODO Auto-generated method stub
 				String ext = filename.substring(filename.lastIndexOf(".") + 1,
 						filename.length());
@@ -160,7 +160,7 @@ public class RecordController {
 	private String getNewName(String path, String name, int counter) {
 		File f = new File(path + "/" + name + counter + ".3gp");
 		while (f.exists()) {
-			Log.e("Exist?", f.getAbsolutePath());
+			Log.d("Exist?", f.getAbsolutePath());
 			f = new File(path + "/" + name + ++counter + ".3gp");
 		}
 		return name + counter + ".3gp";
@@ -198,7 +198,7 @@ public class RecordController {
 //					duration, d, acts);
 //			reader.close();
 //		} catch (IOException ioe) {
-//			Log.e("Error IO", ioe.getMessage());
+//			Log.d("Error IO", ioe.getMessage());
 //		}
 //		return aa;
 //	}
@@ -290,7 +290,7 @@ public class RecordController {
 //	 *            index aksi yang dicatat
 //	 */
 //	public void recordAction(int index) {
-//		// Log.e("new action", "" + (SystemClock.uptimeMillis() - start) + "\t"+
+//		// Log.d("new action", "" + (SystemClock.uptimeMillis() - start) + "\t"+
 //		// index);
 //		actions.add(new Action(SystemClock.uptimeMillis() - start, index));
 //	}
@@ -367,7 +367,7 @@ public class RecordController {
 //			out.close();
 //			lastSavedFile = newName;
 //		} catch (IOException e) {
-//			Log.e("Test", "What? " + e);
+//			Log.d("Test", "What? " + e);
 //		}
 //	}
 	
@@ -407,7 +407,7 @@ public class RecordController {
 	            mPlayer.setDataSource(DEFAULT_RECORD_FOLDER_PATH+"/"+currentFile);
 	            mPlayer.prepare();
 	        } catch (IOException e) {
-	            Log.e("Record Controller", "prepare() failed");
+	            Log.d("Record Controller", "prepare() failed");
 	        }
     	}
     }
@@ -419,7 +419,7 @@ public class RecordController {
     		temp.setDataSource(DEFAULT_RECORD_FOLDER_PATH + "/"+filename);
     		temp.prepare();
     	}catch (IOException e) {
-            Log.e("Record Controller", "prepare() failed");
+            Log.d("Record Controller", "prepare() failed");
         }
         return temp;
     }
@@ -455,7 +455,7 @@ public class RecordController {
         try {
             mRecorder.prepare();
         } catch (IOException e) {
-            Log.e("Media Recorder", "prepare() failed");
+            Log.d("Media Recorder", "prepare() failed");
         }
 
         mRecorder.start();

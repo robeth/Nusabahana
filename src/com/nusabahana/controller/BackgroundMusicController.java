@@ -110,9 +110,9 @@ public class BackgroundMusicController {
 				}
 			});
 
-			Log.e("BackgroundMusic", "Start opening:" + filename);
+			Log.d("BackgroundMusic", "Start opening:" + filename);
 			if (filename.startsWith(DEFAULT_MUSICS_FOLDER_PATH)) {
-				Log.e("BackgroundMusic", "in folder:" + filename);
+				Log.d("BackgroundMusic", "in folder:" + filename);
 				// mediaPlayer.setDataSource(filename);
 				// MediaPlayer mPlayer = new MediaPlayer();
 				// example of mediaFile
@@ -126,13 +126,13 @@ public class BackgroundMusicController {
 				// FileDescriptor afd = fis.getFD();
 				mediaPlayer.setDataSource(f.getAbsolutePath());
 			} else {
-				Log.e("BackgroundMusic", "in asset:" + filename);
+				Log.d("BackgroundMusic", "in asset:" + filename);
 				mediaPlayer.setDataSource(activity.getAssets().openFd(filename)
 						.getFileDescriptor());
 			}
 			mediaPlayer.prepare();
 		} catch (Exception ex) {
-			Log.e("BackgroundMusic", "error opening:" + filename
+			Log.d("BackgroundMusic", "error opening:" + filename
 					+ "\nErrorMessage:" + ex.getMessage());
 			ex.printStackTrace();
 		}
