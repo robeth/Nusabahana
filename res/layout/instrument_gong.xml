@@ -12,8 +12,8 @@
         android:layout_alignParentTop="true"
         android:layout_margin="5dp"
         android:adjustViewBounds="true"
-        android:maxHeight="50dp"
-        android:maxWidth="50dp"
+        android:maxHeight="30dp"
+        android:maxWidth="30dp"
         android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
@@ -23,8 +23,8 @@
         android:layout_margin="5dp"
         android:layout_toRightOf="@id/gong0"
         android:adjustViewBounds="true"
-        android:maxHeight="55dp"
-        android:maxWidth="55dp"
+        android:maxHeight="35dp"
+        android:maxWidth="35dp"
         android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
@@ -34,8 +34,8 @@
         android:layout_margin="5dp"
         android:layout_toRightOf="@id/gong1"
         android:adjustViewBounds="true"
-        android:maxHeight="60dp"
-        android:maxWidth="60dp"
+        android:maxHeight="40dp"
+        android:maxWidth="40dp"
         android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
@@ -46,16 +46,37 @@
         android:layout_toRightOf="@id/gong2"
         android:layout_margin="5dp"
         android:adjustViewBounds="true"
-        android:maxHeight="65dp"
-        android:maxWidth="65dp"
+        android:maxHeight="45dp"
+        android:maxWidth="45dp"
         android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/gong4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gong3"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:src="@drawable/gong" />
+    
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gong5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gong4"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="55dp"
+        android:maxWidth="55dp"
+        android:src="@drawable/gong" />
+    
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gong6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/gong3"
-       android:layout_alignParentLeft="true"
         android:layout_margin="5dp"
         android:adjustViewBounds="true"
         android:maxHeight="70dp"
@@ -63,24 +84,24 @@
         android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/gong5"
+        android:id="@+id/gong7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/gong3"
         android:layout_margin="5dp"
-        android:layout_toRightOf="@id/gong4"
+        android:layout_toRightOf="@id/gong6"
         android:adjustViewBounds="true"
         android:maxHeight="75dp"
         android:maxWidth="75dp"
         android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/gong6"
+        android:id="@+id/gong8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/gong3"
         android:layout_margin="5dp"
-        android:layout_toRightOf="@id/gong5"
+        android:layout_toRightOf="@id/gong7"
         android:adjustViewBounds="true"
         android:maxHeight="80dp"
         android:maxWidth="80dp"
@@ -169,5 +190,29 @@
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="6" />
+    
+     <TextView
+        android:id="@+id/gong_text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gong7"
+        android:layout_alignRight="@id/gong7"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="7" />
+     
+      <TextView
+        android:id="@+id/gong_text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gong8"
+        android:layout_alignRight="@id/gong8"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="8" />
 
 </RelativeLayout>

@@ -35,20 +35,20 @@
         <item>Gamelan Jawa</item>
         <item>The bonang is  a collection of small gongs placed horizontally onto strings in a wooden frame (rancak), either one or two rows wide. They are typically hit with padded sticks (tabuh).</item>
         <item>bonanglogo.png</item>
-        <item >0,bonang1a.ogg,1a</item>
-        <item >1,bonang2a.ogg,2a</item>
-        <item >2,bonang3a.ogg,3a</item>
-        <item >3,bonang4a.ogg,4a</item>
-        <item >4,bonang5a.ogg,5a</item>
-        <item >5,bonang6a.ogg,6a</item>
+        <item >0,bonang4a.ogg,4a</item>
+        <item >1,bonang6a.ogg,6a</item>
+        <item >2,bonang5a.ogg,5a</item>
+        <item >3,bonang3a.ogg,3a</item>
+        <item >4,bonang2a.ogg,2a</item>
+        <item >5,bonang1a.ogg,1a</item>
         <item >6,bonang7a.ogg,7a</item>
         <item >7,bonang7b.ogg,7b</item>
-        <item >8,bonang6b.ogg,6b</item>
-        <item >9,bonang5b.ogg,5b</item>
-        <item >10,bonang4b.ogg,4b</item>
-        <item >11,bonang3b.ogg,3b</item>
-        <item >12,bonang2b.ogg,2b</item>
-        <item >13,bonang1b.ogg,1b</item>
+        <item >8,bonang1b.ogg,1b</item>
+        <item >9,bonang2b.ogg,2b</item>
+        <item >10,bonang3b.ogg,3b</item>
+        <item >11,bonang5b.ogg,5b</item>
+        <item >12,bonang6b.ogg,6b</item>
+        <item >13,bonang4b.ogg,4b</item>
         
     </string-array>
     
@@ -65,7 +65,9 @@
         <item >3,gong5.ogg,5</item>
         <item >4,gong6.ogg,6</item>
         <item >5,gong7.ogg,7</item>
-        <item >6,gong8ageng.ogg,8ageng</item>
+        <item >6,gong1ageng.ogg,1ageng</item>
+        <item >7,gong5ageng.ogg,5ageng</item>
+        <item >8,gong6ageng.ogg,6ageng</item>
     </string-array>
     
     <string-array name="kendang">
@@ -76,8 +78,8 @@
         <item>Kendang is the Central Javanese gamelan instruments in which one of its main functions to set the rhythm. This instrument was rung by hand, without extra tools.</item>
         <item>kendanglogo.png</item>
         <item >0,kendang1tak.ogg,1tak</item>
-        <item >1,kendang2deng.ogg,2deng</item>
-        <item >2,kendang3tung.ogg,3tung</item>
+        <item >1,kendang3tung.ogg,2tung</item>
+        <item >2,kendang2deng.ogg,3deng</item>
     </string-array>
     
     <string-array name="kenong">
