@@ -12,8 +12,8 @@ import java.util.Arrays;
 import java.util.Date;
 
 import com.nusabahana.controller.BackgroundMusicController.OnBackgroundMusicStartListener;
+import com.nusabahana.instrument.Instrument;
 import com.nusabahana.model.Action;
-import com.nusabahana.model.Instrument;
 import com.nusabahana.model.OnRecordEndListener;
 import com.nusabahana.model.Record;
 import com.nusabahana.model.RecordPlayer;

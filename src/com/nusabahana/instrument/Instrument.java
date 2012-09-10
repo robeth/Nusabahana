@@ -1,4 +1,6 @@
-package com.nusabahana.model;
+package com.nusabahana.instrument;
+
+import com.nusabahana.model.Note;
 
 /**
  * Kelas yang merupakan model dari semua instrumen alat musik dalam nusabahana
@@ -176,6 +178,10 @@ public class Instrument {
 	 * @return label file
 	 */
 	public String getNoteLabel(int index){
+		
 		return notes[index].getLabel();
 	}
+	
+	public void highlight(int keyNote){};
+	
 }

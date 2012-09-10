@@ -170,11 +170,11 @@ public class DistributorView extends ImageView {
 	@Override
 	public boolean onTouchEvent(final MotionEvent event) {
 		//
-		// final int[] a = { 0, 0 };
-		// v.getLocationOnScreen(a);
-		// event.setLocation(a[0]+event.getX(), a[1]+event.getY());
-		// Log.v("tag fuuuuuuuuu : "+event.getPointerCount(), "real event:(" +
-		// event.getX() + "," + event.getY() +")--- tag :"+v.getTag());
+		 final int[] a = { 0, 0 };
+//		 v.getLocationOnScreen(a);
+		 event.setLocation(a[0]+event.getX(), a[1]+event.getY());
+		 Log.v("tag fuuuuuuuuu : "+event.getPointerCount(), "real event:(" +
+		 event.getX() + "," + event.getY() +")--- tag :");
 
 		// start
 		int action = event.getActionMasked();
