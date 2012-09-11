@@ -6,7 +6,7 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.util.Log;
 
-import com.nusabahana.instrument.Instrument;
+import com.nusabahana.model.Instrument;
 import com.nusabahana.model.InstrumentGroup;
 import com.nusabahana.model.Note;
 

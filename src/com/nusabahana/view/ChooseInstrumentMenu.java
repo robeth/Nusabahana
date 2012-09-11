@@ -1,6 +1,6 @@
 package com.nusabahana.view;
 
-import com.nusabahana.instrument.Instrument;
+import com.nusabahana.model.Instrument;
 import com.nusabahana.model.InstrumentGroup;
 import com.nusabahana.view.R;
 

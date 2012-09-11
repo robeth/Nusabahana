@@ -1,6 +1,8 @@
-package com.nusabahana.instrument;
+package com.nusabahana.model;
 
-import com.nusabahana.model.Note;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 
 /**
  * Kelas yang merupakan model dari semua instrumen alat musik dalam nusabahana
@@ -181,7 +183,18 @@ public class Instrument {
 		
 		return notes[index].getLabel();
 	}
-	
-	public void highlight(int keyNote){};
+
+	public int[] getInstrumentIndexes(int key){
+		int[] temp = new int[4];
+		int latestIndex = 0;
+		
+		Arrays.fill(temp, -1);
+		
+		for(int i = 0; i < notes.length; i++){
+			if(notes[i].getKey() == key)
+				temp[latestIndex++] = i;
+		}
+		return temp;
+	}
 	
 }

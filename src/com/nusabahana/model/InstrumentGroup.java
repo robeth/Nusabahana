@@ -1,6 +1,5 @@
 package com.nusabahana.model;
 
-import com.nusabahana.instrument.Instrument;
 
 public class InstrumentGroup {
 	private Instrument[] instrumentElements;

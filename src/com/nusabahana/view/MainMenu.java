@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
+import com.nusabahana.partiture.PartitureReader;
 import com.nusabahana.view.R;
 
 import android.app.Activity;

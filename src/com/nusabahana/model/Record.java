@@ -3,7 +3,6 @@ package com.nusabahana.model;
 import java.util.ArrayList;
 import java.util.Date;
 
-import com.nusabahana.instrument.Instrument;
 
 /**
  * Kelas yang merupakan model dari semua file rekaman nusabahana

@@ -5,6 +5,7 @@ import java.security.MessageDigest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
@@ -32,11 +33,16 @@ import com.nusabahana.controller.InstrumentController;
 import com.nusabahana.controller.RecordController;
 import com.nusabahana.controller.BackgroundMusicController.OnBackgroundMusicStartListener;
 import com.nusabahana.controller.RecordController.OnRecordStartPlayingListener;
-import com.nusabahana.instrument.Instrument;
+import com.nusabahana.model.Instrument;
 import com.nusabahana.partiture.Element;
 import com.nusabahana.partiture.Partiture;
 import com.nusabahana.partiture.PartiturePlayer;
 import com.nusabahana.partiture.PartitureTutorial;
+import com.nusabahana.partiture.PartitureTutorial.OnPartitureNextSubElementListener;
+import com.nusabahana.partiture.PartitureTutorial.OnPauseListener;
+import com.nusabahana.partiture.PartitureTutorial.OnPlayListener;
+import com.nusabahana.partiture.PartitureTutorial.OnResumeListener;
+import com.nusabahana.partiture.PartitureTutorial.OnStopListener;
 import com.nusabahana.partiture.Row;
 import com.nusabahana.partiture.Segment;
 import com.nusabahana.partiture.SubElement;
@@ -59,7 +65,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 	private DistributorView dv;
 
 	// Bagian view yang akan diberi listener
-	private ImageButton bRecordStart, bRecordStop, bBMStart, bBMStop;
+	private ImageButton bRecordStart, bRecordStop, bBMStart, bBMStop, bTutorialStart, bTutorialPause,bTutorialStop;
 	private ImageView bBMBrowse;
 	private TextView timerText;
 	private NoteImage[] insParts;
@@ -81,6 +87,11 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 	// Instrumen yang disimulasikan
 	private Instrument simulatedInstrument;
 	private Animation[] animationSet;
+	private Partiture partiture;
+	private PartitureTutorial tutorial;
+	private TextView tutorialText;
+	
+
 
 	/**
 	 * Inisialisasi activity
@@ -148,7 +159,11 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		bBMStart = (ImageButton) findViewById(R.id.button_start_bm);
 		bBMStop = (ImageButton) findViewById(R.id.button_stop_bm);
 		bBMBrowse = (ImageView) findViewById(R.id.button_browse_bm);
+		bTutorialStart = (ImageButton) findViewById(R.id.partiture_start_button);
+		bTutorialPause = (ImageButton) findViewById(R.id.partiture_pause_button);
+		bTutorialStop = (ImageButton) findViewById(R.id.partiture_stop_button);
 		timerText = (TextView) findViewById(R.id.text_record_timer);
+		tutorialText = (TextView)findViewById(R.id.partiture_row);
 
 		bRecordStart.setOnClickListener(recordStartListener);
 		bRecordStop.setOnClickListener(recordStopListener);
@@ -156,6 +171,9 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		bBMStart.setOnClickListener(musicStartListener);
 		bBMStop.setOnClickListener(musicStopListener);
 		bBMBrowse.setOnClickListener(musicBrowseListener);
+		bTutorialStart.setOnClickListener(startTutorialListener);
+		bTutorialPause.setOnClickListener(pauseTutorialListener);
+		bTutorialStop.setOnClickListener(stopTutorialListener);
 		timerText.setText("00:00");
 
 		bBMStop.setEnabled(true);
@@ -164,9 +182,13 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		RECORD_CONTROLLER.setOnRecordStartPlayingListener(orStartListener);
 		
 		
-		Partiture partiture = getDummyPartiture();
-		PartitureTutorial tutorial = new PartitureTutorial(partiture,1000);
-		
+		partiture = getDummyPartiture();
+		tutorial = new PartitureTutorial(partiture,4000);
+		tutorial.setOnNextSubElementListener(subelementListener);
+		tutorial.setOnPlayListener(onTutorialStartListener);
+		tutorial.setOnPauseListener(onTutorialPauseListener);
+		tutorial.setOnResumeListener(onTutorialResumeListener);
+		tutorial.setOnStopListener(onTutorialStopListener);
 	}
 	
 	public void activateInstrumentsBackgroundMode(){
@@ -548,6 +570,99 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		public void onCompletion(MediaPlayer mp) {
 			// TODO Auto-generated method stub
 			musicStopListener.onClick(null);
+		}
+	};
+	
+	private OnPlayListener onTutorialStartListener = new OnPlayListener(){
+		@Override
+		public void onPlay(){
+			bTutorialStart.setVisibility(android.view.View.INVISIBLE);
+			bTutorialPause.setVisibility(android.view.View.VISIBLE);
+		}
+	};
+	
+	private OnPauseListener onTutorialPauseListener = new OnPauseListener(){
+		@Override
+		public void onPause(){
+			bTutorialStart.setVisibility(android.view.View.VISIBLE);
+			bTutorialPause.setVisibility(android.view.View.INVISIBLE);
+		}
+	};
+	
+	private OnStopListener onTutorialStopListener = new OnStopListener(){
+		@Override
+		public void onStop(){
+			bTutorialStart.setVisibility(android.view.View.VISIBLE);
+			bTutorialPause.setVisibility(android.view.View.INVISIBLE);
+		}
+	};
+	
+	private OnResumeListener onTutorialResumeListener = new OnResumeListener(){
+		@Override
+		public void onResume(){
+			bTutorialStart.setVisibility(android.view.View.INVISIBLE);
+			bTutorialPause.setVisibility(android.view.View.VISIBLE);
+		}
+	};
+	
+	private OnClickListener startTutorialListener = new OnClickListener(){
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			if(tutorial.getTutorialState() == PartitureTutorial.STANDBY){
+				tutorial.play();
+			} else {
+				tutorial.resume();
+			}
+		}
+		
+	};
+	
+	private OnClickListener pauseTutorialListener = new OnClickListener(){
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			tutorial.pause();
+		}
+		
+	};
+	
+	private OnClickListener stopTutorialListener = new OnClickListener(){
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			tutorial.stop();
+		}
+		
+	};
+	
+	private OnPartitureNextSubElementListener subelementListener = new OnPartitureNextSubElementListener() {
+		
+		@Override
+		public void onNextSubElement() {
+			// TODO Auto-generated method stub
+			int subelementValue = tutorial.getCurrentSubElementValue();
+			Log.d("Tutorial", "subvalue:"+subelementValue);
+			int[] highlightedIndexes = simulatedInstrument.getInstrumentIndexes(subelementValue);
+			
+			for(int i = 0; i < insParts.length; i++){
+				if(isIn(highlightedIndexes, i))
+					insParts[i].setColorFilter(0x99ff0000);
+				else 
+					insParts[i].setColorFilter(Color.TRANSPARENT);
+			}
+			tutorialText.setText(tutorial.getRowSpannable(), TextView.BufferType.SPANNABLE);
+		}
+		
+		private boolean isIn(int[] arrayInt, int intValue){
+			for(int i = 0; i < arrayInt.length; i++)
+				if(arrayInt[i] == intValue)
+					return true;
+			
+			return false;
 		}
 	};
 
