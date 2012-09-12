@@ -1,9 +1,13 @@
 package com.nusabahana.view;
 
 import java.security.MessageDigest;
+import java.util.Arrays;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -37,6 +41,7 @@ import com.nusabahana.model.Instrument;
 import com.nusabahana.partiture.Element;
 import com.nusabahana.partiture.Partiture;
 import com.nusabahana.partiture.PartiturePlayer;
+import com.nusabahana.partiture.PartitureReader;
 import com.nusabahana.partiture.PartitureTutorial;
 import com.nusabahana.partiture.PartitureTutorial.OnPartitureNextSubElementListener;
 import com.nusabahana.partiture.PartitureTutorial.OnPauseListener;
@@ -59,13 +64,15 @@ import com.nusabahana.view.R;
 public class InstrumentSimulationMenu extends NusabahanaView {
 	/** Konstanta yang menunjukan request result terhadap background musik */
 	private static final int BM_INTENT = 101;
+	private static final int CHOOSE_PARTITURE_DIALOG = 11212;
+	
 
 	// private Animation anim;
 	private TextView[] tvParts;
 	private DistributorView dv;
 
 	// Bagian view yang akan diberi listener
-	private ImageButton bRecordStart, bRecordStop, bBMStart, bBMStop, bTutorialStart, bTutorialPause,bTutorialStop;
+	private ImageButton bRecordStart, bRecordStop, bBMStart, bBMStop, bTutorialStart, bTutorialPause,bTutorialStop, bTutorialChoose;
 	private ImageView bBMBrowse;
 	private TextView timerText;
 	private NoteImage[] insParts;
@@ -89,8 +96,9 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 	private Animation[] animationSet;
 	private Partiture partiture;
 	private PartitureTutorial tutorial;
-	private TextView tutorialText;
-	
+	private TextView tutorialText, tutorialTextHeader;
+	private String[] availablePartituresPath;
+	private String groupPath;
 
 
 	/**
@@ -162,18 +170,18 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		bTutorialStart = (ImageButton) findViewById(R.id.partiture_start_button);
 		bTutorialPause = (ImageButton) findViewById(R.id.partiture_pause_button);
 		bTutorialStop = (ImageButton) findViewById(R.id.partiture_stop_button);
+		bTutorialChoose = (ImageButton) findViewById(R.id.partiture_change);
 		timerText = (TextView) findViewById(R.id.text_record_timer);
 		tutorialText = (TextView)findViewById(R.id.partiture_row);
-
+		tutorialTextHeader = (TextView) findViewById(R.id.partiture_name);
+		
 		bRecordStart.setOnClickListener(recordStartListener);
 		bRecordStop.setOnClickListener(recordStopListener);
 		// bHome.setOnClickListener(homeListener);
 		bBMStart.setOnClickListener(musicStartListener);
 		bBMStop.setOnClickListener(musicStopListener);
 		bBMBrowse.setOnClickListener(musicBrowseListener);
-		bTutorialStart.setOnClickListener(startTutorialListener);
-		bTutorialPause.setOnClickListener(pauseTutorialListener);
-		bTutorialStop.setOnClickListener(stopTutorialListener);
+		
 		timerText.setText("00:00");
 
 		bBMStop.setEnabled(true);
@@ -181,16 +189,85 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		BM_CONTROLLER.setOnBackgroundMusicStartListener(bmStartListener);
 		RECORD_CONTROLLER.setOnRecordStartPlayingListener(orStartListener);
 		
-		
-		partiture = getDummyPartiture();
-		tutorial = new PartitureTutorial(partiture,4000);
-		tutorial.setOnNextSubElementListener(subelementListener);
-		tutorial.setOnPlayListener(onTutorialStartListener);
-		tutorial.setOnPauseListener(onTutorialPauseListener);
-		tutorial.setOnResumeListener(onTutorialResumeListener);
-		tutorial.setOnStopListener(onTutorialStopListener);
+		prepareTutorial();
 	}
 	
+	
+	
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		// TODO Auto-generated method stub
+		Dialog dialog = null;
+		switch(id){
+			case CHOOSE_PARTITURE_DIALOG :
+				
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				builder.setTitle("Choose a Partiture");
+				builder.setItems(availablePartituresPath, new DialogInterface.OnClickListener() {
+				    public void onClick(DialogInterface dialog, int item) {
+				        changeTutorialPartiture(item);
+				    }
+				});
+				dialog = builder.create();
+				break;
+		}
+		return dialog;
+	}
+
+
+	private void changeTutorialPartiture(int partitureIndex){
+		partiture = PartitureReader.getPartiture(groupPath, availablePartituresPath[partitureIndex], simulatedInstrument.getNickname());		
+		tutorial.setPartiture(partiture);
+		tutorialText.setText(tutorial.getRowSpannable(), TextView.BufferType.SPANNABLE);
+		tutorialTextHeader.setText(availablePartituresPath[partitureIndex]+" ("+simulatedInstrument.getName()+")");
+	}
+	
+	private void prepareTutorial(){
+		PartitureReader.setContext(this);
+		groupPath= getGroupPath(simulatedInstrument.getNickname());
+		availablePartituresPath= PartitureReader.getAllPartituresFilename(groupPath); 
+		
+		if(availablePartituresPath != null && availablePartituresPath.length > 0){
+			partiture = PartitureReader.getPartiture(groupPath, availablePartituresPath[0], simulatedInstrument.getNickname());
+			
+			tutorial = new PartitureTutorial(partiture,1000);
+			tutorial.setOnNextSubElementListener(subelementListener);
+			tutorial.setOnPlayListener(onTutorialStartListener);
+			tutorial.setOnPauseListener(onTutorialPauseListener);
+			tutorial.setOnResumeListener(onTutorialResumeListener);
+			tutorial.setOnStopListener(onTutorialStopListener);
+			tutorialText.setText(tutorial.getRowSpannable(), TextView.BufferType.SPANNABLE);
+			tutorialTextHeader.setText(availablePartituresPath[0]+" ("+simulatedInstrument.getName()+")");
+			
+
+			bTutorialStart.setOnClickListener(startTutorialListener);
+			bTutorialPause.setOnClickListener(pauseTutorialListener);
+			bTutorialStop.setOnClickListener(stopTutorialListener);
+			bTutorialChoose.setOnClickListener(changeTutorialListener);
+		} else {
+			tutorialText.setText("Empty");
+			tutorialTextHeader.setText("No Partiture for this Instrument Group");
+			RelativeLayout partitureContent = (RelativeLayout) findViewById(R.id.partiture_player_content);
+			LinearLayout partitureHeader = (LinearLayout) findViewById(R.id.partiture_player_header);
+			
+			partitureContent.setVisibility(android.widget.RelativeLayout.INVISIBLE);
+			partitureHeader.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+		}
+	}
+	
+	private String getGroupPath(String nickname) {
+		if(nickname.equals("arumba") || nickname.equals("angklung")){
+			return PartitureReader.ANGKLUNG;
+		} else if(nickname.equals("bonang") || nickname.equals("saron")  || 
+				nickname.equals("kendang") || nickname.equals("gong") 
+				|| nickname.equals("kenong")  ) {
+			return PartitureReader.GAMELAN_JAWA;
+		} else {
+			return PartitureReader.GAMELAN_BALI;
+		}
+	}
+	
+
 	public void activateInstrumentsBackgroundMode(){
 		
 		Partiture[] partiture = new Partiture[1];
@@ -456,6 +533,9 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		if (RECORD_CONTROLLER.getRecordingState() != RecordController.STANDBY) {
 			recordStopListener.onClick(null);
 		}
+		
+		if(tutorial != null)
+			tutorial.stop();
 		super.onBackPressed();
 	}
 
@@ -639,6 +719,17 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		
 	};
 	
+	private OnClickListener changeTutorialListener = new OnClickListener(){
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			tutorial.stop();
+			showDialog(CHOOSE_PARTITURE_DIALOG);
+		}
+		
+	};
+	
 	private OnPartitureNextSubElementListener subelementListener = new OnPartitureNextSubElementListener() {
 		
 		@Override
@@ -646,11 +737,13 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 			// TODO Auto-generated method stub
 			int subelementValue = tutorial.getCurrentSubElementValue();
 			Log.d("Tutorial", "subvalue:"+subelementValue);
-			int[] highlightedIndexes = simulatedInstrument.getInstrumentIndexes(subelementValue);
+			int[] highlightedIndexes = (simulatedInstrument.getNickname().equals("bonang")) ? getBonangHighlightedIndexes(subelementValue) :simulatedInstrument.getInstrumentIndexes(subelementValue);
 			
 			for(int i = 0; i < insParts.length; i++){
-				if(isIn(highlightedIndexes, i))
+				if(isIn(highlightedIndexes, i)){
 					insParts[i].setColorFilter(0x99ff0000);
+					shakePlay(i);
+				}
 				else 
 					insParts[i].setColorFilter(Color.TRANSPARENT);
 			}
@@ -663,6 +756,35 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 					return true;
 			
 			return false;
+		}
+		
+		private int[] getBonangHighlightedIndexes(int key){
+			int[] highlightedIndexes = new int[2];
+			Arrays.fill(highlightedIndexes, -1);
+			switch(key){
+				case 1 : highlightedIndexes[0] = 8; highlightedIndexes[1] = 8;break;
+				case 10 : highlightedIndexes[0] = 5; highlightedIndexes[1] = 5;break;
+				case 11 : highlightedIndexes[0] = 5; highlightedIndexes[1] = 8;break;
+				case 2 : highlightedIndexes[0] = 9; highlightedIndexes[1] = 9;break;
+				case 20 : highlightedIndexes[0] = 4; highlightedIndexes[1] = 4;break;
+				case 22 : highlightedIndexes[0] = 4; highlightedIndexes[1] = 9;break;
+				case 3 : highlightedIndexes[0] = 10; highlightedIndexes[1] = 10;break;
+				case 30 : highlightedIndexes[0] = 3; highlightedIndexes[1] = 3;break;
+				case 33 : highlightedIndexes[0] = 3; highlightedIndexes[1] = 10;break;
+				case 4 : highlightedIndexes[0] = 13; highlightedIndexes[1] = 13;break;
+				case 40 : highlightedIndexes[0] = 0; highlightedIndexes[1] = 0;break;
+				case 44 : highlightedIndexes[0] = 0; highlightedIndexes[1] = 13;break;
+				case 5 : highlightedIndexes[0] = 11; highlightedIndexes[1] = 11;break;
+				case 50 : highlightedIndexes[0] = 2; highlightedIndexes[1] = 2;break;
+				case 55 : highlightedIndexes[0] = 2; highlightedIndexes[1] = 11;break;
+				case 6 : highlightedIndexes[0] = 12; highlightedIndexes[1] = 12;break;
+				case 60 : highlightedIndexes[0] = 1; highlightedIndexes[1] = 1;break;
+				case 66 : highlightedIndexes[0] = 1; highlightedIndexes[1] = 12;break;
+				case 7 : highlightedIndexes[0] = 7; highlightedIndexes[1] = 7;break;
+				case 70 : highlightedIndexes[0] = 6; highlightedIndexes[1] = 6;break;
+				case 77 : highlightedIndexes[0] = 6; highlightedIndexes[1] = 7;break;
+			}
+			return highlightedIndexes;
 		}
 	};
 
