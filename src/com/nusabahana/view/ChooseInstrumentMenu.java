@@ -79,8 +79,10 @@ public class ChooseInstrumentMenu extends NusabahanaView {
 			ImageView groupImage = new ImageView(this);
 			groupImage.setImageResource(imageID);
 			groupImage.setAdjustViewBounds(true);
-			groupImage.setMaxHeight(convertToPixels(60));
-			groupImage.setMaxHeight(convertToPixels(60));
+			/******/
+			//groupImage.setMaxHeight(convertToPixels(60));
+			//groupImage.setMaxHeight(convertToPixels(60));
+			/*****/
 			groupImage.setLayoutParams(imageLayout);
 			groupImage.setOnClickListener(new GroupClickListener(
 					instrumentGroups[i],i));
@@ -105,8 +107,8 @@ public class ChooseInstrumentMenu extends NusabahanaView {
 			
 			instrumentImage.setImageResource(instrumentImageID);
 			instrumentImage.setAdjustViewBounds(true);
-			instrumentImage.setMaxHeight(convertToPixels(50));
-			instrumentImage.setMaxHeight(convertToPixels(50));
+			//instrumentImage.setMaxHeight(convertToPixels(50));
+			//instrumentImage.setMaxHeight(convertToPixels(50));
 			instrumentImage.setLayoutParams(imageLayout);
 
 			instrumentImage.setOnClickListener(new InstrumentClickListener(

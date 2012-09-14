@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/gender" />
+
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@id/gender0"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/gender1"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@id/gender2"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@id/gender3"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@id/gender4"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@id/gender5"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+    
+   	<com.nusabahana.view.NoteImage
+        android:id="@+id/gender7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="31dp"
+        android:layout_toRightOf="@id/gender6"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+        
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="34dp"
+        android:layout_toRightOf="@id/gender7"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+            
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="37dp"
+        android:layout_toRightOf="@id/gender8"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+    
+   <com.nusabahana.view.NoteImage
+        android:id="@+id/gender10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/gender9"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+   
+      <com.nusabahana.view.NoteImage
+        android:id="@+id/gender11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="43dp"
+        android:layout_toRightOf="@id/gender10"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="46dp"
+        android:layout_toRightOf="@id/gender11"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+         
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/gender13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="49dp"
+        android:layout_toRightOf="@id/gender12"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gender" />
+      
+    <TextView
+        android:id="@+id/gender_text0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender0"
+        android:layout_alignRight="@id/gender0"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/gender_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender1"
+        android:layout_alignRight="@id/gender1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/gender_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender2"
+        android:layout_alignRight="@id/gender2"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="2" />
+
+    <TextView
+        android:id="@+id/gender_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender3"
+        android:layout_alignRight="@id/gender3"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="3" />
+
+    <TextView
+        android:id="@+id/gender_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender4"
+        android:layout_alignRight="@id/gender4"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="4" />
+
+    <TextView
+        android:id="@+id/gender_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender5"
+        android:layout_alignRight="@id/gender5"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="5" />
+    
+    <TextView
+        android:id="@+id/gender_text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender6"
+        android:layout_alignRight="@id/gender6"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="6" />
+    
+        <TextView
+        android:id="@+id/gender_text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender7"
+        android:layout_alignRight="@id/gender7"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="7" />
+        
+            <TextView
+        android:id="@+id/gender_text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender8"
+        android:layout_alignRight="@id/gender8"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="8" />
+            
+                <TextView
+        android:id="@+id/gender_text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender9"
+        android:layout_alignRight="@id/gender9"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="9" />
+                
+        <TextView
+        android:id="@+id/gender_text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender10"
+        android:layout_alignRight="@id/gender10"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="10" />
+                                
+         <TextView
+        android:id="@+id/gender_text11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender11"
+        android:layout_alignRight="@id/gender11"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="11" />
+         
+                  <TextView
+        android:id="@+id/gender_text12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender12"
+        android:layout_alignRight="@id/gender12"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="12" />
+                  
+        <TextView
+        android:id="@+id/gender_text13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/gender13"
+        android:layout_alignRight="@id/gender13"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="13" />                              
+                                
+                
+</RelativeLayout>
