@@ -65,10 +65,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:layout_toRightOf="@id/gong4"
+        android:layout_below="@id/gong3"
         android:adjustViewBounds="true"
-        android:maxHeight="120dp"
-        android:maxWidth="120dp"
+        android:maxHeight="160dp"
+        android:maxWidth="160dp"
         android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
@@ -76,6 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/gong3"
+        android:layout_toRightOf="@id/gong5"
         android:layout_margin="5dp"
         android:adjustViewBounds="true"
         android:maxHeight="200dp"

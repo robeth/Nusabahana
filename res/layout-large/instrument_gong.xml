@@ -5,82 +5,90 @@
     android:layout_gravity="center" >
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/saron0"
+        android:id="@+id/gong0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="9dp"
+        android:layout_margin="5dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/saron" />
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/saron1"
+        android:id="@+id/gong1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/saron0"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/gong0"
         android:adjustViewBounds="true"
-        android:src="@drawable/saron" />
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/saron2"
+        android:id="@+id/gong2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="11dp"
-        android:layout_toRightOf="@id/saron1"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/gong1"
         android:adjustViewBounds="true"
-        android:src="@drawable/saron" />
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/saron3"
+        android:id="@+id/gong3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="12dp"
-        android:layout_toRightOf="@id/saron2"
+        android:layout_height="wrap_content"  
+        android:layout_toRightOf="@id/gong2"
+        android:layout_margin="5dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/saron" />
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/saron4"
+        android:id="@+id/gong4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="13dp"
-        android:layout_toRightOf="@id/saron3"
+        android:layout_toRightOf="@id/gong3"
+        android:layout_margin="5dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/saron" />
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/saron5"
+        android:id="@+id/gong5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="14dp"
-        android:layout_toRightOf="@id/saron4"
+        android:layout_margin="5dp"
+        android:layout_below="@id/gong3"
         android:adjustViewBounds="true"
-        android:src="@drawable/saron" />
+        android:maxHeight="120dp"
+        android:maxWidth="120dp"
+        android:src="@drawable/gong" />
 
     <com.nusabahana.view.NoteImage
-        android:id="@+id/saron6"
+        android:id="@+id/gong6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_toRightOf="@id/saron5"
+        android:layout_below="@id/gong3"
+        android:layout_toRightOf="@id/gong5"
+        android:layout_margin="5dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/saron" />
+        android:maxHeight="160dp"
+        android:maxWidth="160dp"
+        android:src="@drawable/gong" />
 
     <TextView
-        android:id="@+id/saron_text0"
+        android:id="@+id/gong_text0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/saron0"
-        android:layout_alignRight="@id/saron0"
+        android:layout_alignBottom="@id/gong0"
+        android:layout_alignRight="@id/gong0"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/toast_frame"
@@ -88,11 +96,11 @@
         android:text="0" />
 
     <TextView
-        android:id="@+id/saron_text1"
+        android:id="@+id/gong_text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/saron1"
-        android:layout_alignRight="@id/saron1"
+        android:layout_alignBottom="@id/gong1"
+        android:layout_alignRight="@id/gong1"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/toast_frame"
@@ -100,11 +108,11 @@
         android:text="1" />
 
     <TextView
-        android:id="@+id/saron_text2"
+        android:id="@+id/gong_text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/saron2"
-        android:layout_alignRight="@id/saron2"
+        android:layout_alignBottom="@id/gong2"
+        android:layout_alignRight="@id/gong2"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/toast_frame"
@@ -112,11 +120,11 @@
         android:text="2" />
 
     <TextView
-        android:id="@+id/saron_text3"
+        android:id="@+id/gong_text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/saron3"
-        android:layout_alignRight="@id/saron3"
+        android:layout_alignBottom="@id/gong3"
+        android:layout_alignRight="@id/gong3"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/toast_frame"
@@ -124,11 +132,11 @@
         android:text="3" />
 
     <TextView
-        android:id="@+id/saron_text4"
+        android:id="@+id/gong_text4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/saron4"
-        android:layout_alignRight="@id/saron4"
+        android:layout_alignBottom="@id/gong4"
+        android:layout_alignRight="@id/gong4"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/toast_frame"
@@ -136,26 +144,27 @@
         android:text="4" />
 
     <TextView
-        android:id="@+id/saron_text5"
+        android:id="@+id/gong_text5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/saron5"
-        android:layout_alignRight="@id/saron5"
+        android:layout_alignBottom="@id/gong5"
+        android:layout_alignRight="@id/gong5"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="5" />
-    
+
     <TextView
-        android:id="@+id/saron_text6"
+        android:id="@+id/gong_text6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/saron6"
-        android:layout_alignRight="@id/saron6"
+        android:layout_alignBottom="@id/gong6"
+        android:layout_alignRight="@id/gong6"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="6" />
+
 </RelativeLayout>
