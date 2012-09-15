@@ -17,8 +17,6 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
-            android:maxHeight="120dp"
-            android:maxWidth="120dp"
             android:src="@drawable/kenong" />
 
         <com.nusabahana.view.NoteImage
@@ -29,8 +27,6 @@
             android:layout_toRightOf="@id/kenong2"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
-            android:maxHeight="120dp"
-            android:maxWidth="120dp"
             android:src="@drawable/kenong" />
 
         <TextView
@@ -70,9 +66,8 @@
             android:layout_alignLeft="@id/rl_lower"
             android:adjustViewBounds="true"
             android:layout_marginBottom="5dp"
-            android:maxHeight="120dp"
-            android:maxWidth="120dp"
-            android:src="@drawable/kenong" android:layout_marginRight="140dp"/>
+            android:src="@drawable/kenong" 
+            android:layout_marginRight="140dp"/>
 
         <com.nusabahana.view.NoteImage
             android:id="@+id/kenong4"
@@ -81,8 +76,6 @@
             android:layout_toRightOf="@id/kenong1"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
-            android:maxHeight="120dp"
-            android:maxWidth="120dp"
             android:src="@drawable/kenong" />
 
         <com.nusabahana.view.NoteImage
@@ -93,8 +86,6 @@
             android:layout_below="@id/kenong1"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
-            android:maxHeight="120dp"
-            android:maxWidth="120dp"
             android:src="@drawable/kenong" />
 
         <com.nusabahana.view.NoteImage
@@ -105,10 +96,8 @@
             android:layout_below="@id/kenong4"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
-            android:maxHeight="120dp"
-            android:maxWidth="120dp"
             android:src="@drawable/kenong" />
-
+        
         <TextView
             android:id="@+id/kenong_text0"
             android:layout_width="wrap_content"
@@ -157,5 +146,14 @@
             android:gravity="center_horizontal"
             android:text="5" />
     </RelativeLayout>
+
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/kethuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:maxHeight="120dp"
+        android:maxWidth="120dp"
+        android:src="@drawable/bonang" />
 
 </LinearLayout>
