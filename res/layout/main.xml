@@ -12,7 +12,6 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/nusabahana" />
     
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

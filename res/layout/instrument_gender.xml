@@ -11,7 +11,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="10dp"
         android:src="@drawable/gender" />
 
 
@@ -20,7 +19,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="13dp"
         android:layout_toRightOf="@id/gender0"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -30,7 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="16dp"
         android:layout_toRightOf="@id/gender1"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -40,7 +37,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="19dp"
         android:layout_toRightOf="@id/gender2"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -50,7 +46,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="22dp"
         android:layout_toRightOf="@id/gender3"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -60,7 +55,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="25dp"
         android:layout_toRightOf="@id/gender4"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -70,7 +64,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="28dp"
         android:layout_toRightOf="@id/gender5"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -80,7 +73,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="31dp"
         android:layout_toRightOf="@id/gender6"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -90,7 +82,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="34dp"
         android:layout_toRightOf="@id/gender7"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -100,7 +91,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="37dp"
         android:layout_toRightOf="@id/gender8"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -110,7 +100,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="40dp"
         android:layout_toRightOf="@id/gender9"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -120,7 +109,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="43dp"
         android:layout_toRightOf="@id/gender10"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -130,7 +118,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="46dp"
         android:layout_toRightOf="@id/gender11"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />
@@ -140,7 +127,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="1dp"
-        android:layout_marginTop="49dp"
         android:layout_toRightOf="@id/gender12"
         android:adjustViewBounds="true"
         android:src="@drawable/gender" />

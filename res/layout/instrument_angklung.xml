@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -10,7 +11,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="5dp"
         android:layout_marginRight="4dp"
         android:adjustViewBounds="true"
         android:src="@drawable/angklung" />
@@ -20,18 +20,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="3dp"
-        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@id/angklung0"
         android:layout_toRightOf="@id/angklung0"
         android:adjustViewBounds="true"
-        android:src="@drawable/angklung" />
+        android:src="@drawable/angklunghalf" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/angklung2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="3dp"
-        android:layout_marginTop="15dp"
         android:layout_toRightOf="@id/angklung1"
+        android:layout_alignBottom="@id/angklung0"
         android:adjustViewBounds="true"
         android:src="@drawable/angklung" />
 
@@ -40,20 +40,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="3dp"
-        android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/angklung2"
+        android:layout_alignBottom="@id/angklung0"
         android:adjustViewBounds="true"
-        android:src="@drawable/angklung" />
+        android:src="@drawable/angklunghalf" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/angklung4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/angklung0"
-        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/angklung3"
+        android:layout_alignBottom="@id/angklung0"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp"
         android:adjustViewBounds="true"
         android:src="@drawable/angklung" />
     
@@ -62,9 +60,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="15dp"
+        android:layout_alignBottom="@id/angklung0"
         android:layout_toRightOf="@id/angklung4"
-        android:layout_below="@id/angklung1"
         android:adjustViewBounds="true"
         android:src="@drawable/angklung" />
 
@@ -72,21 +69,63 @@
         android:id="@+id/angklung6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/angklung2"
-       	android:layout_toRightOf="@id/angklung5"
+        android:layout_below="@id/angklung0"
+        android:layout_alignLeft="@id/angklung0"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="20dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/angklung" />
+        android:src="@drawable/angklunghalf" />
                 
      <com.nusabahana.view.NoteImage
         android:id="@+id/angklung7"
        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/angklung6"
+        android:layout_below="@id/angklung1"
+        android:layout_marginRight="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+     
+     <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/angklung7"
+        android:layout_below="@id/angklung2"
+        android:layout_alignBottom="@id/angklung7"
+        android:layout_marginRight="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklunghalf" />
+     
+     <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/angklung8"
+        android:layout_alignBottom="@id/angklung7"
         android:layout_below="@id/angklung3"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklung" />
+     
+     <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung10"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/angklung9"
+        android:layout_alignBottom="@id/angklung7"
+        android:layout_below="@id/angklung4"
+        android:layout_marginRight="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/angklunghalf" />
+     
+     <com.nusabahana.view.NoteImage
+        android:id="@+id/angklung11"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/angklung10"
+        android:layout_alignBottom="@id/angklung7"
+        android:layout_below="@id/angklung5"
+        android:layout_marginRight="5dp"
         android:adjustViewBounds="true"
         android:src="@drawable/angklung" />
 

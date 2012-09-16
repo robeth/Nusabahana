@@ -10,24 +10,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="10dp"
         android:src="@drawable/arumba" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/arumba1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba0"
-        android:src="@drawable/arumba" />
+        android:src="@drawable/arumbahalf" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/arumba2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba1"
         android:src="@drawable/arumba" />
 
@@ -35,17 +33,15 @@
         android:id="@+id/arumba3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba2"
-        android:src="@drawable/arumba" />
+        android:src="@drawable/arumbahalf" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/arumba4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba3"
         android:src="@drawable/arumba" />
 
@@ -53,8 +49,7 @@
         android:id="@+id/arumba5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba4"
         android:src="@drawable/arumba" />
 
@@ -62,17 +57,15 @@
         android:id="@+id/arumba6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba5"
-        android:src="@drawable/arumba" />
+        android:src="@drawable/arumbahalf" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/arumba7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba6"
         android:src="@drawable/arumba" />
 
@@ -80,17 +73,15 @@
         android:id="@+id/arumba8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba7"
-        android:src="@drawable/arumba" />
+        android:src="@drawable/arumbahalf" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/arumba9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba8"
         android:src="@drawable/arumba" />
 
@@ -98,100 +89,18 @@
         android:id="@+id/arumba10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba9"
-        android:src="@drawable/arumba" />
+        android:src="@drawable/arumbahalf" />
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/arumba11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/arumba10"
         android:src="@drawable/arumba" />
-
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/arumba12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/arumba0"
-        android:layout_marginRight="5dp"
-        
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/arumba1"
-        android:src="@drawable/arumba" />
-
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/arumba13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/arumba0"
-       android:layout_marginTop="7dp"
-        android:layout_marginRight="5dp"
-        android:layout_toRightOf="@id/arumba12"
-        android:src="@drawable/arumba" />
-
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/arumba14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/arumba0"
-        android:layout_marginTop="9dp"
-        android:layout_marginRight="5dp"
-        android:layout_toRightOf="@id/arumba13"
-        android:src="@drawable/arumba" />
-
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/arumba15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/arumba0"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="11dp"
-        android:layout_toRightOf="@id/arumba14"
-        android:src="@drawable/arumba" />
-
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/arumba16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/arumba0"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="13dp"
-        android:layout_toRightOf="@id/arumba15"
-        android:src="@drawable/arumba" />
-
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/arumba17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/arumba0"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="5dp"
-        android:layout_toRightOf="@id/arumba16"
-        android:src="@drawable/arumba" />
-
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/arumba18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/arumba0"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="17dp"
-        android:layout_toRightOf="@id/arumba17"
-        android:src="@drawable/arumba" />
-
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/arumba19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/arumba0"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="19dp"
-        android:layout_toRightOf="@id/arumba18"
-        android:src="@drawable/arumba" />
+   
 
     <TextView
         android:id="@+id/arumba_text0"
@@ -336,101 +245,5 @@
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="11" />
-
-    <TextView
-        android:id="@+id/arumba_text12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/arumba12"
-        android:layout_alignRight="@id/arumba12"
-        android:layout_marginBottom="6dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/toast_frame"
-        android:gravity="center_horizontal"
-        android:text="12" />
-
-    <TextView
-        android:id="@+id/arumba_text13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/arumba13"
-        android:layout_alignRight="@id/arumba13"
-        android:layout_marginBottom="6dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/toast_frame"
-        android:gravity="center_horizontal"
-        android:text="13" />
-
-    <TextView
-        android:id="@+id/arumba_text14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/arumba14"
-        android:layout_alignRight="@id/arumba14"
-        android:layout_marginBottom="6dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/toast_frame"
-        android:gravity="center_horizontal"
-        android:text="14" />
-
-    <TextView
-        android:id="@+id/arumba_text15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/arumba15"
-        android:layout_alignRight="@id/arumba15"
-        android:layout_marginBottom="6dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/toast_frame"
-        android:gravity="center_horizontal"
-        android:text="15" />
-
-    <TextView
-        android:id="@+id/arumba_text16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/arumba16"
-        android:layout_alignRight="@id/arumba16"
-        android:layout_marginBottom="6dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/toast_frame"
-        android:gravity="center_horizontal"
-        android:text="16" />
-
-    <TextView
-        android:id="@+id/arumba_text17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/arumba17"
-        android:layout_alignRight="@id/arumba17"
-        android:layout_marginBottom="6dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/toast_frame"
-        android:gravity="center_horizontal"
-        android:text="17" />
-
-    <TextView
-        android:id="@+id/arumba_text18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/arumba18"
-        android:layout_alignRight="@id/arumba18"
-        android:layout_marginBottom="6dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/toast_frame"
-        android:gravity="center_horizontal"
-        android:text="18" />
-
-    <TextView
-        android:id="@+id/arumba_text19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/arumba19"
-        android:layout_alignRight="@id/arumba19"
-        android:layout_marginBottom="6dp"
-        android:layout_marginRight="6dp"
-        android:background="@drawable/toast_frame"
-        android:gravity="center_horizontal"
-        android:text="19" />
 
 </RelativeLayout>
