@@ -1,6 +1,5 @@
 package com.nusabahana.view;
 
-import java.security.MessageDigest;
 import java.util.Arrays;
 
 import android.app.Activity;
@@ -16,10 +15,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
@@ -27,15 +24,13 @@ import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nusabahana.controller.BackgroundMusicController;
-import com.nusabahana.controller.InstrumentController;
-import com.nusabahana.controller.RecordController;
 import com.nusabahana.controller.BackgroundMusicController.OnBackgroundMusicStartListener;
+import com.nusabahana.controller.RecordController;
 import com.nusabahana.controller.RecordController.OnRecordStartPlayingListener;
 import com.nusabahana.model.Instrument;
 import com.nusabahana.partiture.Element;
@@ -51,8 +46,6 @@ import com.nusabahana.partiture.PartitureTutorial.OnStopListener;
 import com.nusabahana.partiture.Row;
 import com.nusabahana.partiture.Segment;
 import com.nusabahana.partiture.SubElement;
-import com.nusabahana.partiture.PartitureTutorial.OnPartitureHasNextAction;
-import com.nusabahana.view.R;
 
 /**
  * Kelas yang merupakan view dari fitur simulasi alat musik. Implementasi fitur

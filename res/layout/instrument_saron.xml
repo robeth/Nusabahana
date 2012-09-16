@@ -13,8 +13,6 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="9dp"
         android:adjustViewBounds="true"
-        android:maxHeight="180dp"
-        android:maxWidth="50dp"
         android:src="@drawable/saron" />
 
     <com.nusabahana.view.NoteImage
@@ -25,8 +23,6 @@
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/saron0"
         android:adjustViewBounds="true"
-        android:maxHeight="178dp"
-        android:maxWidth="50dp"
         android:src="@drawable/saron" />
 
     <com.nusabahana.view.NoteImage
@@ -37,8 +33,6 @@
         android:layout_marginTop="11dp"
         android:layout_toRightOf="@id/saron1"
         android:adjustViewBounds="true"
-        android:maxHeight="176dp"
-        android:maxWidth="50dp"
         android:src="@drawable/saron" />
 
     <com.nusabahana.view.NoteImage
@@ -49,8 +43,6 @@
         android:layout_marginTop="12dp"
         android:layout_toRightOf="@id/saron2"
         android:adjustViewBounds="true"
-        android:maxHeight="174dp"
-        android:maxWidth="50dp"
         android:src="@drawable/saron" />
 
     <com.nusabahana.view.NoteImage
@@ -61,8 +53,6 @@
         android:layout_marginTop="13dp"
         android:layout_toRightOf="@id/saron3"
         android:adjustViewBounds="true"
-        android:maxHeight="172dp"
-        android:maxWidth="50dp"
         android:src="@drawable/saron" />
 
     <com.nusabahana.view.NoteImage
@@ -73,8 +63,6 @@
         android:layout_marginTop="14dp"
         android:layout_toRightOf="@id/saron4"
         android:adjustViewBounds="true"
-        android:maxHeight="170dp"
-        android:maxWidth="50dp"
         android:src="@drawable/saron" />
 
     <com.nusabahana.view.NoteImage
@@ -85,8 +73,6 @@
         android:layout_marginTop="15dp"
         android:layout_toRightOf="@id/saron5"
         android:adjustViewBounds="true"
-        android:maxHeight="168dp"
-        android:maxWidth="50dp"
         android:src="@drawable/saron" />
 
     <TextView

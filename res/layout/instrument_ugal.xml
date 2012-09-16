@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center">
+    android:layout_gravity="center" >
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/ugal0"
@@ -11,23 +11,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
         android:adjustViewBounds="true"
-        android:maxHeight="160dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
-
 
     <com.nusabahana.view.NoteImage
         android:id="@+id/ugal1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="13dp"
         android:layout_toRightOf="@id/ugal0"
         android:adjustViewBounds="true"
-        android:maxHeight="155dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
 
     <com.nusabahana.view.NoteImage
@@ -35,11 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="16dp"
         android:layout_toRightOf="@id/ugal1"
         android:adjustViewBounds="true"
-        android:maxHeight="150dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
 
     <com.nusabahana.view.NoteImage
@@ -47,11 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="19dp"
         android:layout_toRightOf="@id/ugal2"
         android:adjustViewBounds="true"
-        android:maxHeight="145dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
 
     <com.nusabahana.view.NoteImage
@@ -59,11 +46,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="22dp"
         android:layout_toRightOf="@id/ugal3"
         android:adjustViewBounds="true"
-        android:maxHeight="140dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
 
     <com.nusabahana.view.NoteImage
@@ -71,11 +55,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="25dp"
         android:layout_toRightOf="@id/ugal4"
         android:adjustViewBounds="true"
-        android:maxHeight="135dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
 
     <com.nusabahana.view.NoteImage
@@ -83,47 +64,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="28dp"
         android:layout_toRightOf="@id/ugal5"
         android:adjustViewBounds="true"
-        android:maxHeight="130dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
-    
-   	<com.nusabahana.view.NoteImage
+
+    <com.nusabahana.view.NoteImage
         android:id="@+id/ugal7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="31dp"
         android:layout_toRightOf="@id/ugal6"
         android:adjustViewBounds="true"
-        android:maxHeight="125dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
-        
+
     <com.nusabahana.view.NoteImage
         android:id="@+id/ugal8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="34dp"
         android:layout_toRightOf="@id/ugal7"
         android:adjustViewBounds="true"
-        android:maxHeight="120dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
-            
-                <com.nusabahana.view.NoteImage
+
+    <com.nusabahana.view.NoteImage
         android:id="@+id/ugal9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="37dp"
         android:layout_toRightOf="@id/ugal8"
         android:adjustViewBounds="true"
-        android:maxHeight="115dp"
-        android:maxWidth="50dp"
         android:src="@drawable/ugal" />
 
     <TextView
@@ -197,20 +166,19 @@
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="5" />
-    
+
     <TextView
         android:id="@+id/ugal_text6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/ugal6"
         android:layout_alignRight="@id/ugal6"
-        android:layout_marginBottom="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="6" />
-    
-        <TextView
+
+    <TextView
         android:id="@+id/ugal_text7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -221,8 +189,8 @@
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="7" />
-        
-            <TextView
+
+    <TextView
         android:id="@+id/ugal_text8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -233,8 +201,8 @@
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="8" />
-            
-                <TextView
+
+    <TextView
         android:id="@+id/ugal_text9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -245,4 +213,5 @@
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="9" />
+
 </RelativeLayout>

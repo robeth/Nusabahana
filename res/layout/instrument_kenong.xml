@@ -3,159 +3,163 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:orientation="vertical" >
+    android:orientation="horizontal" >
 
-    <RelativeLayout
-        android:id="@+id/rl_uppper"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
-
-        <com.nusabahana.view.NoteImage
-            android:id="@+id/kenong2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:layout_margin="5dp"
-            android:maxHeight="60dp"
-            android:maxWidth="60dp"
-            android:src="@drawable/kenong" />
-
-        <com.nusabahana.view.NoteImage
-            android:id="@+id/kenong3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/kenong2"
-            android:layout_toRightOf="@id/kenong2"
-            android:adjustViewBounds="true"
-           android:layout_margin="5dp"
-            android:maxHeight="60dp"
-            android:maxWidth="60dp"
-            android:src="@drawable/kenong" />
-
-        <TextView
-            android:id="@+id/kenong_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/kenong2"
-            android:layout_alignRight="@id/kenong2"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/toast_frame"
-            android:gravity="center_horizontal"
-            android:text="2" />
-
-        <TextView
-            android:id="@+id/kenong_text3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/kenong3"
-            android:layout_alignRight="@id/kenong3"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/toast_frame"
-            android:gravity="center_horizontal"
-            android:text="3" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rl_lower"
+    <com.nusabahana.view.NoteImage
+        android:id="@+id/kethuk"
+        android:layout_gravity="bottom"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:maxHeight="120dp"
+        android:maxWidth="120dp"
+        android:src="@drawable/bonang" />
 
-        <com.nusabahana.view.NoteImage
-            android:id="@+id/kenong1"
-            android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_uppper"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/rl_lower"
-            android:adjustViewBounds="true"
-            android:layout_marginBottom="5dp"
-            android:maxHeight="60dp"
-            android:maxWidth="60dp"
-            android:src="@drawable/kenong" android:layout_marginRight="140dp"/>
+            android:gravity="center" >
 
-        <com.nusabahana.view.NoteImage
-            android:id="@+id/kenong4"
+            <com.nusabahana.view.NoteImage
+                android:id="@+id/kenong2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/kenong" />
+
+            <com.nusabahana.view.NoteImage
+                android:id="@+id/kenong3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/kenong2"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/kenong2"
+                android:adjustViewBounds="true"
+                android:src="@drawable/kenong" />
+
+            <TextView
+                android:id="@+id/kenong_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/kenong2"
+                android:layout_alignRight="@id/kenong2"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/toast_frame"
+                android:gravity="center_horizontal"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/kenong_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/kenong3"
+                android:layout_alignRight="@id/kenong3"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/toast_frame"
+                android:gravity="center_horizontal"
+                android:text="3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_lower"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/kenong1"
-            android:adjustViewBounds="true"
-            android:layout_margin="5dp"
-            android:maxHeight="60dp"
-            android:maxWidth="60dp"
-            android:src="@drawable/kenong" />
+            android:layout_height="wrap_content" >
 
-        <com.nusabahana.view.NoteImage
-            android:id="@+id/kenong0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/kenong1"
-            android:layout_below="@id/kenong1"
-            android:adjustViewBounds="true"
-            android:layout_margin="5dp"
-            android:maxHeight="60dp"
-            android:maxWidth="60dp"
-            android:src="@drawable/kenong" />
+            <com.nusabahana.view.NoteImage
+                android:id="@+id/kenong1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="140dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/kenong" />
 
-        <com.nusabahana.view.NoteImage
-            android:id="@+id/kenong5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@id/kenong4"
-            android:layout_below="@id/kenong4"
-            android:adjustViewBounds="true"
-            android:layout_margin="5dp"
-            android:maxHeight="60dp"
-            android:maxWidth="60dp"
-            android:src="@drawable/kenong" />
+            <com.nusabahana.view.NoteImage
+                android:id="@+id/kenong4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/kenong1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/kenong" />
 
-        <TextView
-            android:id="@+id/kenong_text0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/kenong0"
-            android:layout_alignRight="@id/kenong0"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/toast_frame"
-            android:gravity="center_horizontal"
-            android:text="0" />
+            <com.nusabahana.view.NoteImage
+                android:id="@+id/kenong0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/kenong1"
+                android:layout_below="@id/kenong1"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/kenong" />
 
-        <TextView
-            android:id="@+id/kenong_text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/kenong1"
-            android:layout_alignRight="@id/kenong1"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/toast_frame"
-            android:gravity="center_horizontal"
-            android:text="1" />
+            <com.nusabahana.view.NoteImage
+                android:id="@+id/kenong5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/kenong4"
+                android:layout_below="@id/kenong4"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/kenong" />
 
-        <TextView
-            android:id="@+id/kenong_text4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/kenong4"
-            android:layout_alignRight="@id/kenong4"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/toast_frame"
-            android:gravity="center_horizontal"
-            android:text="4" />
+            <TextView
+                android:id="@+id/kenong_text0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/kenong0"
+                android:layout_alignRight="@id/kenong0"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/toast_frame"
+                android:gravity="center_horizontal"
+                android:text="0" />
 
-        <TextView
-            android:id="@+id/kenong_text5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/kenong5"
-            android:layout_alignRight="@id/kenong5"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/toast_frame"
-            android:gravity="center_horizontal"
-            android:text="5" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/kenong_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/kenong1"
+                android:layout_alignRight="@id/kenong1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/toast_frame"
+                android:gravity="center_horizontal"
+                android:text="1" />
 
+            <TextView
+                android:id="@+id/kenong_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/kenong4"
+                android:layout_alignRight="@id/kenong4"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/toast_frame"
+                android:gravity="center_horizontal"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/kenong_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/kenong5"
+                android:layout_alignRight="@id/kenong5"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/toast_frame"
+                android:gravity="center_horizontal"
+                android:text="5" />
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>
