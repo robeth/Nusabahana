@@ -112,6 +112,7 @@ public class PartitureTutorial {
 	}
 
 	public void nextRow() {
+		Log.d("HOHO", "On new Row"+currentRow);
 		currentRow++;
 		currentSegment = -1;
 		nextSegment();
@@ -120,6 +121,7 @@ public class PartitureTutorial {
 	}
 
 	public void nextSegment() {
+		Log.d("HOHO", "On new segment"+currentSegment);
 		currentSegment++;
 		currentElement = -1;
 		nextElement();
@@ -128,6 +130,7 @@ public class PartitureTutorial {
 	}
 
 	public void nextElement() {
+		Log.d("HOHO", "On new element"+currentElement);
 		currentElement++;
 		currentSubElement = -1;
 		nextSubElement();
@@ -136,6 +139,7 @@ public class PartitureTutorial {
 	}
 
 	public void nextSubElement() {
+		Log.d("HOHO", "On new subelement"+currentSubElement);
 		currentSubElement++;
 		if (onNextSubElementListener != null)
 			onNextSubElementListener.onNextSubElement();
@@ -332,8 +336,9 @@ public class PartitureTutorial {
 		
 		for (int i = 0; i < printedRow.getNumSegments(); i++) {
 			int totalSegments = printedRow.getNumSegments();
-			for (int j = 0; j < printedRow.getSegments()[currentSegment] .getNumElements(); j++) {
+			for (int j = 0; j < printedRow.getSegments()[currentSegment].getNumElements(); j++) {
 				int totalSubElements = printedRow.getSegments()[i].getElements()[j].getNumSubElements();
+				Log.d("TEST", "total subelements:"+totalSegments);
 				if (totalSubElements > 1) sb.append("<u>");
 				for (int l = 0; l < totalSubElements; l++) {
 					if (i == currentSegment && j == currentElement && l == currentSubElement) {

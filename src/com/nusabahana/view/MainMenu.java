@@ -43,6 +43,7 @@ public class MainMenu extends Activity {
 		ImageView galleryImage = (ImageView) findViewById(R.id.gallery);
 		ImageView aboutImage = (ImageView) findViewById(R.id.aboutImage);
 		
+		
 		playImage.setOnClickListener(playListener);
 		galleryImage.setOnClickListener(galleryListener);
 		aboutImage.setOnClickListener(aboutListener);
