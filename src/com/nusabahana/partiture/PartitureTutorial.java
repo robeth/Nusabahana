@@ -336,9 +336,10 @@ public class PartitureTutorial {
 		
 		for (int i = 0; i < printedRow.getNumSegments(); i++) {
 			int totalSegments = printedRow.getNumSegments();
+			Log.d("TEST", "total element("+i+"):"+printedRow.getSegments()[currentSegment].getNumElements());
 			for (int j = 0; j < printedRow.getSegments()[currentSegment].getNumElements(); j++) {
 				int totalSubElements = printedRow.getSegments()[i].getElements()[j].getNumSubElements();
-				Log.d("TEST", "total subelements:"+totalSegments);
+				Log.d("TEST", "total subelements:"+totalSubElements);
 				if (totalSubElements > 1) sb.append("<u>");
 				for (int l = 0; l < totalSubElements; l++) {
 					if (i == currentSegment && j == currentElement && l == currentSubElement) {
