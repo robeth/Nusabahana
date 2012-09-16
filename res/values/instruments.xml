@@ -35,20 +35,20 @@
         <item>Gamelan Jawa</item>
         <item>The bonang is  a collection of small gongs placed horizontally onto strings in a wooden frame (rancak), either one or two rows wide. They are typically hit with padded sticks (tabuh).</item>
         <item>bonanglogo.png</item>
-        <item >0,bonang4a.ogg,4a</item>
-        <item >1,bonang6a.ogg,6a</item>
-        <item >2,bonang5a.ogg,5a</item>
-        <item >3,bonang3a.ogg,3a</item>
-        <item >4,bonang2a.ogg,2a</item>
-        <item >5,bonang1a.ogg,1a</item>
-        <item >6,bonang7a.ogg,7a</item>
-        <item >7,bonang7b.ogg,7b</item>
-        <item >8,bonang1b.ogg,1b</item>
-        <item >9,bonang2b.ogg,2b</item>
-        <item >10,bonang3b.ogg,3b</item>
-        <item >11,bonang5b.ogg,5b</item>
-        <item >12,bonang6b.ogg,6b</item>
-        <item >13,bonang4b.ogg,4b</item>
+        <item >0,bonang4a.ogg,4a,4</item>
+        <item >1,bonang6a.ogg,6a,6</item>
+        <item >2,bonang5a.ogg,5a,5</item>
+        <item >3,bonang3a.ogg,3a,3</item>
+        <item >4,bonang2a.ogg,2a,2</item>
+        <item >5,bonang1a.ogg,1a,1</item>
+        <item >6,bonang7a.ogg,7a,7</item>
+        <item >7,bonang7b.ogg,7b,7</item>
+        <item >8,bonang1b.ogg,1b,1</item>
+        <item >9,bonang2b.ogg,2b,2</item>
+        <item >10,bonang3b.ogg,3b,3</item>
+        <item >11,bonang5b.ogg,5b,5</item>
+        <item >12,bonang6b.ogg,6b,6</item>
+        <item >13,bonang4b.ogg,4b,4</item>
         
     </string-array>
     
@@ -59,15 +59,13 @@
         <item>Gamelan Jawa</item>
          <item>Hanging gongs, consisting of gong ageng, and kempul (medium-size). Ageng Gong, is the largest gong in the gamelan of Java and its considered the most important instrument in a gamelan ensemble. Both of them are often played by the same player with the same mallets.</item>
         <item>gonglogo.png</item>
-        <item >0,gong1.ogg,1</item>
-        <item >1,gong2.ogg,2</item>
-        <item >2,gong3.ogg,3</item>
-        <item >3,gong5.ogg,5</item>
-        <item >4,gong6.ogg,6</item>
-        <item >5,gong7.ogg,7</item>
-        <item >6,gong1ageng.ogg,1ageng</item>
-        <item >7,gong5ageng.ogg,5ageng</item>
-        <item >8,gong6ageng.ogg,6ageng</item>
+        <item >0,gong1.ogg,1,1</item>
+        <item >1,gong2.ogg,2,2</item>
+        <item >2,gong3.ogg,3,3</item>
+        <item >3,gong5.ogg,5,5</item>
+        <item >4,gong6.ogg,6,6</item>
+        <item >5,gong7.ogg,7,7</item>
+        <item >6,gong1ageng.ogg,1ageng,8</item>
     </string-array>
     
     <string-array name="kendang">
@@ -77,9 +75,9 @@
         <item>Gamelan Jawa</item>
         <item>Kendang is the Central Javanese gamelan instruments in which one of its main functions to set the rhythm. This instrument was rung by hand, without extra tools.</item>
         <item>kendanglogo.png</item>
-        <item >0,kendang1tak.ogg,1tak</item>
-        <item >1,kendang3tung.ogg,2tung</item>
-        <item >2,kendang2deng.ogg,3deng</item>
+        <item >0,kendang1tak.ogg,1tak,1</item>
+        <item >1,kendang3tung.ogg,2tung,2</item>
+        <item >2,kendang2deng.ogg,3deng,3</item>
     </string-array>
     
     <string-array name="kenong">
@@ -89,12 +87,12 @@
         <item>Gamelan Jawa</item>
          <item>Kenong is technically a kind of gong, but is placed on its side and is roughly as tall as it is wide. hey are usually played with similar padded sticks to the bonang, except larger.  </item>
          <item>kenonglogo.png</item>
-        <item>0,kenong1.ogg,1</item>
-        <item>1,kenong2.ogg,2</item>
-        <item>2,kenong3.ogg,3</item>
-        <item>3,kenong5.ogg,5</item>
-        <item>4,kenong6.ogg,6</item>
-        <item>5,kenong7.ogg,7</item>
+        <item>0,kenong1.ogg,1,1</item>
+        <item>1,kenong2.ogg,2,2</item>
+        <item>2,kenong3.ogg,3,3</item>
+        <item>3,kenong5.ogg,5,5</item>
+        <item>4,kenong6.ogg,6,6</item>
+        <item>5,kenong7.ogg,7,7</item>
     </string-array>
     
     <string-array name="saron">
@@ -104,13 +102,13 @@
         <item>Gamelan Jawa</item>
 		<item>Saron, is one of the gamelan instruments including balungan family. Tabuh saron usually made of wood, with a shape like a hammer. In the play saron, right hand hit wilahan / sheet metal with percussion, then the left hand punch that knocked wilahan previously.</item>
         <item>saronlogo.png</item>
-        <item>0,sarondemung1.ogg,1</item>
-        <item>1,sarondemung2.ogg,2</item>
-        <item>2,sarondemung3.ogg,3</item>
-        <item>3,sarondemung4.ogg,4</item>
-        <item>4,sarondemung5.ogg,5</item>
-        <item>5,sarondemung6.ogg,6</item>
-        <item>6,sarondemung7.ogg,7</item>
+        <item>0,sarondemung1.ogg,1,1</item>
+        <item>1,sarondemung2.ogg,2,2</item>
+        <item>2,sarondemung3.ogg,3,3</item>
+        <item>3,sarondemung4.ogg,4,4</item>
+        <item>4,sarondemung5.ogg,5,5</item>
+        <item>5,sarondemung6.ogg,6,6</item>
+        <item>6,sarondemung7.ogg,7,7</item>
     </string-array>
     
     <string-array name="ugal">
@@ -120,16 +118,16 @@
         <item>Gamelan Bali</item>
         <item>Ugal requires long resonating bamboo tubes so is often played while sitting on a chair or bench. There are 10 keys so the instrument spans two octaves.</item>
         <item>ugalicon.png</item>
-        <item>0,ugal4rendah_pertama.ogg,4r</item>
-        <item>1,ugal5rendah_kedua.ogg,5r</item>
-        <item>2,ugal7rendah_ketiga.ogg,7r</item>
-        <item>3,ugal1_keempat.ogg,1</item>
-        <item>4,ugal3_kelima.ogg,3</item>
-        <item>5,ugal4_keenam.ogg,4</item>
-        <item>6,ugal5_ketuju.ogg,5</item>
-        <item>7,ugal7_kedelapan.ogg,7</item>
-        <item>8,ugal1tinggi_kesembilan.ogg,1tt</item>
-        <item>9,ugal3tinggi_kesepuluh.ogg,3t</item>
+        <item>0,ugal4rendah_pertama.ogg,4r,4</item>
+        <item>1,ugal5rendah_kedua.ogg,5r,5</item>
+        <item>2,ugal7rendah_ketiga.ogg,7r,7</item>
+        <item>3,ugal1_keempat.ogg,1,1</item>
+        <item>4,ugal3_kelima.ogg,3,3</item>
+        <item>5,ugal4_keenam.ogg,4,4</item>
+        <item>6,ugal5_ketuju.ogg,5,5</item>
+        <item>7,ugal7_kedelapan.ogg,7,7</item>
+        <item>8,ugal1tinggi_kesembilan.ogg,1tt,11</item>
+        <item>9,ugal3tinggi_kesepuluh.ogg,3t,13</item>
     </string-array>
     
     <string-array name="giying">
@@ -139,16 +137,16 @@
         <item>Gamelan Bali</item>
         <item>The giying is the largest of the gangsa metallophones and is played with a wooden mallet. It has ten keys and occupies the lowest range of the gangas.The giying plays an elaborated version of the core melody, played on the jublag, which may be considered the main melody.</item>
         <item>giyingicon.png</item>
-        <item>0,giying4rendah.ogg,4r</item>
-        <item>1,giying5rendah.ogg,5r</item>
-        <item>2,giying7rendah.ogg,7r</item>
-        <item>3,giying1.ogg,1</item>
-        <item>4,giying3.ogg,3</item>
-        <item>5,giying4.ogg,4</item>
-        <item>6,giying5.ogg,5</item>
-        <item>7,giying7.ogg,7</item>
-        <item>8,giying1tinggi.ogg,1t</item>
-        <item>9,giying3tinggi.ogg,3t</item>
+        <item>0,giying4rendah.ogg,4r,4</item>
+        <item>1,giying5rendah.ogg,5r,5</item>
+        <item>2,giying7rendah.ogg,7r,7</item>
+        <item>3,giying1.ogg,1,1</item>
+        <item>4,giying3.ogg,3,3</item>
+        <item>5,giying4.ogg,4,4</item>
+        <item>6,giying5.ogg,5,5</item>
+        <item>7,giying7.ogg,7,7</item>
+        <item>8,giying1tinggi.ogg,1t,1</item>
+        <item>9,giying3tinggi.ogg,3t,1</item>
     </string-array>
     
     <string-array name="gangsa">
@@ -158,11 +156,11 @@
         <item>Gamelan Bali</item>
         <item>A gangsa is a type of metallophone which is used mainly in Balinese and Javanese Gamelan music. There are two types of gangsa typically used: the smaller, higher pitched kantilan and the larger pemade.</item>
         <item>gangsaicon.png</item>
-        <item>0,gangsa3_pertama.ogg,3</item>
-        <item>1,gangsa4_kedua.ogg,4</item>
-        <item>2,gangsa5_ketiga.ogg,5</item>
-        <item>3,gangsa7_keempat.ogg,7</item>
-        <item>4,gangsa1_terakhir.ogg,1</item>
+        <item>0,gangsa3_pertama.ogg,3,3</item>
+        <item>1,gangsa4_kedua.ogg,4,4</item>
+        <item>2,gangsa5_ketiga.ogg,5,5</item>
+        <item>3,gangsa7_keempat.ogg,7,7</item>
+        <item>4,gangsa1_terakhir.ogg,1,1</item>
     </string-array>
     
     <string-array name="kantil">
@@ -172,16 +170,16 @@
         <item>Gamelan Bali</item>
         <item>The kantil is the smallest and highest of the gangsa instruments: There are usually 10 keys so the instrument spans two octaves</item>
         <item>kantilicon.png</item>
-        <item>0,kantil1_keempat.ogg,1</item>
-        <item>1,kantil3_kelima.ogg,3</item>
-        <item>2,kantil4_pertama.ogg,4</item>
-        <item>3,kantil5_kedua.ogg,5</item>
-        <item>4,kantil7_ketiga.ogg,7</item>
-        <item>5,kantil1tinggi_kesembilan.ogg,1t</item>
-        <item>6,kantil3tinggi_kesepuluh.ogg,3t</item>
-        <item>7,kantil4tinggi_keenam.ogg,4t</item>
-        <item>8,kantil5tinggi_ketuju.ogg,5t</item>
-        <item>9,kantil7tinggi_kedelapan.ogg,7t</item>
+        <item>0,kantil1_keempat.ogg,1,1</item>
+        <item>1,kantil3_kelima.ogg,3,3</item>
+        <item>2,kantil4_pertama.ogg,4,4</item>
+        <item>3,kantil5_kedua.ogg,5,5</item>
+        <item>4,kantil7_ketiga.ogg,7,7</item>
+        <item>5,kantil1tinggi_kesembilan.ogg,1t,11</item>
+        <item>6,kantil3tinggi_kesepuluh.ogg,3t,13</item>
+        <item>7,kantil4tinggi_keenam.ogg,4t,14</item>
+        <item>8,kantil5tinggi_ketuju.ogg,5t,15</item>
+        <item>9,kantil7tinggi_kedelapan.ogg,7t,17</item>
     </string-array>
     
     <string-array name="gender">
@@ -191,20 +189,20 @@
         <item>Gamelan Bali</item>
         <item>Gender consists of 10 to 14 tuned metal bars suspended over a tuned resonator of bamboo or metal, which are tapped with a mallet made of wooden disks (Bali). Each key is a note of a different pitch, often extending a little more than two octaves.</item>
         <item>gendericon.png</item>
-        <item>0,genderbarungan1rendah.ogg,1r</item>
-		<item>1,genderbarungan2rendah.ogg,2r</item>
-		<item>2,genderbarungan3rendah.ogg,3r</item>
-		<item>3,genderbarungan5rendah.ogg,5r</item>
-		<item>4,genderbarungan6rendah.ogg,6r</item>
-		<item>5,genderbarungan1.ogg,1</item>
-		<item>6,genderbarungan2.ogg,2</item>
-		<item>7,genderbarungan3.ogg,3</item>
-		<item>8,genderbarungan5.ogg,5</item>
-		<item>9,genderbarungan6.ogg,6</item>
-		<item>10,genderbarungan1tinggi.ogg,1t</item>
-		<item>11,genderbarungan2tinggi.ogg,2t</item>
-		<item>12,genderbarungan3tinggi.ogg,3t</item>
-		<item>13,genderbarungan6tinggi.ogg,6t</item>
+        <item>0,genderbarungan1rendah.ogg,1r,11</item>
+		<item>1,genderbarungan2rendah.ogg,2r,12</item>
+		<item>2,genderbarungan3rendah.ogg,3r,13</item>
+		<item>3,genderbarungan5rendah.ogg,5r,15</item>
+		<item>4,genderbarungan6rendah.ogg,6r,16</item>
+		<item>5,genderbarungan1.ogg,1,1</item>
+		<item>6,genderbarungan2.ogg,2,2</item>
+		<item>7,genderbarungan3.ogg,3,3</item>
+		<item>8,genderbarungan5.ogg,5,5</item>
+		<item>9,genderbarungan6.ogg,6,6</item>
+		<item>10,genderbarungan1tinggi.ogg,1t,11</item>
+		<item>11,genderbarungan2tinggi.ogg,2t,12</item>
+		<item>12,genderbarungan3tinggi.ogg,3t,13</item>
+		<item>13,genderbarungan6tinggi.ogg,6t,16</item>
     </string-array>
     
     <string-array name="angklung">
@@ -214,14 +212,14 @@
         <item>Angklung Group</item>
         <item>The Angklung is a musical instrument made of two bamboo tubes attached to a bamboo frame. The tubes are carved to have a resonant pitch when struck and are tuned to octaves. </item>
         <item>angklunglogo.png</item>
-        <item >0,angklung1do.ogg,1</item>
-        <item >1,angklung2re.ogg,2</item>
-        <item >2,angklung3mi.ogg,3</item>
-        <item >3,angklung4fa.ogg,4</item>
-        <item >4,angklung5sol.ogg,5</item>
-        <item >5,angklung6la.ogg,6</item>
-        <item >6,angklung7si.ogg,7</item>
-        <item >7,angklung1dotinggi.ogg,1t</item>
+        <item >0,angklung1do.ogg,1,1</item>
+        <item >1,angklung2re.ogg,2,2</item>
+        <item >2,angklung3mi.ogg,3,3</item>
+        <item >3,angklung4fa.ogg,4,4</item>
+        <item >4,angklung5sol.ogg,5,5</item>
+        <item >5,angklung6la.ogg,6,6</item>
+        <item >6,angklung7si.ogg,7,7</item>
+        <item >7,angklung1dotinggi.ogg,1t,8</item>
     </string-array>
     
     <string-array name="arumba">
@@ -231,18 +229,26 @@
         <item>Angklung Group</item>
         <item>Arumba is a musical instrument made of bamboo material in the play with melodic and rhythmic. At first arumba using pentatonic scales, but in its development diatonic scales can be played.</item>
         <item>arumbaicon.png</item>
-        <item >0,arumba3rendah.ogg,3r</item>
-        <item >1,arumba4rendah.ogg,4r</item>
-        <item >2,arumba5rendah.ogg,5r</item>
-        <item >3,arumba6rendah.ogg,6r</item>
-        <item >4,arumba7rendah.ogg,7r</item>
-        <item >5,arumba1.ogg,1</item>
-        <item >6,arumba2.ogg,2</item>
-        <item >7,arumba3.ogg,3</item>
-        <item >8,arumba4.ogg,4</item>
-        <item >9,arumba5.ogg,5</item>
-        <item >10,arumba6.ogg,6</item>
-        <item >11,arumba7.ogg,7</item>
+        <item >0,arumba3rendah.ogg,3r,13</item>
+        <item >1,arumba4rendah.ogg,4r,14</item>
+        <item >2,arumba5rendah.ogg,5r,15</item>
+        <item >3,arumba6rendah.ogg,6r,16</item>
+        <item >4,arumba7rendah.ogg,7r,17</item>
+        <item >5,arumba1.ogg,1,1</item>
+        <item >6,arumba2.ogg,2,2</item>
+        <item >7,arumba3.ogg,3,3</item>
+        <item >8,arumba4.ogg,4,4</item>
+        <item >9,arumba5.ogg,5,5</item>
+        <item >10,arumba6.ogg,6,6</item>
+        <item >11,arumba7.ogg,7,7</item>
+        <item >12,arumba1tinggi.ogg,1t,21</item>
+        <item >13,arumba2tinggi.ogg,2t,22</item>
+        <item >14,arumba3tinggi.ogg,3t,23</item>
+        <item >15,arumba4tinggi.ogg,4t,24</item>
+        <item >16,arumba5tinggi.ogg,5t,25</item>
+        <item >17,arumba6tinggi.ogg,6t,26</item>
+        <item >18,arumba7tinggi.ogg,7t,27</item>
+        <item >19,arumba1tinggitinggi.ogg,1tt,31</item>
 
     </string-array>
     

@@ -74,7 +74,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/bonang0"
         android:adjustViewBounds="true"
-        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/bonang" />
 
     <com.nusabahana.view.NoteImage
@@ -84,7 +87,10 @@
         android:layout_below="@id/bonang1"
         android:layout_toRightOf="@id/bonang7"
         android:adjustViewBounds="true"
-        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/bonang" />
 
     <com.nusabahana.view.NoteImage
@@ -94,7 +100,10 @@
         android:layout_below="@id/bonang0"
         android:layout_toRightOf="@id/bonang8"
         android:adjustViewBounds="true"
-        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/bonang" />
 
     <com.nusabahana.view.NoteImage
@@ -104,7 +113,10 @@
         android:layout_below="@id/bonang0"
         android:layout_toRightOf="@id/bonang9"
         android:adjustViewBounds="true"
-        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/bonang" />
 
     <com.nusabahana.view.NoteImage
@@ -114,7 +126,10 @@
         android:layout_below="@id/bonang0"
         android:layout_toRightOf="@id/bonang10"
         android:adjustViewBounds="true"
-        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/bonang" />
 
     <com.nusabahana.view.NoteImage
@@ -124,7 +139,10 @@
         android:layout_below="@id/bonang0"
         android:layout_toRightOf="@id/bonang11"
         android:adjustViewBounds="true"
-        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/bonang" />
 
     <com.nusabahana.view.NoteImage
@@ -134,7 +152,10 @@
         android:layout_below="@id/bonang0"
         android:layout_toRightOf="@id/bonang12"
         android:adjustViewBounds="true"
-        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/bonang" />
 
     <TextView

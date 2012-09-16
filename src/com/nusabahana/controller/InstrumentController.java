@@ -166,7 +166,7 @@ public class InstrumentController {
 				for (int k = 0; k < notes.length; k++) {
 					String[] temp2 = ins[k + 6].split(",");
 					notes[k] = new Note(Integer.parseInt(temp2[0]), temp2[1],
-							temp2[2]);
+							temp2[2], Integer.parseInt(temp2[3]));
 				}
 
 				instrumentElements[j] = new Instrument(ins[0], ins[1], ins[2],

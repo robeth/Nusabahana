@@ -1,37 +1,51 @@
 package com.nusabahana.view;
 
-import java.security.MessageDigest;
+import java.util.Arrays;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
+import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nusabahana.controller.BackgroundMusicController;
-import com.nusabahana.controller.RecordController;
 import com.nusabahana.controller.BackgroundMusicController.OnBackgroundMusicStartListener;
+import com.nusabahana.controller.RecordController;
 import com.nusabahana.controller.RecordController.OnRecordStartPlayingListener;
 import com.nusabahana.model.Instrument;
-import com.nusabahana.view.R;
+import com.nusabahana.partiture.Element;
+import com.nusabahana.partiture.Partiture;
+import com.nusabahana.partiture.PartiturePlayer;
+import com.nusabahana.partiture.PartitureReader;
+import com.nusabahana.partiture.PartitureTutorial;
+import com.nusabahana.partiture.PartitureTutorial.OnPartitureNextSubElementListener;
+import com.nusabahana.partiture.PartitureTutorial.OnPauseListener;
+import com.nusabahana.partiture.PartitureTutorial.OnPlayListener;
+import com.nusabahana.partiture.PartitureTutorial.OnResumeListener;
+import com.nusabahana.partiture.PartitureTutorial.OnStopListener;
+import com.nusabahana.partiture.Row;
+import com.nusabahana.partiture.Segment;
+import com.nusabahana.partiture.SubElement;
 
 /**
  * Kelas yang merupakan view dari fitur simulasi alat musik. Implementasi fitur
@@ -43,16 +57,18 @@ import com.nusabahana.view.R;
 public class InstrumentSimulationMenu extends NusabahanaView {
 	/** Konstanta yang menunjukan request result terhadap background musik */
 	private static final int BM_INTENT = 101;
+	private static final int CHOOSE_PARTITURE_DIALOG = 11212;
+	
 
 	// private Animation anim;
 	private TextView[] tvParts;
+	private DistributorView dv;
 
 	// Bagian view yang akan diberi listener
-	private ImageButton bRecordStart, bRecordStop, bBMStart, bBMStop;
+	private ImageButton bRecordStart, bRecordStop, bBMStart, bBMStop, bTutorialStart, bTutorialPause,bTutorialStop, bTutorialChoose;
 	private ImageView bBMBrowse;
 	private TextView timerText;
 	private NoteImage[] insParts;
-	private ProgressBar progressbar;
 	private int time;
 
 	// Progress bar beserta handler yang mengupdatenya
@@ -71,6 +87,12 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 	// Instrumen yang disimulasikan
 	private Instrument simulatedInstrument;
 	private Animation[] animationSet;
+	private Partiture partiture;
+	private PartitureTutorial tutorial;
+	private TextView tutorialText, tutorialTextHeader;
+	private String[] availablePartituresPath;
+	private String groupPath;
+
 
 	/**
 	 * Inisialisasi activity
@@ -93,11 +115,12 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		// Inisialisasi bagian instrument simulasi: gambar, suara dan listener
 		setContentView(R.layout.instrument_simulation_record);
 		FrameLayout lv = (FrameLayout) findViewById(R.id.instrument_frame);
-		DistributorView dv = (DistributorView) findViewById(R.id.distributor);
+		dv = (DistributorView) findViewById(R.id.distributor);
 		LayoutInflater layoutInflater = (LayoutInflater) this
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		lv.addView(layoutInflater.inflate(instrumentXMLID, lv, false), 0);
 		lv.bringChildToFront(dv);
+		
 
 		String bgPath = INSTRUMENT_CONTROLLER.getGroup(simulatedInstrument)
 				.getBgPath();
@@ -137,22 +160,164 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		bBMStart = (ImageButton) findViewById(R.id.button_start_bm);
 		bBMStop = (ImageButton) findViewById(R.id.button_stop_bm);
 		bBMBrowse = (ImageView) findViewById(R.id.button_browse_bm);
+		bTutorialStart = (ImageButton) findViewById(R.id.partiture_start_button);
+		bTutorialPause = (ImageButton) findViewById(R.id.partiture_pause_button);
+		bTutorialStop = (ImageButton) findViewById(R.id.partiture_stop_button);
+		bTutorialChoose = (ImageButton) findViewById(R.id.partiture_change);
 		timerText = (TextView) findViewById(R.id.text_record_timer);
-
+		tutorialText = (TextView)findViewById(R.id.partiture_row);
+		tutorialTextHeader = (TextView) findViewById(R.id.partiture_name);
+		
 		bRecordStart.setOnClickListener(recordStartListener);
 		bRecordStop.setOnClickListener(recordStopListener);
 		// bHome.setOnClickListener(homeListener);
 		bBMStart.setOnClickListener(musicStartListener);
 		bBMStop.setOnClickListener(musicStopListener);
 		bBMBrowse.setOnClickListener(musicBrowseListener);
+		
 		timerText.setText("00:00");
 
 		bBMStop.setEnabled(true);
 		bRecordStop.setEnabled(true);
 		BM_CONTROLLER.setOnBackgroundMusicStartListener(bmStartListener);
 		RECORD_CONTROLLER.setOnRecordStartPlayingListener(orStartListener);
+		
+		prepareTutorial();
+	}
+	
+	
+	
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		// TODO Auto-generated method stub
+		Dialog dialog = null;
+		switch(id){
+			case CHOOSE_PARTITURE_DIALOG :
+				
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				builder.setTitle("Choose a Partiture");
+				builder.setItems(availablePartituresPath, new DialogInterface.OnClickListener() {
+				    public void onClick(DialogInterface dialog, int item) {
+				        changeTutorialPartiture(item);
+				    }
+				});
+				dialog = builder.create();
+				break;
+		}
+		return dialog;
 	}
 
+
+	private void changeTutorialPartiture(int partitureIndex){
+		partiture = PartitureReader.getPartiture(groupPath, availablePartituresPath[partitureIndex], simulatedInstrument.getNickname());		
+		tutorial.setPartiture(partiture);
+		tutorialText.setText(tutorial.getRowSpannable(), TextView.BufferType.SPANNABLE);
+		tutorialTextHeader.setText(availablePartituresPath[partitureIndex]+" ("+simulatedInstrument.getName()+")");
+	}
+	
+	private void prepareTutorial(){
+		PartitureReader.setContext(this);
+		groupPath= getGroupPath(simulatedInstrument.getNickname());
+		availablePartituresPath= PartitureReader.getAllPartituresFilename(groupPath); 
+		
+		if(availablePartituresPath != null && availablePartituresPath.length > 0){
+			partiture = PartitureReader.getPartiture(groupPath, availablePartituresPath[0], simulatedInstrument.getNickname());
+			
+			tutorial = new PartitureTutorial(partiture,1000);
+			tutorial.setOnNextSubElementListener(subelementListener);
+			tutorial.setOnPlayListener(onTutorialStartListener);
+			tutorial.setOnPauseListener(onTutorialPauseListener);
+			tutorial.setOnResumeListener(onTutorialResumeListener);
+			tutorial.setOnStopListener(onTutorialStopListener);
+			tutorialText.setText(tutorial.getRowSpannable(), TextView.BufferType.SPANNABLE);
+			tutorialTextHeader.setText(availablePartituresPath[0]+" ("+simulatedInstrument.getName()+")");
+			
+
+			bTutorialStart.setOnClickListener(startTutorialListener);
+			bTutorialPause.setOnClickListener(pauseTutorialListener);
+			bTutorialStop.setOnClickListener(stopTutorialListener);
+			bTutorialChoose.setOnClickListener(changeTutorialListener);
+		} else {
+			tutorialText.setText("Empty");
+			tutorialTextHeader.setText("No Partiture for this Instrument Group");
+			RelativeLayout partitureContent = (RelativeLayout) findViewById(R.id.partiture_player_content);
+			LinearLayout partitureHeader = (LinearLayout) findViewById(R.id.partiture_player_header);
+			
+			partitureContent.setVisibility(android.widget.RelativeLayout.INVISIBLE);
+			partitureHeader.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+		}
+	}
+	
+	private String getGroupPath(String nickname) {
+		if(nickname.equals("arumba") || nickname.equals("angklung")){
+			return PartitureReader.ANGKLUNG;
+		} else if(nickname.equals("bonang") || nickname.equals("saron")  || 
+				nickname.equals("kendang") || nickname.equals("gong") 
+				|| nickname.equals("kenong")  ) {
+			return PartitureReader.GAMELAN_JAWA;
+		} else {
+			return PartitureReader.GAMELAN_BALI;
+		}
+	}
+	
+
+	public void activateInstrumentsBackgroundMode(){
+		
+		Partiture[] partiture = new Partiture[1];
+		partiture[0] = getDummyPartiture();
+		
+		Instrument[] instruments = this.INSTRUMENT_CONTROLLER.getInstrumentGroups()[0].getInstrumentElements();
+		PartiturePlayer pp = new PartiturePlayer(this, instruments, partiture, 2000);
+		pp.play();
+	}
+	
+	private Partiture getDummyPartiture(){
+		SubElement[] ss = new SubElement[4];
+		ss[0] = new SubElement(-1);
+		ss[1] = new SubElement(3);
+		ss[2] = new SubElement(-1);
+		ss[3] = new SubElement(5);
+		
+		SubElement[] ss2 = new SubElement[4];
+		ss2[0] = new SubElement(-1);
+		ss2[1] = new SubElement(6);
+		ss2[2] = new SubElement(-1);
+		ss2[3] = new SubElement(5);
+		
+		SubElement[] ss3 = new SubElement[4];
+		ss3[0] = new SubElement(-1);
+		ss3[1] = new SubElement(4);
+		ss3[2] = new SubElement(-1);
+		ss3[3] = new SubElement(2);
+		
+		SubElement[] ss4 = new SubElement[4];
+		ss4[0] = new SubElement(-1);
+		ss4[1] = new SubElement(1);
+		ss4[2] = new SubElement(-1);
+		ss4[3] = new SubElement(6);
+		
+		Element[] elements1 = new Element[4];
+		
+		elements1[0] = new Element(ss);
+		elements1[1] = new Element(ss2);
+		elements1[2] = new Element(ss3);
+		elements1[3] = new Element(ss4);
+		
+		Segment[] segments = new Segment[1];
+		segments[0] = new Segment(elements1);
+		
+		Row[] row = new Row[1];
+		row[0] = new Row(segments);
+		
+		Partiture partiture = new Partiture(row, null);
+		return partiture;
+	}
+	
+	public void onWindowFocusChanged(boolean hasFocus) {
+		super.onWindowFocusChanged(hasFocus);
+		if(hasFocus)
+			dv.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+	}
 	// Menerima hasil dari activity lain
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// Jika hasil berasal dari DetailFileMenu
@@ -226,34 +391,6 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 
 	};
 
-	/**
-	 * Listener untuk gambar home
-	 */
-	// private OnClickListener homeListener = new OnClickListener() {
-	// public void onClick(View v) {
-	// if (RECORD_CONTROLLER.getRecordingState() == RecordController.STANDBY
-	// && BM_CONTROLLER.getMode() == BM_CONTROLLER.MODE_STANDBY
-	// && RECORD_CONTROLLER.getPlayingState() == RecordController.STANDBY) {
-	//
-	// Intent nIntent = new Intent(InstrumentSimulationMenu.this,
-	// MainMenu.class);
-	// nIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-	// startActivity(nIntent);
-	// } else {
-	// if (BM_CONTROLLER.getMode() != BM_CONTROLLER.MODE_STANDBY) {
-	// musicStopListener.onClick(null);
-	// }
-	//
-	// if (RECORD_CONTROLLER.getRecordingState() != RecordController.STANDBY) {
-	// recordStopListener.onClick(null);
-	// }
-	// if (RECORD_CONTROLLER.getPlayingState() != RecordController.STANDBY) {
-	// musicStopListener.onClick(null);
-	// }
-	// this.onClick(v);
-	// }
-	// }
-	// };
 
 	/**
 	 * Listener untuk gambar start pada mode musik latar
@@ -272,7 +409,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 					// Klo lagi main
 					else if (BM_CONTROLLER.getMode() == BackgroundMusicController.MODE_PLAYING) {
 						BM_CONTROLLER.pause();
-						bBMStart.setImageResource(R.drawable.playblack);
+						bBMStart.setImageResource(R.drawable.playnormal);
 						progressHandler.removeCallbacks(pl);
 					}
 
@@ -290,7 +427,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 					// Klo lagi main
 					else if (RECORD_CONTROLLER.getPlayingState() == RECORD_CONTROLLER.PLAY_PLAYING) {
 						RECORD_CONTROLLER.pausePlaying();
-						bBMStart.setImageResource(R.drawable.playblack);
+						bBMStart.setImageResource(R.drawable.playnormal);
 						progressHandler.removeCallbacks(pl3);
 					}
 
@@ -317,14 +454,14 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 					&& RECORD_CONTROLLER.getPlayingState() != RecordController.STANDBY) {
 				RECORD_CONTROLLER.stopPlaying();
 			}
-			bBMStart.setImageResource(R.drawable.playblack);
+			bBMStart.setImageResource(R.drawable.playnormal);
 			bBMStop.setEnabled(false);
 
 			if (!isRecord)
 				progressHandler.removeCallbacks(pl);
 			else
 				progressHandler.removeCallbacks(pl3);
-			progressbar.setProgress(0);
+			//progressbar.setProgress(0);
 		}
 	};
 
@@ -354,7 +491,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		@Override
 		public void onStart() {
 			// TODO Auto-generated method stub
-			progressbar.setMax(BM_CONTROLLER.getDuration());
+			//progressbar.setMax(BM_CONTROLLER.getDuration());
 			progressHandler.post(pl);
 			bBMStop.setEnabled(true);
 		}
@@ -366,7 +503,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		@Override
 		public void onStart() {
 			// TODO Auto-generated method stub
-			progressbar.setMax(RECORD_CONTROLLER.getDuration());
+			//progressbar.setMax(RECORD_CONTROLLER.getDuration());
 			progressHandler.post(pl3);
 			bBMStop.setEnabled(true);
 		}
@@ -389,6 +526,9 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		if (RECORD_CONTROLLER.getRecordingState() != RecordController.STANDBY) {
 			recordStopListener.onClick(null);
 		}
+		
+		if(tutorial != null)
+			tutorial.stop();
 		super.onBackPressed();
 	}
 
@@ -441,15 +581,15 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		public void run() {
 			if (BM_CONTROLLER.getMode() == BM_CONTROLLER.MODE_PLAYING) {
 				int current = BM_CONTROLLER.getCurrent();
-				Log.e("Progress", "Max(Prog/Media):" + progressbar.getMax()
-						+ "/" + BM_CONTROLLER.getDuration()
-						+ "-- Current(Prog/Media):" + progressbar.getProgress()
-						+ "/" + BM_CONTROLLER.getCurrent());
+				//Log.e("Progress", "Max(Prog/Media):" + progressbar.getMax()
+				//		+ "/" + BM_CONTROLLER.getDuration()
+//						+ "-- Current(Prog/Media):" + progressbar.getProgress()
+//						+ "/" + BM_CONTROLLER.getCurrent());
 				if (BM_CONTROLLER.getDuration() - current > 1000) {
-					progressbar.setProgress(current);
+//					progressbar.setProgress(current);
 					progressHandler.postDelayed(this, 1000);
 				} else {
-					progressbar.setProgress(BM_CONTROLLER.getDuration());
+//					progressbar.setProgress(BM_CONTROLLER.getDuration());
 				}
 			} else {
 				musicStopListener.onClick(null);
@@ -463,15 +603,15 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 			if (RECORD_CONTROLLER.getPlayingState() == RecordController.PLAY_PLAYING) {
 
 				int current = RECORD_CONTROLLER.getCurrent();
-				Log.e("Progress", "Max(Prog/Media):" + progressbar.getMax()
-						+ "/" + RECORD_CONTROLLER.getDuration()
-						+ "-- Current(Prog/Media):" + progressbar.getProgress()
-						+ "/" + RECORD_CONTROLLER.getCurrent());
+//				Log.e("Progress", "Max(Prog/Media):" + progressbar.getMax()
+//						+ "/" + RECORD_CONTROLLER.getDuration()
+//						+ "-- Current(Prog/Media):" + progressbar.getProgress()
+//						+ "/" + RECORD_CONTROLLER.getCurrent());
 				if (RECORD_CONTROLLER.getDuration() - current > 1000) {
-					progressbar.setProgress(current);
+//					progressbar.setProgress(current);
 					progressHandler.postDelayed(this, 1000);
 				} else {
-					progressbar.setProgress(RECORD_CONTROLLER.getDuration());
+//					progressbar.setProgress(RECORD_CONTROLLER.getDuration());
 				}
 			} else {
 				musicStopListener.onClick(null);
@@ -505,4 +645,140 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 			musicStopListener.onClick(null);
 		}
 	};
+	
+	private OnPlayListener onTutorialStartListener = new OnPlayListener(){
+		@Override
+		public void onPlay(){
+			bTutorialStart.setVisibility(android.view.View.INVISIBLE);
+			bTutorialPause.setVisibility(android.view.View.VISIBLE);
+		}
+	};
+	
+	private OnPauseListener onTutorialPauseListener = new OnPauseListener(){
+		@Override
+		public void onPause(){
+			bTutorialStart.setVisibility(android.view.View.VISIBLE);
+			bTutorialPause.setVisibility(android.view.View.INVISIBLE);
+		}
+	};
+	
+	private OnStopListener onTutorialStopListener = new OnStopListener(){
+		@Override
+		public void onStop(){
+			bTutorialStart.setVisibility(android.view.View.VISIBLE);
+			bTutorialPause.setVisibility(android.view.View.INVISIBLE);
+		}
+	};
+	
+	private OnResumeListener onTutorialResumeListener = new OnResumeListener(){
+		@Override
+		public void onResume(){
+			bTutorialStart.setVisibility(android.view.View.INVISIBLE);
+			bTutorialPause.setVisibility(android.view.View.VISIBLE);
+		}
+	};
+	
+	private OnClickListener startTutorialListener = new OnClickListener(){
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			if(tutorial.getTutorialState() == PartitureTutorial.STANDBY){
+				tutorial.play();
+			} else {
+				tutorial.resume();
+			}
+		}
+		
+	};
+	
+	private OnClickListener pauseTutorialListener = new OnClickListener(){
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			tutorial.pause();
+		}
+		
+	};
+	
+	private OnClickListener stopTutorialListener = new OnClickListener(){
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			tutorial.stop();
+		}
+		
+	};
+	
+	private OnClickListener changeTutorialListener = new OnClickListener(){
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			tutorial.stop();
+			showDialog(CHOOSE_PARTITURE_DIALOG);
+		}
+		
+	};
+	
+	private OnPartitureNextSubElementListener subelementListener = new OnPartitureNextSubElementListener() {
+		
+		@Override
+		public void onNextSubElement() {
+			// TODO Auto-generated method stub
+			int subelementValue = tutorial.getCurrentSubElementValue();
+			Log.d("Tutorial", "subvalue:"+subelementValue);
+			int[] highlightedIndexes = (simulatedInstrument.getNickname().equals("bonang")) ? getBonangHighlightedIndexes(subelementValue) :simulatedInstrument.getInstrumentIndexes(subelementValue);
+			
+			for(int i = 0; i < insParts.length; i++){
+				if(isIn(highlightedIndexes, i)){
+					insParts[i].setColorFilter(0x99ff0000);
+					shakePlay(i);
+				}
+				else 
+					insParts[i].setColorFilter(Color.TRANSPARENT);
+			}
+			tutorialText.setText(tutorial.getRowSpannable(), TextView.BufferType.SPANNABLE);
+		}
+		
+		private boolean isIn(int[] arrayInt, int intValue){
+			for(int i = 0; i < arrayInt.length; i++)
+				if(arrayInt[i] == intValue)
+					return true;
+			
+			return false;
+		}
+		
+		private int[] getBonangHighlightedIndexes(int key){
+			int[] highlightedIndexes = new int[2];
+			Arrays.fill(highlightedIndexes, -1);
+			switch(key){
+				case 1 : highlightedIndexes[0] = 8; highlightedIndexes[1] = 8;break;
+				case 10 : highlightedIndexes[0] = 5; highlightedIndexes[1] = 5;break;
+				case 11 : highlightedIndexes[0] = 5; highlightedIndexes[1] = 8;break;
+				case 2 : highlightedIndexes[0] = 9; highlightedIndexes[1] = 9;break;
+				case 20 : highlightedIndexes[0] = 4; highlightedIndexes[1] = 4;break;
+				case 22 : highlightedIndexes[0] = 4; highlightedIndexes[1] = 9;break;
+				case 3 : highlightedIndexes[0] = 10; highlightedIndexes[1] = 10;break;
+				case 30 : highlightedIndexes[0] = 3; highlightedIndexes[1] = 3;break;
+				case 33 : highlightedIndexes[0] = 3; highlightedIndexes[1] = 10;break;
+				case 4 : highlightedIndexes[0] = 13; highlightedIndexes[1] = 13;break;
+				case 40 : highlightedIndexes[0] = 0; highlightedIndexes[1] = 0;break;
+				case 44 : highlightedIndexes[0] = 0; highlightedIndexes[1] = 13;break;
+				case 5 : highlightedIndexes[0] = 11; highlightedIndexes[1] = 11;break;
+				case 50 : highlightedIndexes[0] = 2; highlightedIndexes[1] = 2;break;
+				case 55 : highlightedIndexes[0] = 2; highlightedIndexes[1] = 11;break;
+				case 6 : highlightedIndexes[0] = 12; highlightedIndexes[1] = 12;break;
+				case 60 : highlightedIndexes[0] = 1; highlightedIndexes[1] = 1;break;
+				case 66 : highlightedIndexes[0] = 1; highlightedIndexes[1] = 12;break;
+				case 7 : highlightedIndexes[0] = 7; highlightedIndexes[1] = 7;break;
+				case 70 : highlightedIndexes[0] = 6; highlightedIndexes[1] = 6;break;
+				case 77 : highlightedIndexes[0] = 6; highlightedIndexes[1] = 7;break;
+			}
+			return highlightedIndexes;
+		}
+	};
+
 }

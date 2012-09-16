@@ -43,8 +43,6 @@
             android:layout_marginLeft="20dp"
             android:adjustViewBounds="true"
             android:gravity="right"
-            android:maxHeight="125dp"
-            android:maxWidth="125dp"
             android:src="@drawable/treaserumusic" />
 
         <LinearLayout
@@ -135,8 +133,6 @@
             android:adjustViewBounds="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:maxHeight="35dp"
-            android:maxWidth="35dp"
             android:src="@drawable/logosoundcloud" />
 
         <ImageView
@@ -146,8 +142,6 @@
             android:adjustViewBounds="true"
              android:layout_marginLeft="10dp"
              android:layout_marginTop="10dp"
-            android:maxHeight="35dp"
-            android:maxWidth="35dp"
             android:src="@drawable/logotwitter" />
         <ImageView
             android:id="@+id/facebook_button"
@@ -157,8 +151,6 @@
              android:layout_marginRight="100dp"
              android:layout_marginTop="10dp"
             android:adjustViewBounds="true"
-            android:maxHeight="35dp"
-            android:maxWidth="35dp"
             android:src="@drawable/logofacebook" />
 
         <Button
@@ -179,8 +171,6 @@
             android:id="@+id/trash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxHeight="25dp"
-            android:maxWidth="25dp"
             android:src="@drawable/trash" />
     </LinearLayout>
 </LinearLayout>

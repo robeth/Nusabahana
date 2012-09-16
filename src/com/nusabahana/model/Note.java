@@ -11,6 +11,7 @@ public class Note {
 	private String path;
 	/** note sebenarnya pada alat musik */
 	private String label;
+	private int key;
 	
 	/**
 	 * Contructor default
@@ -22,10 +23,11 @@ public class Note {
 	 * @param l
 	 * 			  label file
 	 */
-	public Note(int i, String p, String l){
+	public Note(int i, String p, String l, int key){
 		this.index = i;
 		this.path = p;
 		this.label = l;
+		this.key = key;
 	}
 
 	/**
@@ -81,4 +83,14 @@ public class Note {
 	public void setPath(String path) {
 		this.path = path;
 	}
+
+	public int getKey() {
+		return key;
+	}
+
+	public void setKey(int key) {
+		this.key = key;
+	}
+	
+	
 }

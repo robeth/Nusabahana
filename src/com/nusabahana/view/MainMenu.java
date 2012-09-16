@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
+import com.nusabahana.partiture.PartitureReader;
 import com.nusabahana.view.R;
 
 import android.app.Activity;
@@ -41,6 +42,7 @@ public class MainMenu extends Activity {
 		ImageView playImage = (ImageView) findViewById(R.id.play);
 		ImageView galleryImage = (ImageView) findViewById(R.id.gallery);
 		ImageView aboutImage = (ImageView) findViewById(R.id.aboutImage);
+		
 		
 		playImage.setOnClickListener(playListener);
 		galleryImage.setOnClickListener(galleryListener);

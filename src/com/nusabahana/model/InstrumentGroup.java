@@ -1,5 +1,6 @@
 package com.nusabahana.model;
 
+
 public class InstrumentGroup {
 	private Instrument[] instrumentElements;
 	private String name;
@@ -44,5 +45,6 @@ public class InstrumentGroup {
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
 	}
+	
 	
 }
