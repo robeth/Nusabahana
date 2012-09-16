@@ -32,9 +32,7 @@
                 android:adjustViewBounds="true"
                 android:background="#00000000"
                 android:clickable="true"
-                android:maxHeight="25dp"
-                android:maxWidth="25dp"
-                android:src="@drawable/playblack" />
+                android:src="@drawable/playnormal" />
 
             <ImageButton
                 android:id="@+id/button_stop_bm"
@@ -47,9 +45,7 @@
                 android:adjustViewBounds="true"
                 android:background="#00000000"
                 android:clickable="true"
-                android:maxHeight="25dp"
-                android:maxWidth="25dp"
-                android:src="@drawable/stopblack" />
+                android:src="@drawable/stopnormal" />
 
             <ImageView
                 android:id="@+id/button_browse_bm"
@@ -61,8 +57,6 @@
                 android:layout_marginTop="5dp"
                 android:adjustViewBounds="true"
                 android:clickable="true"
-                android:maxHeight="25dp"
-                android:maxWidth="25dp"
                 android:src="@drawable/music_folder" />
         </LinearLayout>
     </RelativeLayout>
@@ -72,10 +66,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
         android:layout_below="@id/topbar"
         android:layout_marginTop="20dp"
         android:background="@+drawable/blue_box_left"
-        android:padding="2dp" >
+        android:padding="7dp" >
 
         <LinearLayout
             android:id="@+id/button_group2"
@@ -92,9 +87,7 @@
                 android:layout_marginTop="5dp"
                 android:background="#00000000"
                 android:clickable="true"
-                android:maxHeight="25dp"
-                android:maxWidth="25dp"
-                android:src="@drawable/record" />
+                android:src="@drawable/recordnormal" />
 
             <ImageButton
                 android:id="@+id/button_stop_record"
@@ -105,9 +98,7 @@
                 android:layout_marginTop="5dp"
                 android:background="#00000000"
                 android:clickable="true"
-                android:maxHeight="25dp"
-                android:maxWidth="25dp"
-                android:src="@drawable/stopblack" />
+                android:src="@drawable/stopnormal" />
 
             <TextView
                 android:id="@+id/text_record_timer"
@@ -158,8 +149,6 @@
                 android:layout_marginTop="5dp"
                 android:adjustViewBounds="true"
                 android:clickable="true"
-                android:maxHeight="25dp"
-                android:maxWidth="25dp"
                 android:src="@drawable/music_folder" />
         </LinearLayout>
 
@@ -196,9 +185,7 @@
                     android:adjustViewBounds="true"
                     android:background="#00000000"
                     android:clickable="true"
-                    android:maxHeight="25dp"
-                    android:maxWidth="25dp"
-                    android:src="@drawable/play" />
+                    android:src="@drawable/playnormal" />
 
                 <ImageButton
                     android:id="@+id/partiture_pause_button"
@@ -208,8 +195,6 @@
                     android:adjustViewBounds="true"
                     android:background="#00000000"
                     android:clickable="true"
-                    android:maxHeight="25dp"
-                    android:maxWidth="25dp"
                     android:src="@drawable/pause" />
 
                 <ImageButton
@@ -220,9 +205,7 @@
                     android:adjustViewBounds="true"
                     android:background="#00000000"
                     android:clickable="true"
-                    android:maxHeight="25dp"
-                    android:maxWidth="25dp"
-                    android:src="@drawable/stopblack" />
+                    android:src="@drawable/stopnormal" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

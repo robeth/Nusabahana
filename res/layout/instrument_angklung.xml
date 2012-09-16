@@ -227,4 +227,51 @@
         android:gravity="center_horizontal"
         android:text="7" />
 
+                <TextView
+        android:id="@+id/angklung_text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung8"
+        android:layout_alignRight="@id/angklung8"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="8" />
+                
+                <TextView
+        android:id="@+id/angklung_text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung9"
+        android:layout_alignRight="@id/angklung9"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="9" />
+                
+                <TextView
+        android:id="@+id/angklung_text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung10"
+        android:layout_alignRight="@id/angklung10"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="7" />
+                
+                <TextView
+        android:id="@+id/angklung_text11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/angklung11"
+        android:layout_alignRight="@id/angklung11"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/toast_frame"
+        android:gravity="center_horizontal"
+        android:text="11" />
 </RelativeLayout>

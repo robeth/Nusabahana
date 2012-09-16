@@ -1,13 +1,7 @@
 package com.nusabahana.partiture;
 
-import android.content.Context;
 import android.text.Html;
-import android.text.Spannable;
 import android.text.Spanned;
-import android.util.Log;
-
-import com.nusabahana.model.Instrument;
-import com.nusabahana.model.InstrumentPlayer;
 
 public class PartitureTutorial {
 	private Partiture partiture;
@@ -112,7 +106,6 @@ public class PartitureTutorial {
 	}
 
 	public void nextRow() {
-		Log.d("HOHO", "On new Row"+currentRow);
 		currentRow++;
 		currentSegment = -1;
 		nextSegment();
@@ -121,7 +114,6 @@ public class PartitureTutorial {
 	}
 
 	public void nextSegment() {
-		Log.d("HOHO", "On new segment"+currentSegment);
 		currentSegment++;
 		currentElement = -1;
 		nextElement();
@@ -130,7 +122,6 @@ public class PartitureTutorial {
 	}
 
 	public void nextElement() {
-		Log.d("HOHO", "On new element"+currentElement);
 		currentElement++;
 		currentSubElement = -1;
 		nextSubElement();
@@ -139,7 +130,6 @@ public class PartitureTutorial {
 	}
 
 	public void nextSubElement() {
-		Log.d("HOHO", "On new subelement"+currentSubElement);
 		currentSubElement++;
 		if (onNextSubElementListener != null)
 			onNextSubElementListener.onNextSubElement();
@@ -161,7 +151,6 @@ public class PartitureTutorial {
 
 		@Override
 		public void onTicked() {
-			Log.d("Partiture Player", "OnTicked");
 
 			boolean hasNextAction = true;
 			if (hasNextSubElement()) {
@@ -184,7 +173,6 @@ public class PartitureTutorial {
 			}
 
 			if (hasNextAction) {
-				Log.d("Partiture Player", "Next Action");
 
 				timedAction.stop();
 				timedAction.setTime(getNextInterval());
@@ -192,8 +180,6 @@ public class PartitureTutorial {
 				if (onNextAction != null)
 					onNextAction.onNextAction();
 			} else {
-
-				Log.d("Partiture Player", "Stop");
 				stop();
 				if (onEnd != null)
 					onEnd.onEnd();
@@ -336,10 +322,8 @@ public class PartitureTutorial {
 		
 		for (int i = 0; i < printedRow.getNumSegments(); i++) {
 			int totalSegments = printedRow.getNumSegments();
-			Log.d("TEST", "total element("+i+"):"+printedRow.getSegments()[currentSegment].getNumElements());
-			for (int j = 0; j < printedRow.getSegments()[currentSegment].getNumElements(); j++) {
+			for (int j = 0; j < printedRow.getSegments()[i].getNumElements(); j++) {
 				int totalSubElements = printedRow.getSegments()[i].getElements()[j].getNumSubElements();
-				Log.d("TEST", "total subelements:"+totalSubElements);
 				if (totalSubElements > 1) sb.append("<u>");
 				for (int l = 0; l < totalSubElements; l++) {
 					if (i == currentSegment && j == currentElement && l == currentSubElement) {

@@ -68,6 +68,7 @@ public class PartitureReader {
 						String[] rawElements = rawSegments[k].split("-");
 						Element[] elements = new Element[rawElements.length];
 						for(int l = 0; l < elements.length; l++){
+							Log.d("MAX","Raw Segment("+k+") element("+l+"):"+rawElements[l]);
 							String[] rawSubelements = rawElements[l].split("_");
 							SubElement[] subelements = new SubElement[rawSubelements.length];
 							for(int m = 0; m < subelements.length;m++){
@@ -82,6 +83,7 @@ public class PartitureReader {
 				partitures[i] = new Partiture(rows,instrumentKeyname);
 				Log.d("Debug Tutorial", partitures[i].toString());
 			}
+			br.close();
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

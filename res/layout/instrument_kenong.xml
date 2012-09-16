@@ -5,20 +5,39 @@
     android:layout_gravity="center"
     android:orientation="horizontal" >
 
-    <com.nusabahana.view.NoteImage
-        android:id="@+id/kethuk"
-        android:layout_gravity="bottom"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:maxHeight="120dp"
-        android:maxWidth="120dp"
-        android:src="@drawable/bonang" />
+        android:layout_gravity="bottom" >
+
+        <com.nusabahana.view.NoteImage
+            android:id="@+id/kenong6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:maxHeight="120dp"
+            android:maxWidth="120dp"
+            android:src="@drawable/bonang" />
+
+        <TextView
+            android:id="@+id/kenong_text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/kenong6"
+            android:layout_alignRight="@id/kenong6"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/toast_frame"
+            android:gravity="center_horizontal"
+            android:text="6" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_toRightOf="@id/kenong6"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -162,4 +181,5 @@
                 android:text="5" />
         </RelativeLayout>
     </LinearLayout>
+
 </LinearLayout>

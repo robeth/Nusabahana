@@ -1,23 +1,17 @@
 package com.nusabahana.controller;
 
 import java.io.File;
-import java.io.FileDescriptor;
-import java.io.FileInputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.Arrays;
 
-import com.nusabahana.view.InstrumentSimulationMenu;
-
 import android.app.Activity;
-import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.os.Environment;
 import android.util.Log;
-import android.widget.ProgressBar;
 
 /**
  * Kelas yang merupakan Controller dari segala aktivitas yang berhubungan dengan
