@@ -85,62 +85,8 @@ public class MainMenu extends Activity {
 		if (firstTime) {
 			firstTime = false;
 			
-			Animation a = AnimationUtils.loadAnimation(this, R.anim.anim);
-			a.reset();
-			final ImageView iv = (ImageView) findViewById(R.id.img);
-			iv.clearAnimation();
-			a.setAnimationListener(new AnimationListener() {
 
-				@Override
-				public void onAnimationEnd(Animation animation) {
-					// TODO Auto-generated method stub
-					iv.setVisibility(View.INVISIBLE);
-				}
-
-				@Override
-				public void onAnimationRepeat(Animation animation) {
-					// TODO Auto-generated method stub
-
-				}
-
-				@Override
-				public void onAnimationStart(Animation animation) {
-					// TODO Auto-generated method stub
-
-				}
-
-			});
-
-			iv.startAnimation(a);
-
-			a = AnimationUtils.loadAnimation(this, R.anim.translateleft);
-			a.reset();
-			final ImageView iv2 = (ImageView) findViewById(R.id.img1);
-			a.setAnimationListener(new AnimationListener() {
-
-				@Override
-				public void onAnimationEnd(Animation animation) {
-					// TODO Auto-generated method stub
-					iv2.setVisibility(View.INVISIBLE);
-				}
-
-				@Override
-				public void onAnimationRepeat(Animation animation) {
-					// TODO Auto-generated method stub
-
-				}
-
-				@Override
-				public void onAnimationStart(Animation animation) {
-					// TODO Auto-generated method stub
-
-				}
-
-			});
-
-			iv2.startAnimation(a);
-
-			a = AnimationUtils.loadAnimation(this, R.anim.rotatepic);
+			Animation a = AnimationUtils.loadAnimation(this, R.anim.rotatepic);
 			a.reset();
 			ImageView iv3 = (ImageView) findViewById(R.id.playring);
 			iv3.clearAnimation();
@@ -151,8 +97,6 @@ public class MainMenu extends Activity {
 			iv3 = (ImageView) findViewById(R.id.galleryring);
 			iv3.clearAnimation();
 			iv3.startAnimation(a);
-			
-
 		}
 	}
 

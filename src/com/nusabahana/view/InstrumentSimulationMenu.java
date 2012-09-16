@@ -138,7 +138,6 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		bBMStop = (ImageButton) findViewById(R.id.button_stop_bm);
 		bBMBrowse = (ImageView) findViewById(R.id.button_browse_bm);
 		timerText = (TextView) findViewById(R.id.text_record_timer);
-		progressbar = (ProgressBar) findViewById(R.id.progressBar1);
 
 		bRecordStart.setOnClickListener(recordStartListener);
 		bRecordStop.setOnClickListener(recordStopListener);
