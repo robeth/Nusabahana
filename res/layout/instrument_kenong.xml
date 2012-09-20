@@ -14,11 +14,13 @@
             android:id="@+id/kenong6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_alignParentBottom="true"
             android:layout_margin="5dp"
             android:maxHeight="120dp"
             android:maxWidth="120dp"
             android:src="@drawable/bonang" />
+
 
         <TextView
             android:id="@+id/kenong_text6"
@@ -32,7 +34,6 @@
             android:gravity="center_horizontal"
             android:text="6" />
     </RelativeLayout>
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

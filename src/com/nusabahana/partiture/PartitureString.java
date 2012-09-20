@@ -54,18 +54,21 @@ public class PartitureString {
 		library.put(104, "0/4");
 		library.put(105, "0/5");
 		library.put(106, "0/6");
+		library.put(107, "0/7");
 		library.put(111, "1/1");
 		library.put(122, "2/2");
 		library.put(133, "3/3");
 		library.put(144, "4/4");
 		library.put(155, "5/5");
 		library.put(166, "6/6");
+		library.put(177, "7/7");
 		library.put(110, "1/0");
 		library.put(120, "2/0");
 		library.put(130, "3/0");
 		library.put(140, "4/0");
 		library.put(150, "5/0");
 		library.put(160, "6/0");
+		library.put(170, "7/0");
 		
 		//Special key for kendang
 		library.put(201, "a");

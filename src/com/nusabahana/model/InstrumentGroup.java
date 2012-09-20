@@ -1,8 +1,5 @@
 package com.nusabahana.model;
 
-
-
-
 public class InstrumentGroup {
 	private Instrument[] instrumentElements;
 	private String name;

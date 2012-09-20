@@ -409,7 +409,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 					// Klo lagi main
 					else if (BM_CONTROLLER.getMode() == BackgroundMusicController.MODE_PLAYING) {
 						BM_CONTROLLER.pause();
-						bBMStart.setImageResource(R.drawable.playblack);
+						bBMStart.setImageResource(R.drawable.playnormal);
 						progressHandler.removeCallbacks(pl);
 					}
 
@@ -427,7 +427,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 					// Klo lagi main
 					else if (RECORD_CONTROLLER.getPlayingState() == RECORD_CONTROLLER.PLAY_PLAYING) {
 						RECORD_CONTROLLER.pausePlaying();
-						bBMStart.setImageResource(R.drawable.playblack);
+						bBMStart.setImageResource(R.drawable.playnormal);
 						progressHandler.removeCallbacks(pl3);
 					}
 
@@ -454,7 +454,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 					&& RECORD_CONTROLLER.getPlayingState() != RecordController.STANDBY) {
 				RECORD_CONTROLLER.stopPlaying();
 			}
-			bBMStart.setImageResource(R.drawable.playblack);
+			bBMStart.setImageResource(R.drawable.playnormal);
 			bBMStop.setEnabled(false);
 
 			if (!isRecord)
@@ -755,27 +755,27 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 			int[] highlightedIndexes = new int[2];
 			Arrays.fill(highlightedIndexes, -1);
 			switch(key){
-				case 1 : highlightedIndexes[0] = 8; highlightedIndexes[1] = 8;break;
-				case 10 : highlightedIndexes[0] = 5; highlightedIndexes[1] = 5;break;
-				case 11 : highlightedIndexes[0] = 5; highlightedIndexes[1] = 8;break;
-				case 2 : highlightedIndexes[0] = 9; highlightedIndexes[1] = 9;break;
-				case 20 : highlightedIndexes[0] = 4; highlightedIndexes[1] = 4;break;
-				case 22 : highlightedIndexes[0] = 4; highlightedIndexes[1] = 9;break;
-				case 3 : highlightedIndexes[0] = 10; highlightedIndexes[1] = 10;break;
-				case 30 : highlightedIndexes[0] = 3; highlightedIndexes[1] = 3;break;
-				case 33 : highlightedIndexes[0] = 3; highlightedIndexes[1] = 10;break;
-				case 4 : highlightedIndexes[0] = 13; highlightedIndexes[1] = 13;break;
-				case 40 : highlightedIndexes[0] = 0; highlightedIndexes[1] = 0;break;
-				case 44 : highlightedIndexes[0] = 0; highlightedIndexes[1] = 13;break;
-				case 5 : highlightedIndexes[0] = 11; highlightedIndexes[1] = 11;break;
-				case 50 : highlightedIndexes[0] = 2; highlightedIndexes[1] = 2;break;
-				case 55 : highlightedIndexes[0] = 2; highlightedIndexes[1] = 11;break;
-				case 6 : highlightedIndexes[0] = 12; highlightedIndexes[1] = 12;break;
-				case 60 : highlightedIndexes[0] = 1; highlightedIndexes[1] = 1;break;
-				case 66 : highlightedIndexes[0] = 1; highlightedIndexes[1] = 12;break;
-				case 7 : highlightedIndexes[0] = 7; highlightedIndexes[1] = 7;break;
-				case 70 : highlightedIndexes[0] = 6; highlightedIndexes[1] = 6;break;
-				case 77 : highlightedIndexes[0] = 6; highlightedIndexes[1] = 7;break;
+				case 101 : highlightedIndexes[0] = 8; highlightedIndexes[1] = 8;break;
+				case 110 : highlightedIndexes[0] = 5; highlightedIndexes[1] = 5;break;
+				case 111 : highlightedIndexes[0] = 5; highlightedIndexes[1] = 8;break;
+				case 102 : highlightedIndexes[0] = 9; highlightedIndexes[1] = 9;break;
+				case 120 : highlightedIndexes[0] = 4; highlightedIndexes[1] = 4;break;
+				case 122 : highlightedIndexes[0] = 4; highlightedIndexes[1] = 9;break;
+				case 103 : highlightedIndexes[0] = 10; highlightedIndexes[1] = 10;break;
+				case 130 : highlightedIndexes[0] = 3; highlightedIndexes[1] = 3;break;
+				case 133 : highlightedIndexes[0] = 3; highlightedIndexes[1] = 10;break;
+				case 104 : highlightedIndexes[0] = 13; highlightedIndexes[1] = 13;break;
+				case 140 : highlightedIndexes[0] = 0; highlightedIndexes[1] = 0;break;
+				case 144 : highlightedIndexes[0] = 0; highlightedIndexes[1] = 13;break;
+				case 105 : highlightedIndexes[0] = 11; highlightedIndexes[1] = 11;break;
+				case 150 : highlightedIndexes[0] = 2; highlightedIndexes[1] = 2;break;
+				case 155 : highlightedIndexes[0] = 2; highlightedIndexes[1] = 11;break;
+				case 106 : highlightedIndexes[0] = 12; highlightedIndexes[1] = 12;break;
+				case 160 : highlightedIndexes[0] = 1; highlightedIndexes[1] = 1;break;
+				case 166 : highlightedIndexes[0] = 1; highlightedIndexes[1] = 12;break;
+				case 107 : highlightedIndexes[0] = 7; highlightedIndexes[1] = 7;break;
+				case 170 : highlightedIndexes[0] = 6; highlightedIndexes[1] = 6;break;
+				case 177 : highlightedIndexes[0] = 6; highlightedIndexes[1] = 7;break;
 			}
 			return highlightedIndexes;
 		}
