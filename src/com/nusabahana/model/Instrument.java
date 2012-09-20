@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
+
 /**
  * Kelas yang merupakan model dari semua instrumen alat musik dalam nusabahana
  * 
@@ -12,19 +13,19 @@ import java.util.Arrays;
  */
 public class Instrument {
 	/** Nama alat musik */
-	private String name;
+	protected String name;
 	/** Nama lain alat musik */
-	private String nickname;
+	protected String nickname;
 	/** Daerah asal alat musik */
-	private String origin;
+	protected String origin;
 	/** Trah alat musik */
-	private String family;
+	protected String family;
 	/** Profile alat musik */
-	private String profile;
+	protected String profile;
 	/** path gambar alat musik */
-	private String imagePath;
+	protected String imagePath;
 	/** catatan-catatan file */
-	private Note[] notes;
+	protected Note[] notes;
 	
 	/**
 	 * Contructor  default

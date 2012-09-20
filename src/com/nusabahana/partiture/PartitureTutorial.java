@@ -6,6 +6,7 @@ import android.text.Spanned;
 public class PartitureTutorial {
 	private Partiture partiture;
 	private TimedAction timedAction;
+	private PartitureString partitureString;
 	private int currentRow, currentSegment, currentElement, currentSubElement;
 	private long timePerElement;
 	private OnPartitureNextRowListener onNextRowListener;
@@ -26,6 +27,7 @@ public class PartitureTutorial {
 		this.timePerElement = timePerElement;
 		this.timedAction = new TimedAction(new PartitureAction(),
 				this.timePerElement);
+		this.partitureString = PartitureString.getInstance();
 		reset();
 	}
 
@@ -326,19 +328,21 @@ public class PartitureTutorial {
 				int totalSubElements = printedRow.getSegments()[i].getElements()[j].getNumSubElements();
 				if (totalSubElements > 1) sb.append("<u>");
 				for (int l = 0; l < totalSubElements; l++) {
+					int key = printedRow.getSegments()[i].getElements()[j].getSubElements()[l].getValue();
+					
 					if (i == currentSegment && j == currentElement && l == currentSubElement) {
 						sb.append("<font color='red'>");
-						sb.append(printedRow.getSegments()[i].getElements()[j].getSubElements()[l].getValue());
+						sb.append(partitureString.getValue(key));
 						sb.append("</font>");
 					} else {
-						sb.append(printedRow.getSegments()[i].getElements()[j].getSubElements()[l].getValue());
+						sb.append(partitureString.getValue(key));
 					}
 					sb.append("&nbsp;");
 				}
 				if (totalSubElements > 1)sb.append("</u>");
-				sb.append("&nbsp; &nbsp;");
+				sb.append("&nbsp;");
 			}
-			if(i+1 < totalSegments)sb.append("&nbsp; &nbsp; &nbsp;");
+			if(i+1 < totalSegments)sb.append("&nbsp;");
 		}
 
 		return Html.fromHtml(sb.toString());
