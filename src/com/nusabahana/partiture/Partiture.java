@@ -1,6 +1,5 @@
 package com.nusabahana.partiture;
 
-import java.util.Arrays;
 
 public class Partiture {
 	private Row[] rows;

@@ -1,17 +1,13 @@
 package com.nusabahana.view;
 
-import com.nusabahana.model.OnRecordEndListener;
-import com.nusabahana.view.R;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -19,7 +15,6 @@ import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 
 /**
  * Kelas yang merupakan view dari galeri file rekaman
@@ -103,8 +98,9 @@ public class RecordGalleryMenu extends NusabahanaView {
 		}
 
 		if (recordsName != null) {
-			for (int i = 0; i < recordsName.length; i++)
-				Log.e("Checking filtered", recordsName[i]);
+			for (int i = 0; i < recordsName.length; i++){
+//				Log.e("Checking filtered", recordsName[i]);
+			}
 			ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 					R.layout.recordrow, recordsName);
 			lv.setAdapter(adapter);
@@ -122,7 +118,7 @@ public class RecordGalleryMenu extends NusabahanaView {
 					currentFileName = recordsName[position];
 					hasChose = true;
 					isRecordFile = true;
-					Log.e("isRecord", recordsName[position]);
+//					Log.e("isRecord", recordsName[position]);
 				}
 			});
 		}
@@ -188,7 +184,7 @@ public class RecordGalleryMenu extends NusabahanaView {
 		public void onClick(View v) {
 			if (hasChose) {
 				if (isRecordFile) {
-					Log.e("Record Gallery", "let's play record file");
+//					Log.e("Record Gallery", "let's play record file");
 					if (mode == STANDBY) {
 						RECORD_CONTROLLER.playRecord(currentFileName, ocl);
 						mode = PLAYING;
@@ -198,7 +194,7 @@ public class RecordGalleryMenu extends NusabahanaView {
 						toStopState();
 					}
 				} else {
-					Log.e("BM Gallery", "let's play BM file");
+//					Log.e("BM Gallery", "let's play BM file");
 					if (mode == STANDBY) {
 						BM_CONTROLLER.play(currentFileName, ocl);
 						mode = PLAYING;

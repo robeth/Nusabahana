@@ -21,7 +21,7 @@
             android:layout_centerHorizontal="true"
             android:orientation="vertical" >
 
-            <ImageButton
+            <Button
                 android:id="@+id/button_start_bm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -30,11 +30,10 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:adjustViewBounds="true"
-                android:background="#00000000"
-                android:clickable="true"
-                android:src="@drawable/playnormal" />
+                android:background="@drawable/button_play"
+                android:clickable="true" />
 
-            <ImageButton
+            <Button
                 android:id="@+id/button_stop_bm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -43,9 +42,8 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:adjustViewBounds="true"
-                android:background="#00000000"
-                android:clickable="true"
-                android:src="@drawable/stopnormal" />
+                android:background="@drawable/button_stop"
+                android:clickable="true" />
 
             <ImageView
                 android:id="@+id/button_browse_bm"
@@ -66,8 +64,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
         android:layout_below="@id/topbar"
+        android:layout_centerVertical="true"
         android:layout_marginTop="20dp"
         android:background="@+drawable/blue_box_left"
         android:padding="7dp" >
@@ -78,27 +76,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <ImageButton
+            <Button
                 android:id="@+id/button_start_record"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
-                android:background="#00000000"
-                android:clickable="true"
-                android:src="@drawable/recordnormal" />
-
-            <ImageButton
-                android:id="@+id/button_stop_record"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:background="#00000000"
-                android:clickable="true"
-                android:src="@drawable/stopnormal" />
+                android:background="@drawable/button_record"
+                android:clickable="true" />
 
             <TextView
                 android:id="@+id/text_record_timer"
@@ -111,6 +97,19 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/button_group2"
+            android:layout_alignBottom="@id/button_group2"
+            android:layout_alignLeft="@id/button_group2"
+            android:layout_alignRight="@id/button_group2"
+            android:background="@drawable/toast_frame">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Record" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <LinearLayout
@@ -123,23 +122,43 @@
 
         <LinearLayout
             android:id="@+id/partiture_player_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@+drawable/blue_box_top"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:padding="3dp" >
 
             <TextView
                 android:id="@+id/partiture_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="Suwe Ora Jamu"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FFFFFF" />
 
-            <ImageButton
+            <Button
+                android:id="@+id/partiture_start_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/button_play"
+                android:clickable="true" />
+
+            <Button
+                android:id="@+id/partiture_stop_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/button_stop"
+                android:clickable="true" />
+
+            <Button
                 android:id="@+id/partiture_change"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -148,67 +167,40 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:adjustViewBounds="true"
-                android:clickable="true"
-                android:src="@drawable/music_folder" />
+                android:background="@drawable/music_folder"
+                android:clickable="true" />
         </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/partiture_player_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@+drawable/blue_box_top" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@+drawable/blue_box_top"
+            android:padding="5dp" >
 
             <TextView
                 android:id="@+id/partiture_row"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:text="Suwe Ora Jamu Suwe Ora Jamu Suwe Ora Jamu Suwe Ora Jamu"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#FFFFFF" />
-
-            <LinearLayout
-                android:id="@+id/button_group3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/partiture_row"
-                android:layout_centerHorizontal="true"
-                android:background="@+drawable/blue_box_top"
-                android:orientation="horizontal" >
-
-                <ImageButton
-                    android:id="@+id/partiture_start_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:adjustViewBounds="true"
-                    android:background="#00000000"
-                    android:clickable="true"
-                    android:src="@drawable/playnormal" />
-
-                <ImageButton
-                    android:id="@+id/partiture_pause_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:adjustViewBounds="true"
-                    android:background="#00000000"
-                    android:clickable="true"
-                    android:src="@drawable/pause" />
-
-                <ImageButton
-                    android:id="@+id/partiture_stop_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:adjustViewBounds="true"
-                    android:background="#00000000"
-                    android:clickable="true"
-                    android:src="@drawable/stopnormal" />
-            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/instruction_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/about"
+        android:clickable="true" />
 
     <FrameLayout
         android:id="@+id/instrument_frame"

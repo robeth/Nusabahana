@@ -2,13 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nusabahana.view"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.1.2" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8"/>
 
     <application
         android:icon="@drawable/nusabahana_icon"
@@ -86,6 +86,9 @@
             android:label="Share Facebook"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar" />
+        <activity android:name=".Instruction"
+                android:label="How to Play"
+                android:theme="@style/Theme.Translucent" />
     </application>
 
 </manifest>

@@ -1,38 +1,17 @@
 package com.nusabahana.controller;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.security.MessageDigest;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
-
-import com.nusabahana.controller.BackgroundMusicController.OnBackgroundMusicStartListener;
-import com.nusabahana.model.Action;
-import com.nusabahana.model.Instrument;
-import com.nusabahana.model.OnRecordEndListener;
-import com.nusabahana.model.Record;
-import com.nusabahana.model.RecordPlayer;
 
 import android.app.Activity;
-import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.media.MediaRecorder;
-import android.os.Bundle;
 import android.os.Environment;
-import android.os.SystemClock;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.LinearLayout;
 
 /**
  * Kelas yang merupakan controller dari semua aktivitas yang berhubungan dengan

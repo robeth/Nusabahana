@@ -2,10 +2,6 @@ package com.nusabahana.partiture;
 
 import java.util.HashMap;
 
-import android.text.Html;
-import android.text.Spanned;
-import android.text.SpannedString;
-
 public class PartitureString {
 	private HashMap<Integer, String> library;
 	private static PartitureString partitureString;
@@ -71,9 +67,9 @@ public class PartitureString {
 		library.put(170, "7/0");
 		
 		//Special key for kendang
-		library.put(201, "a");
-		library.put(202, "u");
-		library.put(203, "e");
+		library.put(201, "t");
+		library.put(202, "p");
+		library.put(203, "d");
 		
 	}
 	

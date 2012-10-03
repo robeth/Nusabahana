@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/instruction1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/detail_frame"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/note1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/toast_frame"
+            android:text="0/7" />
+
+        <TextView
+            android:id="@+id/explanation1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:maxLines="3"
+            android:background="@drawable/title_frame"
+            android:text="Touch the corresponding part\nin the BOTTOM row" />
+
+        <com.nusabahana.view.NoteImage
+            android:id="@+id/bonang1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bonang" />
+
+        <TextView
+            android:id="@+id/bonang_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/toast_frame"
+            android:text="7b" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/instruction2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instruction1"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/detail_frame"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/note2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/toast_frame"
+            android:text="3/0" />
+
+        <TextView
+            android:id="@+id/explanation2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:maxLines="3"
+            android:background="@drawable/title_frame"
+            android:text="Touch the corresponding part\nin the TOP row" />
+
+        <com.nusabahana.view.NoteImage
+            android:id="@+id/bonang2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bonang" />
+
+        <TextView
+            android:id="@+id/bonang_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/toast_frame"
+            android:text="3a" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/instruction3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instruction2"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/detail_frame"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/note3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/toast_frame"
+            android:text="4/4" />
+
+        <TextView
+            android:id="@+id/explanation3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/title_frame"
+            android:maxLines="3"
+            android:text="Touch the corresponding part\nin the TOP and BOTTOM row" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
+            <com.nusabahana.view.NoteImage
+                android:id="@+id/bonang3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bonang" />
+
+            <TextView
+                android:id="@+id/bonang_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/bonang3"
+				android:layout_alignBottom="@id/bonang3"
+                android:background="@drawable/toast_frame"
+                android:text="4a" />
+
+            <com.nusabahana.view.NoteImage
+                android:id="@+id/bonang3b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bonang3"
+                android:layout_alignLeft="@id/bonang3"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bonang" />
+
+            <TextView
+                android:id="@+id/bonang_text3b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/bonang3b"
+				android:layout_alignBottom="@id/bonang3b"
+                android:background="@drawable/toast_frame"
+                android:text="4b" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -39,7 +39,7 @@ public class DistributorView extends ImageView {
 		int rawX, rawY;
 		final int location[] = { 0, 0 };
 		this.getLocationOnScreen(location);
-		Log.v("Acation Index", "index :"+actionPointerIndex);
+		// Log.v("Acation Index", "index :"+actionPointerIndex);
 		rawX = (int) event.getX(actionPointerIndex) + location[0];
 		rawY = (int) event.getY(actionPointerIndex) + location[1];
 		// Log.v("tag", "location:[" + location[0] + "," + location[1]
@@ -78,34 +78,34 @@ public class DistributorView extends ImageView {
 
 	}
 
-	// final String names[] = { "DOWN", "UP", "MOVE", "CANCEL", "OUTSIDE",
-	// "POINTER_DOWN", "POINTER_UP", "7?", "8?", "9?" };
-	//
-	// private void dumpEvent(final MotionEvent event) {
-	//
-	// final StringBuilder sb = new StringBuilder();
-	// final int action = event.getAction();
-	// final int actionCode = action & MotionEvent.ACTION_MASK;
-	// sb.append("event ACTION_").append(names[actionCode]);
-	// if (actionCode == MotionEvent.ACTION_POINTER_DOWN
-	// || actionCode == MotionEvent.ACTION_POINTER_UP) {
-	// sb.append("(pid ").append(
-	// action >> MotionEvent.ACTION_POINTER_ID_SHIFT);
-	// sb.append(")");
-	// }
-	// sb.append("[");
-	// for (int i = 0; i < event.getPointerCount(); i++) {
-	// sb.append("#").append(i);
-	// sb.append("(pid ").append(event.getPointerId(i));
-	// sb.append(")=").append((int) event.getX(i));
-	// sb.append(",").append((int) event.getY(i));
-	// if (i + 1 < event.getPointerCount()) {
-	// sb.append(";");
-	// }
-	// }
-	// sb.append("]");
-	// Log.d("tag", sb.toString());
-	// }
+	final String names[] = { "DOWN", "UP", "MOVE", "CANCEL", "OUTSIDE",
+			"POINTER_DOWN", "POINTER_UP", "7?", "8?", "9?" };
+
+	private void dumpEvent(final MotionEvent event) {
+
+		final StringBuilder sb = new StringBuilder();
+		final int action = event.getAction();
+		final int actionCode = action & MotionEvent.ACTION_MASK;
+		sb.append("NEWWWW, event ACTION_").append(names[actionCode]);
+		if (actionCode == MotionEvent.ACTION_POINTER_DOWN
+				|| actionCode == MotionEvent.ACTION_POINTER_UP) {
+			sb.append("(pid ").append(
+					action >> MotionEvent.ACTION_POINTER_ID_SHIFT);
+			sb.append(")");
+		}
+		sb.append("[");
+		for (int i = 0; i < event.getPointerCount(); i++) {
+			sb.append("#").append(i);
+			sb.append("(pid ").append(event.getPointerId(i));
+			sb.append(")=").append((int) event.getX(i));
+			sb.append(",").append((int) event.getY(i));
+			if (i + 1 < event.getPointerCount()) {
+				sb.append(";");
+			}
+		}
+		sb.append("]");
+		Log.d("tag", sb.toString());
+	}
 
 	// private ArrayList<View> getChildViews(final View view) {
 	// final ArrayList<View> views = new ArrayList<View>();
@@ -122,10 +122,10 @@ public class DistributorView extends ImageView {
 	// }
 
 	private ArrayList<View> getTouchedViews(final int x, final int y) {
-		
-//		final ArrayList<View> touchedViews = new ArrayList<View>();
+
+		// final ArrayList<View> touchedViews = new ArrayList<View>();
 		for (View view : registeredViews) {
-//			final View view = registeredViews.get(i);
+			// final View view = registeredViews.get(i);
 
 			final int location[] = { 0, 0 };
 			view.getLocationOnScreen(location);
@@ -151,7 +151,7 @@ public class DistributorView extends ImageView {
 		}
 		// }
 
-		return null;//touchedViews;
+		return null;// touchedViews;
 
 	}
 
@@ -169,40 +169,41 @@ public class DistributorView extends ImageView {
 
 	@Override
 	public boolean onTouchEvent(final MotionEvent event) {
+		dumpEvent(event);
 		//
-		 final int[] a = { 0, 0 };
-//		 v.getLocationOnScreen(a);
-		 event.setLocation(a[0]+event.getX(), a[1]+event.getY());
-		 Log.v("tag fuuuuuuuuu : "+event.getPointerCount(), "real event:(" +
-		 event.getX() + "," + event.getY() +")--- tag :");
+		final int[] a = { 0, 0 };
+		// v.getLocationOnScreen(a);
+		event.setLocation(a[0] + event.getX(), a[1] + event.getY());
+		// Log.v("tag fuuuuuuuuu : "+event.getPointerCount(), "real event:(" +
+		// event.getX() + "," + event.getY() +")--- tag :");
 
 		// start
 		int action = event.getActionMasked();
 		int index = event.getActionIndex();
-//		int actionMasked = action & MotionEvent.ACTION_MASK;
+		// int actionMasked = action & MotionEvent.ACTION_MASK;
 
 		switch (action) {
 		case MotionEvent.ACTION_DOWN:
-//			Log.v("Down", "Add id = " + event.getPointerId(0));
+			Log.v("Down", "Add id = " + event.getPointerId(0));
 			dealEvent(0, event);
 			break;
 		case MotionEvent.ACTION_POINTER_DOWN:
-//			int id = action >> MotionEvent.ACTION_POINTER_ID_SHIFT;
-//			Log.v("Pointer Down", "Add id = " + id);
+			int id = action >> MotionEvent.ACTION_POINTER_ID_SHIFT;
+			Log.v("Pointer Down", "Add id = " + id);
 			dealEvent(index, event);
-//			break;
+			break;
 
-//		case MotionEvent.ACTION_MOVE:
-			// Log.d("Move", "move detected");
-//			break;
+		// case MotionEvent.ACTION_MOVE:
+		// Log.d("Move", "move detected");
+		// break;
 
-//		case MotionEvent.ACTION_POINTER_UP:
-//			int id2 = action >> MotionEvent.ACTION_POINTER_ID_SHIFT;
-//			Log.v("Pointer UP", "Release id = " + id2);
-//			break;
-//		case MotionEvent.ACTION_UP:
-//			Log.v("Up", "clear");
-//			break;
+		// case MotionEvent.ACTION_POINTER_UP:
+		// int id2 = action >> MotionEvent.ACTION_POINTER_ID_SHIFT;
+		// Log.v("Pointer UP", "Release id = " + id2);
+		// break;
+		// case MotionEvent.ACTION_UP:
+		// Log.v("Up", "clear");
+		// break;
 		}
 		return true;
 	}

@@ -93,6 +93,7 @@
         <item>3,kenong5.ogg,5,5</item>
         <item>4,kenong6.ogg,6,6</item>
         <item>5,kenong7.ogg,7,7</item>
+        <item>6,kethuk.ogg,kethuk,40</item>
     </string-array>
     
     <string-array name="saron">

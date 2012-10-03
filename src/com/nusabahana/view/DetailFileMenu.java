@@ -2,10 +2,6 @@ package com.nusabahana.view;
 
 import java.io.File;
 
-import com.nusabahana.controller.RecordController;
-import com.nusabahana.model.Record;
-import com.nusabahana.view.R;
-
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
@@ -13,15 +9,15 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.nusabahana.controller.RecordController;
 
 /**
  * Kelas yang merupakan view untuk menampilkan detil dari suatu file rekaman
@@ -232,7 +228,7 @@ public class DetailFileMenu extends NusabahanaView {
 			    // takes the user to the SoundCloud sharing screen
 			    startActivityForResult(intent, 1000);
 			} catch (ActivityNotFoundException e) {
-				Log.e("SOUNDCLOUD", e.getMessage());
+//				Log.e("SOUNDCLOUD", e.getMessage());
 				Toast.makeText(DetailFileMenu.this, "Please install SoundCloud apps", Toast.LENGTH_SHORT)
 				.show();
 			}

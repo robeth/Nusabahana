@@ -134,14 +134,14 @@ public class RecordPlayer {
 			r = new AtomicAction(actions.get(counter).getIndex());
 			counter++;
 			
-			Log.e("Lanjut", "JUUUUUT in : "+ (currentTimeStamp - previousTimeStamp));
+//			Log.e("Lanjut", "JUUUUUT in : "+ (currentTimeStamp - previousTimeStamp));
 			h.postDelayed(r, currentTimeStamp - previousTimeStamp);
 			previousTimeStamp = currentTimeStamp;
 			
 		} else {
 			if(onRecordEndListener != null){
 				onRecordEndListener.onEnded();
-				Log.e("END", "EMDD");
+//				Log.e("END", "EMDD");
 			}
 		}
 	}

@@ -28,15 +28,15 @@
 
             <ImageView
                 android:id="@+id/playring"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:src="@drawable/playring" />
 
             <ImageView
                 android:id="@+id/play"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:src="@drawable/mallet" />
         </RelativeLayout>
@@ -48,23 +48,23 @@
 
             <ImageView
                 android:id="@+id/galleryring"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:src="@drawable/galleryring" />
 
             <ImageView
                 android:id="@+id/gallery"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:src="@drawable/treaserumusic" />
         </RelativeLayout>
         
         <ImageView
                 android:id="@+id/aboutImage"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@drawable/about"
                 android:layout_gravity="center_vertical|right"
                 android:layout_weight="0"  />

@@ -1,7 +1,6 @@
 package com.nusabahana.partiture;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.nusabahana.model.Instrument;
 import com.nusabahana.model.InstrumentPlayer;
@@ -125,7 +124,7 @@ public class PartiturePlayer {
 
 		@Override
 		public void onTicked() {
-			Log.d("Partiture Player", "OnTicked");
+//			Log.d("Partiture Player", "OnTicked");
 			instructInstruments();
 			
 			boolean hasNextAction = true;
@@ -142,12 +141,12 @@ public class PartiturePlayer {
 			}
 			
 			if(hasNextAction){
-				Log.d("Partiture Player", "Next Action");
+//				Log.d("Partiture Player", "Next Action");
 				timedAction.stop();
 				timedAction.setTime(getNextInterval());
 				timedAction.start();
 			} else {
-				Log.d("Partiture Player", "Stop");
+//				Log.d("Partiture Player", "Stop");
 				stop();
 			}
 		}

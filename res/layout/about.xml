@@ -22,7 +22,7 @@
             android:shadowDx="3"
             android:shadowDy="3"
             android:shadowRadius="3"
-            android:text="Nusabahana (0.8.1)"
+            android:text="Nusabahana (1.1.2)"
             android:textColor="#000"
             android:textSize="24dp"
             android:textStyle="bold|italic"
@@ -30,8 +30,8 @@
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/textView1"
             android:layout_marginLeft="10dp"
@@ -53,8 +53,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/imageView1"
             android:layout_below="@+id/imageView1"
             android:layout_marginTop="10dp"
@@ -75,8 +75,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/imageView1"
             android:layout_below="@+id/imageView2"
             android:layout_marginTop="10dp"
@@ -97,8 +97,8 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/imageView1"
             android:layout_below="@+id/imageView3"
             android:layout_marginTop="10dp"
@@ -125,10 +125,9 @@
 
         <ImageView
             android:id="@+id/imageFasilkom"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
             android:src="@drawable/fasilkom" />
 
@@ -136,8 +135,10 @@
             android:id="@+id/fasilkomTextGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageFasilkom"
-            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/imageFasilkom"
+            android:layout_alignBottom="@id/imageFasilkom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/fasilkom_frame"
             android:orientation="vertical" >
 
@@ -173,8 +174,8 @@
 
         <ImageView
             android:id="@+id/imageDosen"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/dosenText"
             android:layout_below="@+id/dosenText"
             android:layout_marginTop="10dp"
@@ -191,6 +192,28 @@
             android:background="@drawable/name_frame"
             android:paddingLeft="10dp"
             android:text="Hadaiq Rolis S. ,S.Kom, M.Kom."
+            android:textColor="#000000" />
+        
+        <ImageView
+            android:id="@+id/imageDosen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dosenText"
+            android:layout_below="@+id/imageDosen"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pakari" />
+
+        <TextView
+            android:id="@+id/namePakari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/imageDosen2"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/imageDosen2"
+            android:background="@drawable/name_frame"
+            android:paddingLeft="10dp"
+            android:text=" Ari Prasetiyo, S.S., M.Si."
             android:textColor="#000000" />
     </RelativeLayout>
 

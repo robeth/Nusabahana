@@ -1,27 +1,17 @@
 package com.nusabahana.view;
 
-import com.nusabahana.model.Instrument;
-import com.nusabahana.model.InstrumentGroup;
-import com.nusabahana.view.R;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.Gallery;
 import android.widget.ImageView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.nusabahana.model.Instrument;
+import com.nusabahana.model.InstrumentGroup;
 
 /**
  * Kelas yang merupakan view dari fitur pemilihan instrumen musik
@@ -146,7 +136,7 @@ public class ChooseInstrumentMenu extends NusabahanaView {
 
 		Bundle b = new Bundle();
 		b.putString("chosenInstrument", chosenInstrument);
-		Log.e("Chosen Instrument:", chosenInstrument);
+//		Log.e("Chosen Instrument:", chosenInstrument);
 
 		newIntent.putExtras(b);
 		startActivity(newIntent);

@@ -1,15 +1,11 @@
 package com.nusabahana.view;
 
+import android.app.Activity;
+import android.os.Bundle;
+
 import com.nusabahana.controller.BackgroundMusicController;
 import com.nusabahana.controller.InstrumentController;
 import com.nusabahana.controller.RecordController;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 /**
  * Kelas yang merupakan kerangka utama semua activity pada aplikasi Nusabahana.

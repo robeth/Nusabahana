@@ -1,6 +1,5 @@
 package com.nusabahana.partiture;
 
-import java.util.Arrays;
 
 public class Segment {
 	private Element[] elements;

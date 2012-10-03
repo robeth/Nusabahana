@@ -36,8 +36,10 @@ public class PartitureTutorial {
 		if (tutorialState != STANDBY) {
 			stop();
 		}
-		currentRow = -1;
-		nextRow();
+		currentRow = 0;
+		currentSegment = 0;
+		currentElement = 0;
+		currentSubElement = -1;
 		return 0;
 	}
 
@@ -343,7 +345,7 @@ public class PartitureTutorial {
 				if (totalSubElements > 1)sb.append("</u>");
 				sb.append("&nbsp;");
 			}
-			if(i+1 < totalSegments)sb.append("&nbsp;");
+			if(i+1 < totalSegments)sb.append("&nbsp;&nbsp;");
 		}
 
 		return Html.fromHtml(sb.toString());
