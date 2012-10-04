@@ -33,7 +33,7 @@
         <item>bonang</item>
         <item>Javanese</item>
         <item>Gamelan Jawa</item>
-        <item>The bonang is  a collection of small gongs placed horizontally onto strings in a wooden frame (rancak), either one or two rows wide. They are typically hit with padded sticks (tabuh).</item>
+        <item>Bonang is a collection of small gongs placed horizontally onto strings in a wooden frame (rancak), either one or two rows wide. They are typically hit with padded sticks (tabuh).</item>
         <item>bonanglogo.png</item>
         <item >0,bonang4a.ogg,4a,4</item>
         <item >1,bonang6a.ogg,6a,6</item>
@@ -73,7 +73,7 @@
         <item>kendang</item>
         <item>Javanese</item>
         <item>Gamelan Jawa</item>
-        <item>Kendang is the Central Javanese gamelan instruments in which one of its main functions to set the rhythm. This instrument was rung by hand, without extra tools.</item>
+        <item>Kendang is a Central Javanese gamelan instruments in which one of its main functions to set the rhythm. This instrument was rung by hand, without extra tools.</item>
         <item>kendanglogo.png</item>
         <item >0,kendang1tak.ogg,1tak,201</item>
         <item >1,kendang3tung.ogg,2tung,202</item>
@@ -85,7 +85,7 @@
         <item>kenong</item>
         <item>Javanese</item>
         <item>Gamelan Jawa</item>
-         <item>Kenong is technically a kind of gong, but is placed on its side and is roughly as tall as it is wide. hey are usually played with similar padded sticks to the bonang, except larger.  </item>
+         <item>Kenong is technically a kind of gong. Kenong is placed in Gong\'s side and is roughly as tall as it is wide. They are usually played with similar padded sticks to the bonang, except larger.  </item>
          <item>kenonglogo.png</item>
         <item>0,kenong1.ogg,1,1</item>
         <item>1,kenong2.ogg,2,2</item>
@@ -101,7 +101,7 @@
         <item>saron</item>
         <item>Javanese</item>
         <item>Gamelan Jawa</item>
-		<item>Saron, is one of the gamelan instruments including balungan family. Tabuh saron usually made of wood, with a shape like a hammer. In the play saron, right hand hit wilahan / sheet metal with percussion, then the left hand punch that knocked wilahan previously.</item>
+		<item>Saron is one of the gamelan instruments including balungan family. Tabuh saron usually made of wood, with a shape like a hammer. In the play, right hand hit wilahan / sheet metal with percussion, then the left hand touch that knocked wilahan previously.</item>
         <item>saronlogo.png</item>
         <item>0,sarondemung1.ogg,1,1</item>
         <item>1,sarondemung2.ogg,2,2</item>
@@ -117,7 +117,7 @@
         <item>ugal</item>
         <item>Bali</item>
         <item>Gamelan Bali</item>
-        <item>Ugal requires long resonating bamboo tubes so is often played while sitting on a chair or bench. There are 10 keys so the instrument spans two octaves.</item>
+        <item>Ugal requires long resonating bamboo tubes so it\'s often played while sitting on a chair or bench. There are 10 keys so the instrument spans two octaves.</item>
         <item>ugalicon.png</item>
         <item>0,ugal4rendah_pertama.ogg,4r,34</item>
         <item>1,ugal5rendah_kedua.ogg,5r,35</item>
@@ -136,7 +136,7 @@
         <item>giying</item>
         <item>Bali</item>
         <item>Gamelan Bali</item>
-        <item>The giying is the largest of the gangsa metallophones and is played with a wooden mallet. It has ten keys and occupies the lowest range of the gangas.The giying plays an elaborated version of the core melody, played on the jublag, which may be considered the main melody.</item>
+        <item>Giying is the largest gangsa metallophones and is played with a wooden mallet. It has ten keys and occupies the lowest range of the gangas. Giying plays an elaborated version of the core melody, played on the jublag, which may be considered the main melody.</item>
         <item>giyingicon.png</item>
         <item>0,giying4rendah.ogg,4r,34</item>
         <item>1,giying5rendah.ogg,5r,35</item>
@@ -155,7 +155,7 @@
         <item>gangsa</item>
         <item>Bali</item>
         <item>Gamelan Bali</item>
-        <item>A gangsa is a type of metallophone which is used mainly in Balinese and Javanese Gamelan music. There are two types of gangsa typically used: the smaller, higher pitched kantilan and the larger pemade.</item>
+        <item>Gangsa is a type of metallophone which is used mainly in Balinese and Javanese Gamelan music. There are two types of gangsa typically used: the smaller, higher pitched kantilan and the larger pemade.</item>
         <item>gangsaicon.png</item>
         <item>0,gangsa3_pertama.ogg,3,3</item>
         <item>1,gangsa4_kedua.ogg,4,4</item>
@@ -169,7 +169,7 @@
         <item>kantil</item>
         <item>Bali</item>
         <item>Gamelan Bali</item>
-        <item>The kantil is the smallest and highest of the gangsa instruments: There are usually 10 keys so the instrument spans two octaves</item>
+        <item>Kantil is the smallest and highest of the gangsa instruments. They usually have 10 keys so the instrument spans two octaves</item>
         <item>kantilicon.png</item>
         <item>0,kantil1_keempat.ogg,1,1</item>
         <item>1,kantil3_kelima.ogg,3,3</item>
@@ -211,7 +211,7 @@
         <item>angklung</item>
         <item>Sunda</item>
         <item>Angklung Group</item>
-        <item>The Angklung is a musical instrument made of two bamboo tubes attached to a bamboo frame. The tubes are carved to have a resonant pitch when struck and are tuned to octaves. </item>
+        <item>Angklung is a musical instrument made of two bamboo tubes attached to a bamboo frame. The tubes are carved to have a resonant pitch when struck and are tuned to octaves. </item>
         <item>angklunglogo.png</item>
         <item >0,angklung1.ogg,1,1</item>
         <item >1,angklung1kress.ogg,1k,21</item>
@@ -232,7 +232,7 @@
         <item>arumba</item>
         <item>Sunda</item>
         <item>Angklung Group</item>
-        <item>Arumba is a musical instrument made of bamboo material in the play with melodic and rhythmic. At first arumba using pentatonic scales, but in its development diatonic scales can be played.</item>
+        <item>Arumba is a musical instrument made of bamboo material. It\'s considered as melodic and rhythmic instrument. At first, arumba using pentatonic scales, but in its development diatonic scales can be played.</item>
         <item>arumbaicon.png</item>
         <item >0,arumba1.ogg,1,1</item>
         <item >1,arumba1kress.ogg,1k,21</item>

@@ -210,8 +210,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		tutorial.setPartiture(partiture);
 		tutorialText.setText(tutorial.getRowSpannable(),
 				TextView.BufferType.SPANNABLE);
-		tutorialTextHeader.setText(availablePartituresPath[partitureIndex]
-				+ " (" + simulatedInstrument.getName() + ")");
+		tutorialTextHeader.setText(getFileName(availablePartituresPath[partitureIndex]));
 	}
 
 	private void prepareTutorial() {

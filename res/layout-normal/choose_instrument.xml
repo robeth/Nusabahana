@@ -70,7 +70,7 @@
             	android:layout_alignParentLeft="true"
                 android:layout_margin="2dp"
 	            android:layout_below="@id/instrument_logo_info"
-                android:background="@drawable/button_play"
+	            android:text="Let's Play"
                 android:clickable="true"/>
 		
         <TextView

@@ -97,21 +97,25 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/button_group2"
-            android:layout_alignBottom="@id/button_group2"
-            android:layout_alignLeft="@id/button_group2"
-            android:layout_alignRight="@id/button_group2"
-            android:background="@drawable/toast_frame">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Record" />
-        </RelativeLayout>
     </RelativeLayout>
 
+    <!--
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/sidebar"
+        android:layout_alignLeft="@id/sidebar"
+        android:layout_alignRight="@id/sidebar"
+        android:layout_alignTop="@id/sidebar"
+        android:background="@drawable/toast_frame" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Record" />
+    </RelativeLayout> -->
+    
+	
     <LinearLayout
         android:id="@+id/partiture_player"
         android:layout_width="wrap_content"
@@ -195,9 +199,9 @@
         android:id="@+id/instruction_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
         android:adjustViewBounds="true"
         android:background="@drawable/about"
         android:clickable="true" />
