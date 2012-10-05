@@ -225,6 +225,24 @@
         <item >9,angklung6.ogg,6,6</item>
         <item >10,angklung6kress.ogg,6k,26</item>
         <item >11,angklung7.ogg,7,7</item>
+        <item >12,angklung1tinggi.ogg,1&#775;,11</item>
+        <item >13,angklung1tinggikress.ogg,<font style='line-through'>1&#775;</font>,61</item>
+        <item >14,angklung2tinggi.ogg,2&#775;,12</item>
+        <item >15,angklung2tinggikress.ogg,<font style='line-through'>2&#775;</font>,62</item>
+        <item >16,angklung3tinggi.ogg,3&#775;,13</item>
+        <item >17,angklung4tinggi.ogg,4&#775;,14</item>
+        <item >18,angklung4tinggikress.ogg,<font style='line-through'>4&#775;</font>,64</item>
+        <item >19,angklung5tinggi.ogg,5&#775;,15</item>
+        <item >20,angklung5tinggikress.ogg,<font style='line-through'>5&#775;</font>,65</item>
+        <item >21,angklung6tinggi.ogg,6&#775;,16</item>
+        <item >22,angklung3rendah.ogg,3&#803;,33</item>
+        <item >23,angklung4rendah.ogg,4&#803;,34</item>
+        <item >24,angklung4rendahkress.ogg,<font style='line-thtough'>4&#803;</font>,84</item>
+        <item >25,angklung5rendah.ogg,5&#803;,35</item>
+        <item >26,angklung5rendahkress.ogg,<font style='line-thtough'>5&#803;</font>,85</item>
+        <item >27,angklung6rendah.ogg,6&#803;,36</item>
+        <item >28,angklung6rendahkress.ogg,<font style='line-thtough'>6&#803;</font>,86</item>
+        <item >29,angklung7rendah.ogg,7&#803;,37</item>
     </string-array>
     
     <string-array name="arumba">

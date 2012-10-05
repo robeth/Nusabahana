@@ -28,10 +28,14 @@ public class DistributorView extends ImageView {
 		registeredViews.add(v);
 	}
 
-	public void unregisterView(View v) {
-		registeredViews.remove(v);
-	}
+//	public void unregisterView(View v) {
+//		registeredViews.remove(v);
+//	}
 
+	public void clear(){
+		registeredViews.clear();
+	}
+	
 	private void dealEvent(final int actionPointerIndex, final MotionEvent event) {
 		//
 		// dumpEvent(event);
@@ -137,6 +141,8 @@ public class DistributorView extends ImageView {
 				if (view instanceof NoteImage) {
 					// deals the Event
 					((NoteImage) view).play();
+				} else if (view instanceof InstructionImage){
+					((InstructionImage)view).doInstruction();
 				}
 				// final int viewLocation[] = { 0, 0 };
 				// view.getLocationOnScreen(viewLocation);

@@ -113,9 +113,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Record" />
-    </RelativeLayout> -->
-    
-	
+    </RelativeLayout>
+    -->
+
     <LinearLayout
         android:id="@+id/partiture_player"
         android:layout_width="wrap_content"
@@ -222,5 +222,23 @@
             android:layout_height="match_parent"
             android:src="#11FFFFFF" />
     </FrameLayout>
+
+    <com.nusabahana.view.InstructionImage
+        android:id="@+id/toggle_button_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/toggle" />
+
+    <com.nusabahana.view.InstructionImage
+        android:id="@+id/toggle_button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/toggle_button_prev"
+        android:adjustViewBounds="true"
+        android:src="@drawable/toggle" />
 
 </RelativeLayout>

@@ -1,24 +1,21 @@
 package com.nusabahana.view;
 
-import java.util.Arrays;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
@@ -32,6 +29,9 @@ import com.nusabahana.controller.BackgroundMusicController;
 import com.nusabahana.controller.BackgroundMusicController.OnBackgroundMusicStartListener;
 import com.nusabahana.controller.RecordController;
 import com.nusabahana.controller.RecordController.OnRecordStartPlayingListener;
+import com.nusabahana.instrument.AngklungView;
+import com.nusabahana.instrument.BonangView;
+import com.nusabahana.instrument.InstrumentView;
 import com.nusabahana.model.Instrument;
 import com.nusabahana.partiture.Element;
 import com.nusabahana.partiture.Partiture;
@@ -68,7 +68,6 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 			bTutorialStop, bTutorialChoose, instructionButton;
 	private ImageView bBMBrowse;
 	private TextView timerText;
-	private NoteImage[] insParts;
 	private int time;
 
 	// Progress bar beserta handler yang mengupdatenya
@@ -94,7 +93,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 	private String groupPath;
 
 	private LinearLayout tutorialLayout;
-
+	private InstrumentView instrumentView;
 	/**
 	 * Inisialisasi activity
 	 */
@@ -102,59 +101,38 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		// Menentukan mode permainan dan alat musik simulasi
 		Bundle tikiJNE = getIntent().getExtras();
 		String chosenInstrumentName = tikiJNE.getString("chosenInstrument");
 
-		simulatedInstrument = INSTRUMENT_CONTROLLER
-				.getInstrument(chosenInstrumentName);
+		simulatedInstrument = INSTRUMENT_CONTROLLER.getInstrument(chosenInstrumentName);
 		INSTRUMENT_CONTROLLER.setCurrentInstrument(chosenInstrumentName);
-		int instrumentXMLID = getResources().getIdentifier(
-				"instrument_" + simulatedInstrument.getNickname(), "layout",
-				getPackageName());
-
-		// Inisialisasi bagian instrument simulasi: gambar, suara dan listener
+		int instrumentXMLID = getResources().getIdentifier("instrument_" + simulatedInstrument.getNickname(), "layout",getPackageName());
+		
 		setContentView(R.layout.instrument_simulation_record);
 		FrameLayout lv = (FrameLayout) findViewById(R.id.instrument_frame);
 		dv = (DistributorView) findViewById(R.id.distributor);
-		LayoutInflater layoutInflater = (LayoutInflater) this
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		lv.addView(layoutInflater.inflate(instrumentXMLID, lv, false), 0);
+		
 		lv.bringChildToFront(dv);
-
-		String bgPath = INSTRUMENT_CONTROLLER.getGroup(simulatedInstrument)
-				.getBgPath();
+		
+		
+		
+		String bgPath = INSTRUMENT_CONTROLLER.getGroup(simulatedInstrument).getBgPath();
 		RelativeLayout rl = (RelativeLayout) findViewById(R.id.simulation);
-
 		int a = getResources().getIdentifier(getFileName(bgPath), "drawable",
 				getPackageName());
-		// Log.e("Background",
-		// getFileName(bgPath) + " -- " + a + " --- " + rl.getHeight());
 		rl.setBackgroundResource(R.drawable.background);
-
-		// anim =
-
-		insParts = new NoteImage[simulatedInstrument.getNotes().length];
-		tvParts = new TextView[insParts.length];
-		animationSet = new Animation[insParts.length];
-		for (int i = 0; i < insParts.length; i++) {
-
-			insParts[i] = (NoteImage) findViewById(getResources()
-					.getIdentifier(simulatedInstrument.getNickname() + i, "id",
-							getPackageName()));
-			tvParts[i] = (TextView) findViewById(getResources().getIdentifier(
-					simulatedInstrument.getNickname() + "_text" + i, "id",
-					getPackageName()));
-			insParts[i].setIndex(i);
-			insParts[i].setActivity(this);
-			tvParts[i].setText(simulatedInstrument.getNoteLabel(i));
-			animationSet[i] = AnimationUtils.loadAnimation(this, R.anim.shake);
-
-			dv.registerView(insParts[i]);
+	
+		if(simulatedInstrument.getNickname().equals("angklung")){
+			Log.d("Instrument View chosen", "it is angklung! : "+simulatedInstrument.getNickname());
+			instrumentView = new AngklungView(this, dv, simulatedInstrument, instrumentXMLID);
+		}else {
+			Log.d("Instrument View chosen", "it is else! : "+simulatedInstrument.getNickname());
+			instrumentView = new BonangView(this, dv, simulatedInstrument, instrumentXMLID);
 		}
-
+		
 		tutorialLayout = (LinearLayout) findViewById(R.id.partiture_player);
-		// Mengambil semua reference view yang akan diberi listener
 		bRecordStart = (Button) findViewById(R.id.button_start_record);
 		bBMStart = (Button) findViewById(R.id.button_start_bm);
 		bBMStop = (Button) findViewById(R.id.button_stop_bm);
@@ -168,7 +146,6 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		tutorialTextHeader = (TextView) findViewById(R.id.partiture_name);
 
 		bRecordStart.setOnClickListener(recordStartListener);
-		// bHome.setOnClickListener(homeListener);
 		bBMStart.setOnClickListener(musicStartListener);
 		bBMStop.setOnClickListener(musicStopListener);
 		bBMBrowse.setOnClickListener(musicBrowseListener);
@@ -178,7 +155,6 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		bBMStop.setEnabled(true);
 		BM_CONTROLLER.setOnBackgroundMusicStartListener(bmStartListener);
 		RECORD_CONTROLLER.setOnRecordStartPlayingListener(orStartListener);
-
 		prepareTutorial();
 	}
 
@@ -547,10 +523,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		super.onBackPressed();
 	}
 
-	public void shakePlay(int index) {
-		INSTRUMENT_CONTROLLER.play(index);
-		insParts[index].startAnimation(animationSet[index]);
-	}
+	
 
 	/**
 	 * Runnable yang digunakan untuk mengupdate state dari ProgressBar
@@ -733,123 +706,13 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 
 		@Override
 		public void onNextSubElement() {
-			// TODO Auto-generated method stub
 			int subelementValue = tutorial.getCurrentSubElementValue();
-			// Log.d("Tutorial", "subvalue:"+subelementValue);
-			int[] highlightedIndexes = (simulatedInstrument.getNickname()
-					.equals("bonang")) ? getBonangHighlightedIndexes(subelementValue)
-					: simulatedInstrument.getInstrumentIndexes(subelementValue);
-
-			for (int i = 0; i < insParts.length; i++) {
-				if (isIn(highlightedIndexes, i)) {
-					insParts[i].setColorFilter(0x99ff0000);
-					shakePlay(i);
-				} else
-					insParts[i].setColorFilter(Color.TRANSPARENT);
-			}
 			tutorialText.setText(tutorial.getRowSpannable(),
 					TextView.BufferType.SPANNABLE);
+			instrumentView.playInstruction(subelementValue);
 		}
 
-		private boolean isIn(int[] arrayInt, int intValue) {
-			for (int i = 0; i < arrayInt.length; i++)
-				if (arrayInt[i] == intValue)
-					return true;
-
-			return false;
-		}
-
-		private int[] getBonangHighlightedIndexes(int key) {
-			int[] highlightedIndexes = new int[2];
-			Arrays.fill(highlightedIndexes, -1);
-			switch (key) {
-			case 101:
-				highlightedIndexes[0] = 8;
-				highlightedIndexes[1] = 8;
-				break;
-			case 110:
-				highlightedIndexes[0] = 5;
-				highlightedIndexes[1] = 5;
-				break;
-			case 111:
-				highlightedIndexes[0] = 5;
-				highlightedIndexes[1] = 8;
-				break;
-			case 102:
-				highlightedIndexes[0] = 9;
-				highlightedIndexes[1] = 9;
-				break;
-			case 120:
-				highlightedIndexes[0] = 4;
-				highlightedIndexes[1] = 4;
-				break;
-			case 122:
-				highlightedIndexes[0] = 4;
-				highlightedIndexes[1] = 9;
-				break;
-			case 103:
-				highlightedIndexes[0] = 10;
-				highlightedIndexes[1] = 10;
-				break;
-			case 130:
-				highlightedIndexes[0] = 3;
-				highlightedIndexes[1] = 3;
-				break;
-			case 133:
-				highlightedIndexes[0] = 3;
-				highlightedIndexes[1] = 10;
-				break;
-			case 104:
-				highlightedIndexes[0] = 13;
-				highlightedIndexes[1] = 13;
-				break;
-			case 140:
-				highlightedIndexes[0] = 0;
-				highlightedIndexes[1] = 0;
-				break;
-			case 144:
-				highlightedIndexes[0] = 0;
-				highlightedIndexes[1] = 13;
-				break;
-			case 105:
-				highlightedIndexes[0] = 11;
-				highlightedIndexes[1] = 11;
-				break;
-			case 150:
-				highlightedIndexes[0] = 2;
-				highlightedIndexes[1] = 2;
-				break;
-			case 155:
-				highlightedIndexes[0] = 2;
-				highlightedIndexes[1] = 11;
-				break;
-			case 106:
-				highlightedIndexes[0] = 12;
-				highlightedIndexes[1] = 12;
-				break;
-			case 160:
-				highlightedIndexes[0] = 1;
-				highlightedIndexes[1] = 1;
-				break;
-			case 166:
-				highlightedIndexes[0] = 1;
-				highlightedIndexes[1] = 12;
-				break;
-			case 107:
-				highlightedIndexes[0] = 7;
-				highlightedIndexes[1] = 7;
-				break;
-			case 170:
-				highlightedIndexes[0] = 6;
-				highlightedIndexes[1] = 6;
-				break;
-			case 177:
-				highlightedIndexes[0] = 6;
-				highlightedIndexes[1] = 7;
-				break;
-			}
-			return highlightedIndexes;
-		}
+		
 	};
 
 	@Override

@@ -19,6 +19,7 @@ public class PartitureString {
 		
 		library.put(777, "&#183;");
 		
+		//Nada tinggi
 		library.put(11, "1&#775;");
 		library.put(12, "2&#775;");
 		library.put(13, "3&#775;");
@@ -27,14 +28,25 @@ public class PartitureString {
 		library.put(16, "6&#775;");
 		library.put(17, "7&#775;");
 		
+		//Nada Tinggi-kress
+		library.put(61, "<font style='line-through'>1&#775;</font>");
+		library.put(62, "<font style='line-thtough'>2&#775;</font>");
+		library.put(63, "<font style='line-thtough'>3&#775;</font>");
+		library.put(64, "<font style='line-thtough'>4&#775;</font>");
+		library.put(65, "<font style='line-thtough'>5&#775;</font>");
+		library.put(66, "<font style='line-thtough'>6&#775;</font>");
+		library.put(67, "<font style='line-thtough'>7&#775;</font>");
+				
+		//Nada kress
 		library.put(21, "<font style='line-through'>1</font>");
 		library.put(22, "<font style='line-thtough'>2</font>");
-		library.put(23, "<font style='line-thtough'>2</font>");
-		library.put(24, "<font style='line-thtough'>2</font>");
-		library.put(25, "<font style='line-thtough'>2</font>");
-		library.put(26, "<font style='line-thtough'>2</font>");
-		library.put(27, "<font style='line-thtough'>2</font>");
+		library.put(23, "<font style='line-thtough'>3</font>");
+		library.put(24, "<font style='line-thtough'>4</font>");
+		library.put(25, "<font style='line-thtough'>5</font>");
+		library.put(26, "<font style='line-thtough'>6</font>");
+		library.put(27, "<font style='line-thtough'>7</font>");
 		
+		//Nada bawah
 		library.put(31, "1&#803;");
 		library.put(32, "2&#803;");
 		library.put(33, "3&#803;");
@@ -42,6 +54,15 @@ public class PartitureString {
 		library.put(35, "5&#803;");
 		library.put(36, "6&#803;");
 		library.put(37, "7&#803;");
+		
+		//Nada Bawah-kress
+		library.put(81, "<font style='line-through'>1&#803;</font>");
+		library.put(82, "<font style='line-thtough'>2&#803;</font>");
+		library.put(83, "<font style='line-thtough'>3&#803;</font>");
+		library.put(84, "<font style='line-thtough'>4&#803;</font>");
+		library.put(85, "<font style='line-thtough'>5&#803;</font>");
+		library.put(86, "<font style='line-thtough'>6&#803;</font>");
+		library.put(87, "<font style='line-thtough'>7&#803;</font>");
 		
 		//Special key for bonang
 		library.put(101, "0/1");

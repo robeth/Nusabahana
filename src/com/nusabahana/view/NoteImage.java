@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+import com.nusabahana.instrument.InstrumentView;
+
 /**
  * Salah satu kelas prototipe untuk implementasikan multitouch
  * @author PPL-B1
@@ -15,7 +17,7 @@ public class NoteImage extends ImageView {
 	private static int STANDBY = 0;
 	private static int PRESSED = 1;
 	private int index;
-	private InstrumentSimulationMenu nv;
+	private InstrumentView instrumentView;
 	
 	public NoteImage(final Context context, final AttributeSet attrs) {
 		super(context, attrs);
@@ -26,12 +28,16 @@ public class NoteImage extends ImageView {
 		this.index = index;
 	}
 	
-	public void setActivity(InstrumentSimulationMenu nv){
-		this.nv = nv;
+	public int getIndex(){
+		return this.index;
+	}
+	
+	public void setInstrumentView(InstrumentView instrumentView){
+		this.instrumentView= instrumentView;
 	}
 	
 	public void play(){
-		nv.shakePlay(index);
+		instrumentView.shakePlay(index);
 	}
 
 }

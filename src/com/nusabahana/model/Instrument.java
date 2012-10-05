@@ -196,4 +196,17 @@ public class Instrument {
 		return temp;
 	}
 	
+	public int[] getRelativeIndexes(int key, int offset, int startIndex, int endIndex){
+		int[] temp = new int[4];
+		int latestIndex = 0;
+		
+		Arrays.fill(temp, -1);
+		
+		for(int i = startIndex; i < endIndex; i++){
+			if(notes[i].getKey() == key)
+				temp[latestIndex++] = i-startIndex + offset;
+		}
+		return temp;
+	}
+	
 }

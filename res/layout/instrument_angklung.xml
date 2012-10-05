@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center" >
-
+    
     <com.nusabahana.view.NoteImage
         android:id="@+id/angklung0"
         android:layout_width="wrap_content"
@@ -274,4 +274,5 @@
         android:background="@drawable/toast_frame"
         android:gravity="center_horizontal"
         android:text="11" />
+                
 </RelativeLayout>
