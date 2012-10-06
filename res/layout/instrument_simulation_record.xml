@@ -3,7 +3,7 @@
     android:id="@+id/simulation"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background" >
+    android:background="@drawable/wood3" >
 
     <RelativeLayout
         android:id="@+id/topbar"
@@ -220,7 +220,7 @@
             android:id="@+id/distributor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="#11FFFFFF" />
+            android:src="#00FFFFFF" />
     </FrameLayout>
 
     <com.nusabahana.view.InstructionImage

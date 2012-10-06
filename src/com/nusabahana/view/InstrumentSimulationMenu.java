@@ -122,6 +122,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		RelativeLayout rl = (RelativeLayout) findViewById(R.id.simulation);
 		int a = getResources().getIdentifier(getFileName(bgPath), "drawable",
 				getPackageName());
+
 		rl.setBackgroundResource(R.drawable.wood3);
 	
 		if(simulatedInstrument.getNickname().equals("angklung")){
@@ -131,7 +132,6 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 			Log.d("Instrument View chosen", "it is else! : "+simulatedInstrument.getNickname());
 			instrumentView = new BonangView(this, dv, simulatedInstrument, instrumentXMLID);
 		}
-		
 		tutorialLayout = (LinearLayout) findViewById(R.id.partiture_player);
 		bRecordStart = (Button) findViewById(R.id.button_start_record);
 		bBMStart = (Button) findViewById(R.id.button_start_bm);
