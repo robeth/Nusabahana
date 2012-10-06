@@ -130,7 +130,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 				getPackageName());
 		// Log.e("Background",
 		// getFileName(bgPath) + " -- " + a + " --- " + rl.getHeight());
-		rl.setBackgroundResource(R.drawable.background);
+		//rl.setBackgroundResource(R.drawable.background);
 
 		// anim =
 

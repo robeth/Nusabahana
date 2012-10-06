@@ -2,12 +2,14 @@ package com.nusabahana.view;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * Kelas yang merupakan view dari menu utama
@@ -34,6 +36,20 @@ public class MainMenu extends Activity {
 		playImage.setOnClickListener(playListener);
 		galleryImage.setOnClickListener(galleryListener);
 		aboutImage.setOnClickListener(aboutListener);
+		if ((getResources().getConfiguration().screenLayout &      Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_LARGE) {     
+	        Toast.makeText(this, "Large screen",Toast.LENGTH_LONG).show();
+
+	    }
+	    else if ((getResources().getConfiguration().screenLayout &      Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_NORMAL) {     
+	        Toast.makeText(this, "Normal sized screen" , Toast.LENGTH_LONG).show();
+
+	    } 
+	    else if ((getResources().getConfiguration().screenLayout &      Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_SMALL) {     
+	        Toast.makeText(this, "Small sized screen" , Toast.LENGTH_LONG).show();
+	    }
+	    else {
+	        Toast.makeText(this, "Screen size is neither large, normal or small" , Toast.LENGTH_LONG).show();
+	    }
 	}
 
 	/**
