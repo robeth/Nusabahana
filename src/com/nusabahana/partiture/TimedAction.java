@@ -21,8 +21,6 @@ public class TimedAction {
 
 	public boolean start(){
 		startTime = System.currentTimeMillis();
-		
-		Log.e("TimedAction", "Start");
 		handler.postDelayed(timerAction, time);
 		return false;
 	}
@@ -51,7 +49,6 @@ public class TimedAction {
 	private class TimerAction implements Runnable {
 		@Override
 		public void run() {
-			Log.e("TimedAction", "OnRun");
 			onTickedListener.onTicked();
 		}
 	}

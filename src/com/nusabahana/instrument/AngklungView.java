@@ -26,6 +26,7 @@ public class AngklungView extends InstrumentView {
 	private InstructionImage instructionNextImage, instructionPrevImage;
 	private int[][] mappingIndex = { { 0, 12, 0, 11 }, { 0, 10, 12, 21 },
 			{ 4, 8, 22, 29 } };
+	private int prevInstructionID = 0;
 
 	public AngklungView(Activity activity, DistributorView distributorView,
 			Instrument instrument, int instrumentViewID) {
@@ -66,8 +67,10 @@ public class AngklungView extends InstrumentView {
 		int[] temp = new int[12];
 		Arrays.fill(temp, -1);
 
-		for (int i = mappingIndex[state][OFFSET_INDEX]; i < 12; i++) {
-			temp[i] = mappingIndex[state][START_INDEX] + i;
+		for (int i = mappingIndex[state][OFFSET_INDEX]; i < mappingIndex[state][OFFSET_INDEX]+mappingIndex[state][NUMBER]; i++) {
+			
+			temp[i] = mappingIndex[state][START_INDEX] + i - mappingIndex[state][OFFSET_INDEX];
+			Log.d("Refresh","index("+i+") :"+ temp[i] );
 		}
 
 		// Yang -1 dibuat invisible dan unregister
@@ -80,10 +83,9 @@ public class AngklungView extends InstrumentView {
 			} else {
 				distributorView.registerView(instrumentParts[i]);
 				instrumentParts[i].setVisibility(View.VISIBLE);
-				instrumentParts[i].setIndex(mappingIndex[state][START_INDEX]
-						+ i);
+				instrumentParts[i].setIndex(temp[i]);
 				instrumentLabels[i].setText(instrument
-						.getNoteLabel(mappingIndex[state][START_INDEX] + i));
+						.getNoteLabel(temp[i]));
 			}
 		}
 
@@ -131,7 +133,16 @@ public class AngklungView extends InstrumentView {
 	};
 
 	public void playInstruction(int instructionID) {
-
+		if(instructionID == 777){
+			instructionID = prevInstructionID;
+		} else {
+			prevInstructionID = instructionID;
+		}
+		
+		if(!isOnOctave(state, instructionID)){
+			changeOctave(instructionID);
+		}
+		
 		int[] highlightedIndexes = instrument.getRelativeIndexes(instructionID,
 				mappingIndex[state][OFFSET_INDEX],
 				mappingIndex[state][START_INDEX],
@@ -144,13 +155,56 @@ public class AngklungView extends InstrumentView {
 			} else
 				instrumentParts[i].setColorFilter(Color.TRANSPARENT);
 		}
-
+	}
+	
+	private void changeOctave(int instructionID){
+		if(state == NORMAL_OCTAVE){
+			if(isOnOctave(HIGH_OCTAVE, instructionID)){
+				Log.d("IN CHANGE","instructionID:"+instructionID+" is HIGH octave");
+				state = HIGH_OCTAVE;
+				refresh();
+			} else if(isOnOctave(LOW_OCTAVE, instructionID)){
+				Log.d("IN CHANGE","instructionID:"+instructionID+" is LOW octave");
+				state = LOW_OCTAVE;
+				refresh();
+			}
+		} else if (state == HIGH_OCTAVE){
+			if(isOnOctave(NORMAL_OCTAVE, instructionID)){
+				Log.d("IN CHANGE","instructionID:"+instructionID+" is NORMAL octave");
+				state = NORMAL_OCTAVE;
+				refresh();
+			} else if(isOnOctave(LOW_OCTAVE, instructionID)){
+				Log.d("IN CHANGE","instructionID:"+instructionID+" is LOW octave");
+				state = LOW_OCTAVE;
+				refresh();
+			}
+		} else {
+			if(isOnOctave(HIGH_OCTAVE, instructionID)){
+				Log.d("IN CHANGE","instructionID:"+instructionID+" is HIGH octave");
+				state = HIGH_OCTAVE;
+				refresh();
+			} else if(isOnOctave(NORMAL_OCTAVE, instructionID)){
+				Log.d("IN CHANGE","instructionID:"+instructionID+" is NORMAL octave");
+				state = NORMAL_OCTAVE;
+				refresh();
+			}
+		}
 	}
 
+	private boolean isOnOctave(int octaveState, int instructionID){
+		for(int i = mappingIndex[octaveState][START_INDEX]; i <= mappingIndex[octaveState][END_INDEX];i++){
+			if(instrument.getNotes()[i].getKey() == instructionID){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	@Override
 	public void shakePlay(int index) {
 		instrumentPlayer.play(index);
-		instrumentParts[index].startAnimation(instrumentAnimations[index]);
+		int imageIndex = index - mappingIndex[state][START_INDEX] + mappingIndex[state][OFFSET_INDEX];
+		instrumentParts[imageIndex].startAnimation(instrumentAnimations[imageIndex]);
 	}
 
 	protected boolean isIn(int[] arrayInt, int intValue) {

@@ -122,7 +122,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		RelativeLayout rl = (RelativeLayout) findViewById(R.id.simulation);
 		int a = getResources().getIdentifier(getFileName(bgPath), "drawable",
 				getPackageName());
-		rl.setBackgroundResource(R.drawable.background);
+		rl.setBackgroundResource(R.drawable.wood3);
 	
 		if(simulatedInstrument.getNickname().equals("angklung")){
 			Log.d("Instrument View chosen", "it is angklung! : "+simulatedInstrument.getNickname());

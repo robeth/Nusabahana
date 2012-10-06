@@ -202,7 +202,7 @@ public class Instrument {
 		
 		Arrays.fill(temp, -1);
 		
-		for(int i = startIndex; i < endIndex; i++){
+		for(int i = startIndex; i <= endIndex; i++){
 			if(notes[i].getKey() == key)
 				temp[latestIndex++] = i-startIndex + offset;
 		}
