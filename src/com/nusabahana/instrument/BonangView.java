@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.util.TypedValue;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
@@ -67,10 +68,15 @@ public class BonangView extends InstrumentView {
 			instrumentParts[i].setIndex(i);
 			instrumentParts[i].setInstrumentView(this);
 			instrumentLabels[i].setText(instrument.getNoteLabel(i));
+//			instrumentLabels[i].setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)convertToPixels(10));
 			instrumentAnimations[i] = AnimationUtils.loadAnimation(activity,
 					R.anim.shake);
 			distributorView.registerView(instrumentParts[i]);
 		}
+	}
+	private int convertToPixels(int dps){
+		final float scale = activity.getResources().getDisplayMetrics().density;
+		return (int) (dps * scale + 0.5f);
 	}
 
 	@Override

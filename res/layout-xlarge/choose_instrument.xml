@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:background="@+drawable/normal_frame"
+        android:background="@+drawable/detail_frame"
         android:orientation="vertical" >
     </LinearLayout>
 
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/instrument_groups" 
-        android:background="@+drawable/normal_frame"
+        android:background="@+drawable/detail_frame"
         android:layout_marginRight="35dp"
         android:layout_marginLeft="5dp">
     </LinearLayout>

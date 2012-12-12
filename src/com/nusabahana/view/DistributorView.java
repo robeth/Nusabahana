@@ -175,7 +175,7 @@ public class DistributorView extends ImageView {
 
 	@Override
 	public boolean onTouchEvent(final MotionEvent event) {
-		dumpEvent(event);
+		//dumpEvent(event);
 		//
 		final int[] a = { 0, 0 };
 		// v.getLocationOnScreen(a);
@@ -190,12 +190,12 @@ public class DistributorView extends ImageView {
 
 		switch (action) {
 		case MotionEvent.ACTION_DOWN:
-			Log.v("Down", "Add id = " + event.getPointerId(0));
+			//Log.v("Down", "Add id = " + event.getPointerId(0));
 			dealEvent(0, event);
 			break;
 		case MotionEvent.ACTION_POINTER_DOWN:
 			int id = action >> MotionEvent.ACTION_POINTER_ID_SHIFT;
-			Log.v("Pointer Down", "Add id = " + id);
+			//Log.v("Pointer Down", "Add id = " + id);
 			dealEvent(index, event);
 			break;
 

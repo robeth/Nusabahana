@@ -18,17 +18,17 @@ import com.nusabahana.view.InstructionImage;
 import com.nusabahana.view.NoteImage;
 import com.nusabahana.view.R;
 
-public class AngklungView extends InstrumentView {
+public class ArumbaView extends InstrumentView {
 	private final int NORMAL_OCTAVE = 0, HIGH_OCTAVE = 1, LOW_OCTAVE = 2,
 			OFFSET_INDEX = 0, NUMBER = 1, START_INDEX = 2, END_INDEX = 3;
 
 	private int state;
 	private InstructionImage instructionNextImage, instructionPrevImage;
-	private int[][] mappingIndex = { { 0, 12, 0, 11 }, { 0, 10, 12, 21 },
-			{ 4, 8, 22, 29 } };
+	private int[][] mappingIndex = { { 0, 12, 0, 11 }, { 0, 12, 12, 23 },
+			{ 4, 8, 24, 31 } };
 	private int prevInstructionID = 0;
 
-	public AngklungView(Activity activity, DistributorView distributorView,
+	public ArumbaView(Activity activity, DistributorView distributorView,
 			Instrument instrument, int instrumentViewID) {
 		super(activity, distributorView, instrument, instrumentViewID);
 		state = NORMAL_OCTAVE;
@@ -64,12 +64,12 @@ public class AngklungView extends InstrumentView {
 			distributorView.registerView(instrumentParts[i]);
 		}
 	}
-
+	
 	private int convertToPixels(int dps){
 		final float scale = activity.getResources().getDisplayMetrics().density;
 		return (int) (dps * scale + 0.5f);
 	}
-	
+
 	private void refresh() {
 		distributorView.clear();
 		int[] temp = new int[12];

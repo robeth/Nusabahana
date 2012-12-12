@@ -30,6 +30,7 @@ import com.nusabahana.controller.BackgroundMusicController.OnBackgroundMusicStar
 import com.nusabahana.controller.RecordController;
 import com.nusabahana.controller.RecordController.OnRecordStartPlayingListener;
 import com.nusabahana.instrument.AngklungView;
+import com.nusabahana.instrument.ArumbaView;
 import com.nusabahana.instrument.BonangView;
 import com.nusabahana.instrument.InstrumentView;
 import com.nusabahana.model.Instrument;
@@ -128,6 +129,9 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 		if(simulatedInstrument.getNickname().equals("angklung")){
 			Log.d("Instrument View chosen", "it is angklung! : "+simulatedInstrument.getNickname());
 			instrumentView = new AngklungView(this, dv, simulatedInstrument, instrumentXMLID);
+		}else if(simulatedInstrument.getNickname().equals("arumba")){
+			Log.d("Instrument View chosen", "it is arumba! : "+simulatedInstrument.getNickname());
+			instrumentView = new ArumbaView(this, dv, simulatedInstrument, instrumentXMLID);
 		}else {
 			Log.d("Instrument View chosen", "it is else! : "+simulatedInstrument.getNickname());
 			instrumentView = new BonangView(this, dv, simulatedInstrument, instrumentXMLID);
@@ -365,7 +369,7 @@ public class InstrumentSimulationMenu extends NusabahanaView {
 
 				RECORD_CONTROLLER.stopRecording();
 				bRecordStart.setOnClickListener(recordStartListener);
-				bRecordStart.setBackgroundResource(R.drawable.button_play);
+				bRecordStart.setBackgroundResource(R.drawable.button_record);
 				progressHandler.removeCallbacks(pl2);
 				time = 0;
 				timerText.setText("00:00");

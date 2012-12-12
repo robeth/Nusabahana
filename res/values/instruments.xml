@@ -214,34 +214,34 @@
         <item>Angklung is a musical instrument made of two bamboo tubes attached to a bamboo frame. The tubes are carved to have a resonant pitch when struck and are tuned to octaves. </item>
         <item>angklunglogo.png</item>
         <item >0,angklung1.ogg,1,1</item>
-        <item >1,angklung1kress.ogg,1k,21</item>
+        <item >1,angklung1kress.ogg,1#,21</item>
         <item >2,angklung2.ogg,2,2</item>
-        <item >3,angklung2kress.ogg,2k,22</item>
+        <item >3,angklung2kress.ogg,2#,22</item>
         <item >4,angklung3.ogg,3,3</item>
         <item >5,angklung4.ogg,4,4</item>
-        <item >6,angklung4kress.ogg,4k,24</item>
+        <item >6,angklung4kress.ogg,4#,24</item>
         <item >7,angklung5.ogg,5,5</item>
-        <item >8,angklung5kress.ogg,5k,25</item>
+        <item >8,angklung5kress.ogg,5#,25</item>
         <item >9,angklung6.ogg,6,6</item>
-        <item >10,angklung6kress.ogg,6k,26</item>
+        <item >10,angklung6kress.ogg,6#,26</item>
         <item >11,angklung7.ogg,7,7</item>
         <item >12,angklung1tinggi.ogg,1&#775;,11</item>
-        <item >13,angklung1tinggikress.ogg,<font style='line-through'>1&#775;</font>,61</item>
+        <item >13,angklung1tinggikress.ogg,1&#775;#,61</item>
         <item >14,angklung2tinggi.ogg,2&#775;,12</item>
-        <item >15,angklung2tinggikress.ogg,<font style='line-through'>2&#775;</font>,62</item>
+        <item >15,angklung2tinggikress.ogg,2&#775;#,62</item>
         <item >16,angklung3tinggi.ogg,3&#775;,13</item>
         <item >17,angklung4tinggi.ogg,4&#775;,14</item>
-        <item >18,angklung4tinggikress.ogg,<font style='line-through'>4&#775;</font>,64</item>
+        <item >18,angklung4tinggikress.ogg,4&#775;#,64</item>
         <item >19,angklung5tinggi.ogg,5&#775;,15</item>
-        <item >20,angklung5tinggikress.ogg,<font style='line-through'>5&#775;</font>,65</item>
+        <item >20,angklung5tinggikress.ogg,5&#775;#,65</item>
         <item >21,angklung6tinggi.ogg,6&#775;,16</item>
         <item >22,angklung3rendah.ogg,3&#803;,33</item>
         <item >23,angklung4rendah.ogg,4&#803;,34</item>
-        <item >24,angklung4rendahkress.ogg,<font style='line-thtough'>4&#803;</font>,84</item>
+        <item >24,angklung4rendahkress.ogg,4&#803;#,84</item>
         <item >25,angklung5rendah.ogg,5&#803;,35</item>
-        <item >26,angklung5rendahkress.ogg,<font style='line-thtough'>5&#803;</font>,85</item>
+        <item >26,angklung5rendahkress.ogg,5&#803;#,85</item>
         <item >27,angklung6rendah.ogg,6&#803;,36</item>
-        <item >28,angklung6rendahkress.ogg,<font style='line-thtough'>6&#803;</font>,86</item>
+        <item >28,angklung6rendahkress.ogg,6&#803;#,86</item>
         <item >29,angklung7rendah.ogg,7&#803;,37</item>
     </string-array>
     
@@ -253,17 +253,37 @@
         <item>Arumba is a musical instrument made of bamboo material. It\'s considered as melodic and rhythmic instrument. At first, arumba using pentatonic scales, but in its development diatonic scales can be played.</item>
         <item>arumbaicon.png</item>
         <item >0,arumba1.ogg,1,1</item>
-        <item >1,arumba1kress.ogg,1k,21</item>
+        <item >1,arumba1kress.ogg,1#,21</item>
         <item >2,arumba2.ogg,2,2</item>
-        <item >3,arumba2kress.ogg,2k,22</item>
+        <item >3,arumba2kress.ogg,2#,22</item>
         <item >4,arumba3.ogg,3,3</item>
         <item >5,arumba4.ogg,4,4</item>
-        <item >6,arumba4kress.ogg,4k,24</item>
+        <item >6,arumba4kress.ogg,4#,24</item>
         <item >7,arumba5.ogg,5,5</item>
-        <item >8,arumba5kress.ogg,5k,25</item>
+        <item >8,arumba5kress.ogg,5#,25</item>
         <item >9,arumba6.ogg,6,6</item>
-        <item >10,arumba6kress.ogg,6k,26</item>
+        <item >10,arumba6kress.ogg,6#,26</item>
         <item >11,arumba7.ogg,7,7</item>
+        <item >12,arumba1tinggi.ogg,1&#775;,11</item>
+        <item >13,arumba1tinggikress.ogg,1&#775;#,61</item>
+        <item >14,arumba2tinggi.ogg,2&#775;,12</item>
+        <item >15,arumba2tinggikress.ogg,2&#775;#,62</item>
+        <item >16,arumba3tinggi.ogg,3&#775;,13</item>
+        <item >17,arumba4tinggi.ogg,4&#775;,14</item>
+        <item >18,arumba4tinggikress.ogg,4&#775;#,64</item>
+        <item >19,arumba5tinggi.ogg,5&#775;,15</item>
+        <item >20,arumba5tinggikress.ogg,5&#775;#,65</item>
+        <item >21,arumba6tinggi.ogg,6&#775;,16</item>
+        <item >22,arumba6tinggikress.ogg,6&#775;#,66</item>
+        <item >23,arumba7tinggi.ogg,7&#775;,17</item>
+        <item >24,arumba3rendah.ogg,3&#803;,33</item>
+        <item >25,arumba4rendah.ogg,4&#803;,34</item>
+        <item >26,arumba4rendahkress.ogg,4&#803;#,84</item>
+        <item >27,arumba5rendah.ogg,5&#803;,35</item>
+        <item >28,arumba5rendahkress.ogg,5&#803;#,85</item>
+        <item >29,arumba6rendah.ogg,6&#803;,36</item>
+        <item >30,arumba6rendahkress.ogg,6&#803;#,86</item>
+        <item >31,arumba7rendah.ogg,7&#803;,37</item>
     </string-array>
     
 </resources>
